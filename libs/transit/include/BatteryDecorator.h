@@ -8,7 +8,7 @@ class BatteryDecorator: public IEntityDecorator {
     /**
      * @brief Constructor that assigns a unique ID to the battery.
      */
-    BatteryDecorator(IEntity* wrapped): IEntityDecorator(wrapped), charge(100.0f) {}
+    BatteryDecorator(IEntity* wrapped): IEntityDecorator(wrapped), charge(100.0) {}
 
      /**
      * @brief What to override to modify the baheavior of the surrounding IEntity
@@ -17,12 +17,12 @@ class BatteryDecorator: public IEntityDecorator {
      */
     virtual void OverridedUpdate(double dt, std::vector<IEntity*> scheduler);
 
-    void recharge();
+    void recharge(double amount);
 
-    float getChargePercent();
+    double getChargePercent();
 
   private:
-    float charge;
+    double charge;
 
 };
 
