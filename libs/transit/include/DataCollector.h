@@ -1,11 +1,13 @@
 #ifndef DATACOLLECTOR_H_
 #define DATACOLLECTOR_H_
 
-#include <csv>
+#include <iostream>
+#include <fstream>
 #include <vector>
 #include <ctime>
 
 #include "math/vector3.h"
+#include "Drone.h"
 
 /**
  * @class DataCollector
@@ -13,7 +15,7 @@
  * the drone and its surroundings. It then stores this data into a csv.
  */
 
-Class DataCollector :
+class DataCollector:
     public:
         /**
          * @brief DataCollector class constructor
@@ -42,3 +44,4 @@ Class DataCollector :
         double distanceToDest;
         double batteryLevel;        
 
+#endif
