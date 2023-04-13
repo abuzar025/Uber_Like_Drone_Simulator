@@ -8,7 +8,7 @@ class BatteryDecorator: public IEntityDecorator {
     /**
      * @brief Constructor that assigns a unique ID to the battery.
      */
-    BatteryDecorator(IEntity* wrapped): IEntityDecorator(wrapped), charge(100.0) {}
+    BatteryDecorator(IEntity* wrapped, double maxCharge): IEntityDecorator(wrapped), maxCharge(maxCharge), charge(maxCharge) {}
 
      /**
      * @brief What to override to modify the baheavior of the surrounding IEntity
@@ -19,7 +19,9 @@ class BatteryDecorator: public IEntityDecorator {
 
     void recharge(double amount);
 
-    double getChargePercent();
+    double getCharge() {return charge;}
+
+    const double maxCharge;
 
   private:
     double charge;
