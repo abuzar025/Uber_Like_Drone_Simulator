@@ -9,6 +9,8 @@
 #include "math/vector3.h"
 #include "Drone.h"
 
+using namespace std;
+
 /**
  * @class DataCollector
  * @brief Represents a singleton class that collect drone pertaining
@@ -16,11 +18,25 @@
  */
 
 class DataCollector:
-    public:
+
+    protected:
         /**
-         * @brief DataCollector class constructor
+        * @brief DataCollector class constructor
         */
         DataCollector();
+
+        static DataCollector* DataCollector;
+
+    public:
+       /**
+        * Singletons should not be cloneable.
+        */
+        DataCollector(DataCollector &other) = delete;
+
+        /**
+        * Singletons should not be assignable.
+        */
+        void operator=(const Singleton &) = delete;
 
         /**
          * @brief DataCollector desconstructor
@@ -39,6 +55,7 @@ class DataCollector:
       void logData();
     
     private:
+        static field instance: DataCollector
         Time eta;
         int numTrips;
         double distanceToDest;
