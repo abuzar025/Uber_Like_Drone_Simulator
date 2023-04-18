@@ -1,0 +1,85 @@
+\hypertarget{classBatteryDecorator}{}\doxysection{Battery\+Decorator Class Reference}
+\label{classBatteryDecorator}\index{BatteryDecorator@{BatteryDecorator}}
+
+
+this class inhertis from the \mbox{\hyperlink{classIEntityDecorator}{I\+Entity\+Decorator}} class. The purpose of this class is to modify the behavior of an \mbox{\hyperlink{classIEntity}{I\+Entity}} object by adding a battery to it.  
+
+
+
+
+{\ttfamily \#include $<$Battery\+Decorator.\+h$>$}
+
+
+
+Inheritance diagram for Battery\+Decorator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classBatteryDecorator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Battery\+Decorator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classBatteryDecorator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a8f2d260a3ecf9fdf443a0f952464c438}\label{classBatteryDecorator_a8f2d260a3ecf9fdf443a0f952464c438}} 
+\mbox{\hyperlink{classBatteryDecorator_a8f2d260a3ecf9fdf443a0f952464c438}{Battery\+Decorator}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$wrapped, double max\+Charge)
+\begin{DoxyCompactList}\small\item\em Constructor that assigns a unique ID to the battery. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBatteryDecorator_abf07daa937e3c657d43896a3b8c81057}{Overrided\+Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em What to override to modify the behaviour of the surrounding \mbox{\hyperlink{classIEntity}{I\+Entity}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBatteryDecorator_a0aa5f9d47d509b9201f1aa8d738ba87d}\label{classBatteryDecorator_a0aa5f9d47d509b9201f1aa8d738ba87d}} 
+void {\bfseries recharge} (double amount)
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a927007d883fd412db218e0cb3dd56965}\label{classBatteryDecorator_a927007d883fd412db218e0cb3dd56965}} 
+double {\bfseries get\+Charge} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_ae3f0608afaa6d564512dfeb557c221b8}\label{classBatteryDecorator_ae3f0608afaa6d564512dfeb557c221b8}} 
+const double {\bfseries max\+Charge}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+this class inhertis from the \mbox{\hyperlink{classIEntityDecorator}{I\+Entity\+Decorator}} class. The purpose of this class is to modify the behavior of an \mbox{\hyperlink{classIEntity}{I\+Entity}} object by adding a battery to it. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBatteryDecorator_abf07daa937e3c657d43896a3b8c81057}\label{classBatteryDecorator_abf07daa937e3c657d43896a3b8c81057}} 
+\index{BatteryDecorator@{BatteryDecorator}!OverridedUpdate@{OverridedUpdate}}
+\index{OverridedUpdate@{OverridedUpdate}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{OverridedUpdate()}{OverridedUpdate()}}
+{\footnotesize\ttfamily void Battery\+Decorator\+::\+Overrided\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+What to override to modify the behaviour of the surrounding \mbox{\hyperlink{classIEntity}{I\+Entity}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & The time step of the update. \\
+\hline
+{\em scheduler} & The list of all entities in the system. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIEntityDecorator_a1270f7ee557197e0babaa6f65272b297}{I\+Entity\+Decorator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/abuza006/\+Courses Spring 2023/csci3081\+W/\+Assignments/\+H\+W4/\+Team-\/010-\/46-\/homework4/libs/transit/include/Battery\+Decorator.\+h\item 
+/home/abuza006/\+Courses Spring 2023/csci3081\+W/\+Assignments/\+H\+W4/\+Team-\/010-\/46-\/homework4/libs/transit/src/Battery\+Decorator.\+cc\end{DoxyCompactItemize}

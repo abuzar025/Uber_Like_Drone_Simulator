@@ -3,7 +3,11 @@
 
 #include "IEntity.h"
 #include "IStrategy.h"
-
+/**
+ * @brief this class inhertis from the IEntity class and is responsible for
+ * generating the Helicopter entity. This class defines the behavior and 
+ * attributes of a helicopter entity in a system.
+ */ 
 class Helicopter : public IEntity {
  public:
   /**
