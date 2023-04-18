@@ -71,6 +71,15 @@ class IEntityDecorator: public IEntity {
     }
 
     /**
+     * @brief Sets the graph object used by the entity in the simulation.
+     * @param graph The IGraph object to be used.
+     */
+    void SetGraph(const IGraph* graph) {
+      entity->SetGraph(graph);
+      IEntity::SetGraph(graph);
+    }
+
+    /**
      * @brief Sets the position of the drone
      * @param pos_ The new position of the drone
      */
