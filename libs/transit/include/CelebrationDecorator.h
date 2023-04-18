@@ -4,7 +4,7 @@
 #include "IStrategy.h"
 
 /**
- * @brief this class inhertis from the IStrategy class and is represents
+ * @brief this class inhertis from the IStrategy class and represents
  * a celebration decorator where the entity will celebrate according to it.
  */
 class CelebrationDecorator : public IStrategy {

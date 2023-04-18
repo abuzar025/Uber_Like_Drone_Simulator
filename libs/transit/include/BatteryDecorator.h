@@ -3,6 +3,11 @@
 
 #include "IEntityDecorator.h"
 
+/**
+ * @brief this class inhertis from the IEntityDecorator class. The purpose of this class is to 
+ * modify the behavior of an IEntity object by adding a battery to it.
+ */
+clas
 class BatteryDecorator: public IEntityDecorator {
   public:
     /**
@@ -11,7 +16,7 @@ class BatteryDecorator: public IEntityDecorator {
     BatteryDecorator(IEntity* wrapped, double maxCharge, double drainRate): IEntityDecorator(wrapped), maxCharge(maxCharge), charge(maxCharge), drainRate(drainRate) {}
 
      /**
-     * @brief What to override to modify the baheavior of the surrounding IEntity
+     * @brief What to override to modify the behaviour of the surrounding IEntity
      * @param dt The time step of the update.
      * @param scheduler The list of all entities in the system.
      */
