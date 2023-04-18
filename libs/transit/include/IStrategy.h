@@ -1,6 +1,7 @@
 #ifndef I_STRATEGY_H_
 #define I_STRATEGY_H_
 
+#include "math/vector3.h"
 #include "IEntity.h"
 
 /**
@@ -23,6 +24,13 @@ class IStrategy {
    * @return True if complete, false if not complete 
    */
   virtual bool IsCompleted() = 0;
+
+  /**
+   * @brief Get the distance left to travel
+   * 
+   * @return the distance left to travel
+   */
+  virtual double GetDistance(Vector3 from) = 0;
 };
 
 #endif

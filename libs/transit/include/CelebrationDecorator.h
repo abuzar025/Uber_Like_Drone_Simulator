@@ -40,6 +40,15 @@ class CelebrationDecorator : public IStrategy {
    * @return True if complete, false if not complete
    */
   virtual bool IsCompleted();
+
+  /**
+   * @brief Get the distance left to travel
+   * 
+   * @return the distance left to travel
+   */
+  virtual double GetDistance(Vector3 from) {
+    return strategy->GetDistance(from);
+  }
 };
 
 #endif  // CELEBRATION_DECORATOR_H_
