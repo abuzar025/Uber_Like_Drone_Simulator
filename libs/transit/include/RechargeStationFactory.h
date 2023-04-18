@@ -24,3 +24,5 @@ class RechargeStationFactory : IEntityFactory {
         **/
         IEntity* CreateEntity(JsonObject& entity);
 }
+
+#endif
