@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "IEntityFactory.h"
+#include "IEntity.h"
 #include "RechargeStation.h"
 
 /**
@@ -12,7 +13,7 @@
 class RechargeStationFactory : IEntityFactory {
     public:
         /**
-        * @brief Destructor for IEntityFactory class.
+        * @brief Destructor for RechargeStationFactory class.
         **/
         virtual ~RechargeStationFactory() {}
 
@@ -23,4 +24,6 @@ class RechargeStationFactory : IEntityFactory {
         *nullpointer if creation failed.
         **/
         IEntity* CreateEntity(JsonObject& entity);
-}
+};
+
+#endif
