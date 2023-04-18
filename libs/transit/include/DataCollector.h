@@ -39,6 +39,7 @@ class DataCollector:
       void logData();
     
     private:
+        static field instance: DataCollector
         Time eta;
         int numTrips;
         double distanceToDest;
