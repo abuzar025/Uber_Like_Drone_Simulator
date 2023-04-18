@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "IEntityFactory.h"
+#include "IEntity.h"
 #include "RechargeStation.h"
 
 /**
