@@ -7,13 +7,12 @@
  * @brief this class inhertis from the IEntityDecorator class. The purpose of this class is to 
  * modify the behavior of an IEntity object by adding a battery to it.
  */
-clas
 class BatteryDecorator: public IEntityDecorator {
   public:
     /**
      * @brief Constructor that assigns a unique ID to the battery.
      */
-    BatteryDecorator(IEntity* wrapped, double maxCharge, double drainRate): IEntityDecorator(wrapped), maxCharge(maxCharge), charge(maxCharge), drainRate(drainRate) {}
+    BatteryDecorator(IEntity* wrapped, double maxCharge, double drainRate): IEntityDecorator(wrapped), maxCharge(maxCharge), charge(maxCharge), drainRate(drainRate), recharging(false) {}
 
      /**
      * @brief What to override to modify the behaviour of the surrounding IEntity
@@ -31,6 +30,7 @@ class BatteryDecorator: public IEntityDecorator {
 
   private:
     double charge;
+    bool recharging;
 
 };
 
