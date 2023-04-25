@@ -34,8 +34,10 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
     double amount = dt * drainRate;
     bool withinChargingStation = false;
     for (auto iter = scheduler.begin(); iter != scheduler.end(); iter++) {
-        if ((*iter)->GetPosition().Distance(GetPosition()) < 5) {
+        RechargeStation* rechargeStation = dynamic_cast<RechargeStation*>(*iter);
+        if (rechargeStation != nullptr && rechargeStation->BatteryInRange(this)) {
             withinChargingStation = true;
+            break;
         }
     }
     if (!withinChargingStation) {
@@ -72,6 +74,8 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
             toRechargeStation->Move(this, amount / drainRate);
         } else {
             if (getCharge() >= maxCharge) {
+                delete toRechargeStation;
+                toRechargeStation = nullptr;
                 recharging = false;
             }
         }
@@ -105,6 +109,13 @@ bool BatteryDecorator::recharge(double amount) {
     if (charge >= maxCharge) {
         charge = maxCharge;
         return true;
+    }
+    return false;
+}
+
+bool BatteryDecorator::IsOrWillBeMarooned() {
+    if (toRechargeStation != nullptr) {
+        return toRechargeStation->GetDistance(GetPosition()) * drainRate / GetSpeed() > charge;
     }
     return false;
 }

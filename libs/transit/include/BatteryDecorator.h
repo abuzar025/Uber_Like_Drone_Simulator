@@ -26,6 +26,8 @@ class BatteryDecorator: public IEntityDecorator {
 
     double getCharge() {return charge;}
 
+    bool IsOrWillBeMarooned();
+
     const double maxCharge;
     const double drainRate;
 
