@@ -1,0 +1,10 @@
+#include "RepairDroneFactory.h"
+
+IEntity* RepairDroneFactory::CreateEntity(JsonObject& entity) {
+  std::string type = entity["type"];
+  if (type.compare("repairDrone") == 0) {
+    std::cout << "Repair Drone Created" << std::endl;
+    return new Robot(entity);
+  }
+  return nullptr;
+}
