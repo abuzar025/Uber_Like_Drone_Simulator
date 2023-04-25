@@ -3,6 +3,7 @@
 
 #include "IEntity.h"
 
+
 /**
  * @brief this class inhertis from the IEntity class and represents 
  * the recharge stations for drone entity. 
@@ -98,7 +99,7 @@ class RechargeStation: public IEntity {
 
     void SetRechargeRate(double rate) { rechargeRate = rate; }
 
-    void RechargeIfInRange(IEntity* entity);
+    bool BatteryInRange(IEntity* entity);
     /**
      * @brief Removing the copy constructor and assignment operator
      * so that drones cannot be copied.
