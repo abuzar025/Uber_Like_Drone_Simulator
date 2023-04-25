@@ -21,7 +21,7 @@ class DataCollector:
 
     public:
 
-        static DroneDataCollector& getInstance();
+        static DataCollector& getInstance();
 
        /**
         * Singletons should not be cloneable.
@@ -51,7 +51,7 @@ class DataCollector:
     
     private:
         static field instance: DataCollector
-        Time eta;
+        time_t eta;
         int numTrips;
         double distanceToDest;
         double batteryLevel;        
