@@ -2,6 +2,7 @@
 #define BATTERY_DECORATOR_H_
 
 #include "IEntityDecorator.h"
+#include "IStrategy.h"
 
 /**
  * @brief this class inhertis from the IEntityDecorator class. The purpose of this class is to 
@@ -31,7 +32,7 @@ class BatteryDecorator: public IEntityDecorator {
   private:
     double charge;
     bool recharging;
-
+    IStrategy* toRechargeStation = nullptr;
 };
 
 #endif
