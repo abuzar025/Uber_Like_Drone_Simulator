@@ -34,8 +34,10 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
     double amount = dt * drainRate;
     bool withinChargingStation = false;
     for (auto iter = scheduler.begin(); iter != scheduler.end(); iter++) {
-        if ((*iter)->GetPosition().Distance(GetPosition()) < 5) {
+        RechargeStation* rechargeStation = dynamic_cast<RechargeStation*>(*iter);
+        if (rechargeStation != nullptr && rechargeStation->BatteryInRange(this)) {
             withinChargingStation = true;
+            break;
         }
     }
     if (!withinChargingStation) {
