@@ -74,6 +74,8 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
             toRechargeStation->Move(this, amount / drainRate);
         } else {
             if (getCharge() >= maxCharge) {
+                delete toRechargeStation;
+                toRechargeStation = nullptr;
                 recharging = false;
             }
         }
@@ -107,6 +109,13 @@ bool BatteryDecorator::recharge(double amount) {
     if (charge >= maxCharge) {
         charge = maxCharge;
         return true;
+    }
+    return false;
+}
+
+bool BatteryDecorator::IsOrWillBeMarooned() {
+    if (toRechargeStation != nullptr) {
+        return toRechargeStation->GetDistance(GetPosition()) * drainRate / GetSpeed() > charge;
     }
     return false;
 }
