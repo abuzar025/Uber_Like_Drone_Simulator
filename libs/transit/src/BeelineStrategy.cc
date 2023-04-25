@@ -17,3 +17,7 @@ void BeelineStrategy::Move(IEntity* entity, double dt) {
 bool BeelineStrategy::IsCompleted() {
   return position.Distance(destination) < 4.0;
 }
+
+double BeelineStrategy::GetDistance(Vector3 from) {
+  return from.Distance(destination);
+}

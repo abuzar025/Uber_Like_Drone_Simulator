@@ -35,6 +35,13 @@ class PathStrategy : public IStrategy {
    * @return True if complete, false if not complete
    */
   virtual bool IsCompleted();
+
+  /**
+   * @brief Get the distance left to travel
+   * 
+   * @return the distance left to travel
+   */
+  double GetDistance(Vector3 from);
 };
 
 #endif  // PATH_STRATEGY_H_

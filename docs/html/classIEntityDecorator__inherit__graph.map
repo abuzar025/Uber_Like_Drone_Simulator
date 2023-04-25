@@ -1,0 +1,5 @@
+<map id="IEntityDecorator" name="IEntityDecorator">
+<area shape="rect" id="node1" title="The IEntityDecorator class is an abstract base class for decorators that modify the behavior of the s..." alt="" coords="9,80,137,107"/>
+<area shape="rect" id="node3" href="$classBatteryDecorator.html" title="this class inhertis from the IEntityDecorator class. The purpose of this class is to modify the behav..." alt="" coords="5,155,140,181"/>
+<area shape="rect" id="node2" href="$classIEntity.html" title="Represents an entity in a physical system." alt="" coords="41,5,105,32"/>
+</map>

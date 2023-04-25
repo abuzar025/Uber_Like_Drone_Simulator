@@ -4,6 +4,11 @@
 #include "IEntity.h"
 #include "IStrategy.h"
 
+/**
+ * @brief this class inhertis from the IEntity class and is responsible for
+ * generating the Human entity. This class defines the behavior and 
+ * attributes of a Human entity in a system.
+ */ 
 class Human : public IEntity {
  public:
   /**

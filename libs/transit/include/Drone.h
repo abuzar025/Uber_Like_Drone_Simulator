@@ -77,6 +77,12 @@ class Drone : public IEntity {
   void GetNearestEntity(std::vector<IEntity*> scheduler);
 
   /**
+   * @brief Gets the current nearest entity
+   * @return The nearest entity to the drone
+   */
+  IEntity* GetCurrentNearestEntity() const { return nearestEntity; }
+
+  /**
    * @brief Updates the drone's position
    * @param dt Delta time
    * @param scheduler Vector containing all the entities in the system
@@ -118,6 +124,22 @@ class Drone : public IEntity {
    * @param height The height at which the drone should jump
    */
   void Jump(double height);
+
+  /**
+   * @brief Gets the current strategy the drone uses to go to the Robot
+   * @return the current IStrategy in use
+   */
+  IStrategy* GetToRobotStrategy() {
+    return toRobot;
+  }
+
+  /**
+   * @brief Gets the current strategy the drone uses to go to the final destination
+   * @return the current IStrategy in use
+   */
+  IStrategy* GetToFinalDestinationStrategy() {
+    return toFinalDestination;
+  }
 
   /**
    * @brief Removing the copy constructor and assignment operator

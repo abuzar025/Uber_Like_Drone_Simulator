@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classIEntity.html" title="Represents an entity in a physical system." alt="" coords="5,132,69,159"/>
+<area shape="rect" id="node2" href="$classDrone.html" title="Represents a drone in a physical system. Drones move using euler integration based on a specified vel..." alt="" coords="151,5,213,32"/>
+<area shape="rect" id="node3" href="$classHelicopter.html" title="this class inhertis from the IEntity class and is responsible for generating the Helicopter entity...." alt="" coords="137,56,227,83"/>
+<area shape="rect" id="node4" href="$classHuman.html" title="this class inhertis from the IEntity class and is responsible for generating the Human entity...." alt="" coords="147,107,217,133"/>
+<area shape="rect" id="node5" href="$classIEntityDecorator.html" title="The IEntityDecorator class is an abstract base class for decorators that modify the behavior of the s..." alt="" coords="118,157,246,184"/>
+<area shape="rect" id="node7" href="$classRechargeStation.html" title="this class inhertis from the IEntity class and represents the recharge stations for drone entity." alt="" coords="117,208,247,235"/>
+<area shape="rect" id="node8" href="$classRobot.html" title="Represents a robot in a physical system." alt="" coords="152,259,212,285"/>
+<area shape="rect" id="node6" href="$classBatteryDecorator.html" title="this class inhertis from the IEntityDecorator class. The purpose of this class is to modify the behav..." alt="" coords="295,157,429,184"/>
+</map>

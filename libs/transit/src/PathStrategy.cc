@@ -20,3 +20,19 @@ void PathStrategy::Move(IEntity* entity, double dt) {
 bool PathStrategy::IsCompleted() {
   return index >= path.size();
 }
+
+double PathStrategy::GetDistance(Vector3 from) {
+  Vector3 vectorFromPoint = from;
+  vectorFromPoint.x -= path.at(index).at(0);
+  vectorFromPoint.y -= path.at(index).at(1);
+  vectorFromPoint.z -= path.at(index).at(2);
+  double result = vectorFromPoint.Magnitude();
+
+  for (int i = index + 1; i < path.size(); i++) {
+    Vector3 betweenPath(path.at(i).at(0), path.at(i).at(1), path.at(i).at(2));
+    betweenPath.x -= path.at(i + 1).at(0);
+    betweenPath.y -= path.at(i + 1).at(1);
+    betweenPath.z -= path.at(i + 1).at(2);
+    result += betweenPath.Magnitude();
+  }
+}
