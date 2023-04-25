@@ -19,15 +19,10 @@ using namespace std;
 
 class DataCollector:
 
-    protected:
-        /**
-        * @brief DataCollector class constructor
-        */
-        DataCollector();
-
-        static DataCollector* DataCollector;
-
     public:
+
+        static DroneDataCollector& getInstance();
+
        /**
         * Singletons should not be cloneable.
         */
@@ -36,7 +31,7 @@ class DataCollector:
         /**
         * Singletons should not be assignable.
         */
-        void operator=(const Singleton &) = delete;
+        void operator=(const DataCollector &) = delete;
 
         /**
          * @brief DataCollector desconstructor
@@ -52,7 +47,7 @@ class DataCollector:
        /**
         * @brief This method uses data stored in this class to write the data into a csv file
        */
-      void logData();
+        void writeDataToCSV(string filename);
     
     private:
         static field instance: DataCollector
