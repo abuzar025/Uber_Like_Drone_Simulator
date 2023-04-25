@@ -1,5 +1,7 @@
 #include "BatteryDecorator.h"
 #include "Drone.h"
+#include "BeelineStrategy.h"
+#include "RechargeStation.h"
 
 // This breaks SOLID.
 // No matter what, O will have to be broken because we will have to modify SimulationModel
@@ -30,18 +32,49 @@
 // This is TERRIBLE.
 void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> scheduler) {
     double amount = dt * drainRate;
-    if (charge <= 0) {
-        return;
-    } else if (amount > charge) {
-        amount = charge;
-        charge = 0;
-    } else {
-        charge -= amount;
+    bool withinChargingStation = false;
+    for (auto iter = scheduler.begin(); iter != scheduler.end(); iter++) {
+        if ((*iter)->GetPosition().Distance(GetPosition()) < 5) {
+            withinChargingStation = true;
+        }
+    }
+    if (!withinChargingStation) {
+        if (charge <= 0) {
+            return;
+        } else if (amount > charge) {
+            amount = charge;
+            charge = 0;
+        } else {
+            charge -= amount;
+        }
     }
 
     if (recharging) {
-        // TODO move drone to charging station
-        entity->Rotate(dt * 10);
+        if (withinChargingStation) {
+            if (toRechargeStation == nullptr) {
+                IEntity* closestRechargeStation = nullptr;
+                double closestRechargeStationDistance = INFINITY;
+                for (auto iter = scheduler.begin(); iter != scheduler.end(); iter++) {
+                    if (dynamic_cast<RechargeStation*>(*iter) != nullptr) {
+                        double distance = (*iter)->GetPosition().Distance(GetPosition());
+                        if (distance < closestRechargeStationDistance) {
+                            closestRechargeStationDistance = distance;
+                            closestRechargeStation = *iter;
+                        }
+                    }
+                }
+                if (closestRechargeStation != nullptr) {
+                    SetDestination(closestRechargeStation->GetPosition());
+                    // Why didn't we make an IStrategyFactory from the start?
+                    toRechargeStation = new BeelineStrategy(GetPosition(), GetDestination());
+                }
+            }
+            toRechargeStation->Move(this, amount / drainRate);
+        } else {
+            if (getCharge() >= maxCharge) {
+                recharging = false;
+            }
+        }
     } else {
         // I hate this. This would be so much better if we could just, inherit off of Drone
         // Decorator makes this so much more complicated for absolutely 0 payoff.
