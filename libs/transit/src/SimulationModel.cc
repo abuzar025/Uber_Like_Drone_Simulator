@@ -5,6 +5,8 @@
 #include "HumanFactory.h"
 #include "HelicopterFactory.h"
 
+
+
 SimulationModel::SimulationModel(IController& controller)
     : controller(controller) {
   compFactory = new CompositeFactory();
