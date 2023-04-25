@@ -41,7 +41,7 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
         }
     }
     if (!withinChargingStation) {
-        if (charge <= 0) {
+        if (charge <= 0 || IsOrWillBeMarooned()) {
             return;
         } else if (amount > charge) {
             amount = charge;
@@ -117,5 +117,5 @@ bool BatteryDecorator::IsOrWillBeMarooned() {
     if (toRechargeStation != nullptr) {
         return toRechargeStation->GetDistance(GetPosition()) * drainRate / GetSpeed() > charge;
     }
-    return false;
+    return charge <= 0;
 }
