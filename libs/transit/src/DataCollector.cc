@@ -1,11 +1,6 @@
 #define _USE_MATH_DEFINES
 #include "DataCollector.h"
 
-<<<<<<< HEAD
-    // protected: 
-
-};
-=======
 class DataCollector() {
 
     DataCollector::DataCollector() {};
@@ -23,4 +18,3 @@ class DataCollector() {
 
     }
 }
->>>>>>> b0542e64e44dafd70b35d3613ce8867f26f055e1
