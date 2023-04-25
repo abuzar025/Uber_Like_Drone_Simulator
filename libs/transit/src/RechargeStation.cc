@@ -23,14 +23,14 @@ RechargeStation::~RechargeStation() {
 void RechargeStation::Update(double dt, std::vector<IEntity*> scheduler) {
     for(int i = 0; i < scheduler.size(); i++) {
         if(dynamic_cast<BatteryDecorator*>(scheduler.at(i)) != nullptr) { //Checks that the object is a Battery
-          RechargeIfInRange(scheduler.at(i));
+          BatteryDecorator* batt = dynamic_cast<BatteryDecorator*>(scheduler.at(i));
+          if(BatteryInRange(batt)) {
+            batt->recharge(rechargeRate);
+          }
         }
     }
 }
 
-void RechargeStation::RechargeIfInRange(IEntity* entity) {
-  BatteryDecorator* batt = dynamic_cast<BatteryDecorator*>(entity);
-  if(abs(position[0] - batt->GetPosition()[0]) <= 5.0 && abs(position[1] - batt->GetPosition()[1]) <= 5.0) {
-    batt->recharge(rechargeRate);
-  }
+bool RechargeStation::BatteryInRange(IEntity* entity) {
+  return abs(position[0] - entity->GetPosition()[0]) <= 5.0 && abs(position[1] - entity->GetPosition()[1]) <= 5.0;
 }
