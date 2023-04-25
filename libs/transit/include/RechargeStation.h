@@ -3,13 +3,10 @@
 
 #include "IEntity.h"
 
-<<<<<<< HEAD
-=======
 /**
  * @brief this class inhertis from the IEntity class and represents 
  * the recharge stations for drone entity. 
  */
->>>>>>> refs/remotes/origin/main
 
 class RechargeStation: public IEntity {
   public:
