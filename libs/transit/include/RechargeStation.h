@@ -3,11 +3,12 @@
 
 #include "IEntity.h"
 
+
 class RechargeStation: public IEntity {
   public:
     /**
-     * @brief Drones are created with a name
-     * @param obj JSON object containing the drone's information
+     * @brief RechargeStations are created with a name
+     * @param obj JSON object containing the Recharge Station's information
      */
     RechargeStation(JsonObject& obj);
 
@@ -58,6 +59,8 @@ class RechargeStation: public IEntity {
      */
     bool GetAvailability() const { return available; }
 
+    double GetRechargeRate() const { return rechargeRate; }
+
     /**
      * @brief Updates the drone's position
      * @param dt Delta time
@@ -89,6 +92,9 @@ class RechargeStation: public IEntity {
      */
     void SetColor(std::string col_) { color = col_; }
 
+    void SetRechargeRate(double rate) { rechargeRate = rate; }
+
+    bool CheckInRange(BatteryDecorator* batt);
     /**
      * @brief Removing the copy constructor and assignment operator
      * so that drones cannot be copied.
@@ -102,6 +108,7 @@ private:
     Vector3 direction;
     std::string color = "None";  // None means default color
     bool available;
+    double rechargeRate;
 };
 
 #endif
