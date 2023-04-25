@@ -92,7 +92,7 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
         if (drone != nullptr) {
             if (drone->GetCurrentNearestEntity() == nullptr) {
                 drone->GetNearestEntity(scheduler);
-                if (drone->GetCurrentNearestEntity() == nullptr) {
+                if (drone->GetCurrentNearestEntity() != nullptr) {
                     double chargeRequired = drone->GetToRobotStrategy()->GetDistance(GetPosition()) + drone->GetToFinalDestinationStrategy()->GetDistance(GetDestination());
                     chargeRequired *= drainRate / GetSpeed();
                     if (chargeRequired > charge) {
