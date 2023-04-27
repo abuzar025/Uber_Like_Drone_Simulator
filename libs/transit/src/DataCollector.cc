@@ -3,30 +3,27 @@
 
 using namespace std;
 
-class DataCollector() {
+DataCollector::DataCollector() {};
 
-    DataCollector::DataCollector() {};
+DataCollector& DataCollector::getInstance() {
+    static DataCollector instance;
+    return instance;
+}
 
-    DataCollector& DataCollector::getInstance() {
-        static DataCollector instance;
-        return instance;
-    }
+void DataCollector::collectData(const Drone& drone) {
+    distanceToDest = drone.GetPosition().Distance(drone.GetDestination());
+    droneX = drone.GetPosition().x;
+    droneY = drone.GetPosition().y;
+    droneZ = drone.GetPosition().z;
 
-    void DataCollector::collectData(const Drone& drone) {
-        distanceToDest = Vector3.Distance(drone.GetPosition(), drone.GetDestination());
-        droneX = drone.GetPosition().x;
-        droneY = drone.GetPosition().y;
-        droneZ = drone.GetPosition().z;
+    eta = distanceToDest / drone.GetSpeed();
+}
 
-        eta = distanceToDest / drone.GetSpeed();
-    }
+void DataCollector::collectBatteryLevel(const BatteryDecorator& battery) {
+    batteryLevel = battery.getCharge();
+}
 
-    void DataCollector::collectBatteryLevel(const BatteryDecorator& battery) {
-        batteryLevel = battery.getCharge();
-    }
+void DataCollector::writeDataToCSV(string filename) {
+    ofstream file(filename);
 
-    void writeDataToCSV(string filename) {
-        std::ofstream file(filename);
-
-    }
 }
