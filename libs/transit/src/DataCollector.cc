@@ -11,7 +11,7 @@ class DataCollector() {
     }
 
     void DataCollector::collectData(const Drone& drone) {
-
+        
     }
 
     void writeDataToCSV(string filename) {
