@@ -24,7 +24,7 @@ class BatteryDecorator: public IEntityDecorator {
 
     bool recharge(double amount);
 
-    double getCharge() {return charge;}
+    double getCharge() const {return charge;}
 
     bool IsOrWillBeMarooned();
 
