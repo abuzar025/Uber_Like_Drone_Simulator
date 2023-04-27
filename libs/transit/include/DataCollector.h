@@ -8,6 +8,7 @@
 
 #include "math/vector3.h"
 #include "Drone.h"
+#include "BatteryDecorator.h"
 
 using namespace std;
 
@@ -17,7 +18,7 @@ using namespace std;
  * the drone and its surroundings. It then stores this data into a csv.
  */
 
-class DataCollector:
+class DataCollector {
 
     public:
 
@@ -26,12 +27,12 @@ class DataCollector:
        /**
         * Singletons should not be cloneable.
         */
-        DataCollector(DataCollector &other) = delete;
+        DataCollector(const DataCollector& other) = delete;
 
         /**
         * Singletons should not be assignable.
         */
-        void operator=(const DataCollector &) = delete;
+        DataCollector& operator=(const DataCollector& other) = delete;
 
         /**
          * @brief DataCollector desconstructor
@@ -44,19 +45,24 @@ class DataCollector:
         */
        void collectData(const Drone& drone);
 
+       void collectBatteryLevel(const BatteryDecorator& battery);
+
        /**
         * @brief This method uses data stored in this class to write the data into a csv file
        */
         void writeDataToCSV(string filename);
+
+        
     
     private:
-        static field instance: DataCollector
+        DataCollector();
         float eta;
         int numTrips;
         float distanceToDest;
         float batteryLevel;
         float droneX;
         float droneY;
-        float droneZ;        
+        float droneZ;
+};
 
 #endif
