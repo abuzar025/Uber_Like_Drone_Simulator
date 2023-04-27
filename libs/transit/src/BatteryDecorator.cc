@@ -3,6 +3,9 @@
 #include "BeelineStrategy.h"
 #include "RechargeStation.h"
 
+// PLEASE REMOVE LATER
+#include <iostream>
+
 void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> scheduler) {
     double amount = dt * drainRate;
     bool withinChargingStation = false;
@@ -65,6 +68,7 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
                     if (chargeRequired > charge) {
                         recharging = true;
                         drone->GetCurrentNearestEntity()->SetAvailability(true);
+                        std::cout << "I am looking to recharge, " << chargeRequired << ", " << charge << std::endl;
                     }
                 }
             } else {
