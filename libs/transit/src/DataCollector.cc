@@ -13,12 +13,16 @@ class DataCollector() {
     }
 
     void DataCollector::collectData(const Drone& drone) {
-        float distanceToDest = Vector3.Distance(drone.position, drone.destination);
-        float droneX = drone.postion.x;
-        float droneY = drone.postion.y;
-        float droneZ = drone.postion.z;
+        distanceToDest = Vector3.Distance(drone.GetPosition(), drone.GetDestination());
+        droneX = drone.GetPosition().x;
+        droneY = drone.GetPosition().y;
+        droneZ = drone.GetPosition().z;
 
-        
+        eta = distanceToDest / drone.GetSpeed();
+    }
+
+    void DataCollector::collectBatteryLevel(const BatteryDecorator& battery) {
+        batteryLevel = battery.getCharge();
     }
 
     void writeDataToCSV(string filename) {

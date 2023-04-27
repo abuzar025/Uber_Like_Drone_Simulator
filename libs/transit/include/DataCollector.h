@@ -51,9 +51,12 @@ class DataCollector:
     
     private:
         static field instance: DataCollector
-        time_t eta;
+        float eta;
         int numTrips;
-        double distanceToDest;
-        double batteryLevel;        
+        float distanceToDest;
+        float batteryLevel;
+        float droneX;
+        float droneY;
+        float droneZ;        
 
 #endif
