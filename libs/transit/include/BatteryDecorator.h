@@ -15,6 +15,12 @@ class BatteryDecorator: public IEntityDecorator {
      */
     BatteryDecorator(IEntity* wrapped, double maxCharge, double drainRate): IEntityDecorator(wrapped), maxCharge(maxCharge), charge(maxCharge), drainRate(drainRate), recharging(false) {}
 
+    /**
+     * @brief Constructor that assigns a unique ID to the battery.
+     * Values are taken from a JsonObject
+     */
+    BatteryDecorator(IEntity* wrapped, JsonObject& obj): BatteryDecorator(wrapped, obj["maxCharge"], obj["drainRate"]) {}
+
      /**
      * @brief What to override to modify the behaviour of the surrounding IEntity
      * @param dt The time step of the update.
