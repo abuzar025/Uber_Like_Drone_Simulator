@@ -42,7 +42,7 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
     }
     if (!withinChargingStation) {
         if (charge <= 0 || IsOrWillBeMarooned()) {
-            return;
+            return; //Stop moving drone, repair drones will be sent out
         } else if (amount > charge) {
             amount = charge;
             charge = 0;
@@ -52,7 +52,7 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
     }
 
     if (recharging) {
-        if (withinChargingStation) {
+        if (!withinChargingStation) {
             if (toRechargeStation == nullptr) {
                 IEntity* closestRechargeStation = nullptr;
                 double closestRechargeStationDistance = INFINITY;
@@ -71,7 +71,9 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
                     toRechargeStation = new BeelineStrategy(GetPosition(), GetDestination());
                 }
             }
-            toRechargeStation->Move(this, amount / drainRate);
+            if (toRechargeStation != nullptr) {
+                toRechargeStation->Move(this, amount / drainRate);
+            }
         } else {
             if (getCharge() >= maxCharge) {
                 delete toRechargeStation;
@@ -90,11 +92,13 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
         if (drone != nullptr) {
             if (drone->GetCurrentNearestEntity() == nullptr) {
                 drone->GetNearestEntity(scheduler);
-                double chargeRequired = drone->GetToRobotStrategy()->GetDistance(GetPosition()) + drone->GetToFinalDestinationStrategy()->GetDistance(GetDestination());
-                chargeRequired *= drainRate / GetSpeed();
-                if (chargeRequired > charge) {
-                    recharging = true;
-                    drone->GetCurrentNearestEntity()->SetAvailability(true);
+                if (drone->GetCurrentNearestEntity() != nullptr) {
+                    double chargeRequired = drone->GetToRobotStrategy()->GetDistance(GetPosition()) + drone->GetToFinalDestinationStrategy()->GetDistance(GetDestination());
+                    chargeRequired *= drainRate / GetSpeed();
+                    if (chargeRequired > charge) {
+                        recharging = true;
+                        drone->GetCurrentNearestEntity()->SetAvailability(true);
+                    }
                 }
             } else {
                 entity->Update(amount / drainRate, scheduler);

@@ -30,9 +30,9 @@ double PathStrategy::GetDistance(Vector3 from) {
 
   for (int i = index + 1; i < path.size(); i++) {
     Vector3 betweenPath(path.at(i).at(0), path.at(i).at(1), path.at(i).at(2));
-    betweenPath.x -= path.at(i + 1).at(0);
-    betweenPath.y -= path.at(i + 1).at(1);
-    betweenPath.z -= path.at(i + 1).at(2);
+    betweenPath.x -= path.at(i - 1).at(0);
+    betweenPath.y -= path.at(i - 1).at(1);
+    betweenPath.z -= path.at(i - 1).at(2);
     result += betweenPath.Magnitude();
   }
 }
