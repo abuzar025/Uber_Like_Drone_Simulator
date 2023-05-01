@@ -26,7 +26,7 @@ class RepairDrone : public IEntity {
   /**
    * @brief Destructor
    */
-  ~RepairDrone() override = default;
+  ~RepairDrone();
 
   /**
    * @brief Gets the RepairDrone's position
@@ -104,14 +104,16 @@ class RepairDrone : public IEntity {
    */
   void SetDestination(Vector3 des_) { destination = des_; }
 
-  void RepairingDrone() *****
-
+  void Update(double dt, std::vector<IEntity*> scheduler);
 
   /**
    * @brief Rotates the RepairDrone
    * @param angle The angle by which the RepairDrone should be rotated
    */
   void Rotate(double angle);
+  void GetClosestRechargeStation(std::vector<IEntity*> scheduler);
+  float DistanceFromDrone(IEntity* entity);
+  bool BatteryInRange(IEntity* entity);
 
  private:
   
@@ -122,6 +124,9 @@ class RepairDrone : public IEntity {
   float speed;
   bool available;
   std::string strategyName;
+  IEntity* station = nullptr; // possible error
+  IStrategy* toDrone = nullptr;
+  IStrategy* toRechargeStation = nullptr;
 };
 
 #endif  // REPAIR_DRONE_H
