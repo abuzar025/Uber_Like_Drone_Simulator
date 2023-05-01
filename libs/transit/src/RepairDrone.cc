@@ -22,7 +22,6 @@ RepairDrone::RepairDrone(JsonObject& obj) : details(obj) {
 RepairDrone::~RepairDrone() {
     delete toDrone;
     delete toRechargeStation;
-    delete station;
 }
 
 void RepairDrone::Update(double dt, std::vector<IEntity*> scheduler) {
@@ -38,6 +37,7 @@ void RepairDrone::Update(double dt, std::vector<IEntity*> scheduler) {
         if (toDrone->IsCompleted()) {
             delete toDrone;
             toDrone = nullptr;
+            //TODO - Actually recharge the battery
             GetClosestRechargeStation(scheduler);
             toRechargeStation = new BeelineStrategy(position, station->GetPosition());
         }
