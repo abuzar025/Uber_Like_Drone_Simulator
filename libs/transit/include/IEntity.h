@@ -140,6 +140,12 @@ class IEntity {
   virtual void SetColor(std::string col_) {}
 
   /**
+   * @brief Sets the entity list of the entity
+   * @param entityList The new entity list of the entity
+   */
+  virtual void SetEntityList(std::vector<IEntity*>* entityList) {}
+
+  /**
    * @brief Rotate the entity.
    * @param angle The angle to rotate the entity by.
    */

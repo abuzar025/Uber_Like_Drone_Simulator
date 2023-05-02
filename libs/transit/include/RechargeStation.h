@@ -97,6 +97,12 @@ class RechargeStation: public IEntity {
      */
     void SetColor(std::string col_) { color = col_; }
 
+    /**
+     * @brief Sets the entity list of the entity
+     * @param entityList The new entity list of the entity
+     */
+    void SetEntityList(std::vector<IEntity*>* entityList_) { entityList = entityList_; }
+
     void SetRechargeRate(double rate) { rechargeRate = rate; }
 
     bool BatteryInRange(IEntity* entity);
@@ -114,6 +120,7 @@ private:
     std::string color = "None";  // None means default color
     bool available;
     double rechargeRate;
+    std::vector<IEntity*>* entityList;
 };
 
 #endif

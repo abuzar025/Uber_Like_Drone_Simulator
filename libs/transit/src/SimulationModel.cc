@@ -37,6 +37,7 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
 
   IEntity* myNewEntity = compFactory->CreateEntity(entity);
   myNewEntity->SetGraph(graph);
+  myNewEntity->SetEntityList(&entities);
 
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);
