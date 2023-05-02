@@ -30,8 +30,11 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
     }
 
     if (recharging) {
+        std::cout << "I am looking to recharge" << std::endl;
         if (!withinChargingStation) {
+            std::cout << "not within recharge station" << std::endl;
             if (toRechargeStation == nullptr) {
+                std::cout << "Seeking Recharge Station" << std::endl;
                 IEntity* closestRechargeStation = nullptr;
                 double closestRechargeStationDistance = INFINITY;
                 for (auto iter = entityList->begin(); iter != entityList->end(); iter++) {
@@ -46,6 +49,8 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
                 if (closestRechargeStation != nullptr) {
                     SetDestination(closestRechargeStation->GetPosition());
                     toRechargeStation = new BeelineStrategy(GetPosition(), GetDestination());
+                } else {
+                    std::cout << "Did not find Recharge Station" << std::endl;
                 }
             }
             if (toRechargeStation != nullptr) {
