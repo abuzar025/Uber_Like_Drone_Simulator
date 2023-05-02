@@ -23,7 +23,15 @@ void DataCollector::collectBatteryLevel(const BatteryDecorator& battery) {
     batteryLevel = battery.getCharge();
 }
 
-void DataCollector::writeDataToCSV(string filename) {
+void DataCollector::writeDataToCSV(string filename) const{
     ofstream file(filename);
+    if (!file.is_open()) {
+        cerr << "Error opening file: " << filename << '\n';
+        return;
+    }
+
+    file << "Timestamp, X Coordinate, Y Coordinate, Z Coordinate, Distance to Destination, Time to Arrival, Battery Level\n";
+    file << 0 << ',' << droneX << ',' << droneY << ',' << droneZ << ',' << distanceToDest << ',' << eta << ',' << batteryLevel << "\n";
+    file.close();
 
 }
