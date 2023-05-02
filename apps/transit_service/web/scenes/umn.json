@@ -60,7 +60,8 @@
             "rotation": [0, 0, 0, 0],
             "direction": [1,0,0],
             "speed": 50.0,
-            "offset": [0, 1.5, 0]
+            "offset": [0, 1.5, 0],
+            "rechargeRate": 2.0
     	  }
     },
     {
