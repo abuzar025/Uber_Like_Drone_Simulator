@@ -56,6 +56,7 @@ class DataCollector {
     
     private:
         DataCollector();
+        time_t clock;
         float eta;
         int numTrips;
         float distanceToDest;
