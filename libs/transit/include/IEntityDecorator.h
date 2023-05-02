@@ -109,6 +109,15 @@ class IEntityDecorator: public IEntity {
     void SetColor(std::string col_) { entity->SetColor(col_); }
 
     /**
+     * @brief Sets the entity list of this and wrapped entity
+     * @param entityList The new entity list of this and wrapped entity
+     */
+    void SetEntityList(std::vector<IEntity*>* entityList_) {
+      entityList = entityList_;
+      entity->SetEntityList(entityList_);
+    }
+
+    /**
      * @brief Rotates the wrapped entity 
      * @param angle The angle by which the wrapped entity  should be rotated
      */
@@ -128,6 +137,7 @@ class IEntityDecorator: public IEntity {
     IEntityDecorator& operator=(const IEntityDecorator& entityDecorator) = delete;
   protected:
     IEntity* entity;
+    std::vector<IEntity*>* entityList;
 
 };
 
