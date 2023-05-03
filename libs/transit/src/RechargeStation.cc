@@ -27,25 +27,15 @@ void RechargeStation::Update(double dt, std::vector<IEntity*> scheduler) {
           std::cout << "CAST" << std::endl;
           BatteryDecorator* batt = dynamic_cast<BatteryDecorator*>(entityList->at(i));
           if(BatteryInRange(batt)) {
-<<<<<<< HEAD
-            std::cout << "IN RANGE" << std::endl;
-            batt->recharge(rechargeRate);
-=======
             batt->recharge(rechargeRate * dt);
->>>>>>> refs/remotes/origin/main
           }
         }
     }
 }
 
 bool RechargeStation::BatteryInRange(IEntity* entity) {
-<<<<<<< HEAD
-  std::cout << "XDIFF - " << abs(position[0] - entity->GetPosition()[0]) << ", ZDIFF - " << abs(position[2] - entity->GetPosition()[2]) << std::endl;
-  return abs(position[0] - entity->GetPosition()[0]) <= 50.0 && abs(position[2] - entity->GetPosition()[2]) <= 50.0;
-=======
   double x = position.x - entity->GetPosition().x;
   double z = position.z - entity->GetPosition().z;
   double radius = 5.0;
   return x * x + z * z <= radius * radius;
->>>>>>> refs/remotes/origin/main
 }
