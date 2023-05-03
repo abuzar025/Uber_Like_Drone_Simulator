@@ -107,6 +107,11 @@ class RepairDrone : public IEntity {
   void Update(double dt, std::vector<IEntity*> scheduler);
 
   /**
+    * @brief Sets the entity list of the entity
+    * @param entityList The new entity list of the entity
+    */
+  void SetEntityList(std::vector<IEntity*>* entityList_) { entityList = entityList_; }
+  /**
    * @brief Rotates the RepairDrone
    * @param angle The angle by which the RepairDrone should be rotated
    */
@@ -119,14 +124,16 @@ class RepairDrone : public IEntity {
   
   JsonObject details;
   Vector3 position;
+  Vector3 home;
   Vector3 direction;
   Vector3 destination;
   float speed;
   bool available;
   std::string strategyName;
-  IEntity* station = nullptr; // possible error
+  IEntity* batt = nullptr;
   IStrategy* toDrone = nullptr;
   IStrategy* toRechargeStation = nullptr;
+  std::vector<IEntity*>* entityList;
 };
 
 #endif  // REPAIR_DRONE_H
