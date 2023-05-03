@@ -32,7 +32,7 @@ void DataCollector::writeDataToCSV(string filename) const{
     }
 
     file << "Timestamp, X Coordinate, Y Coordinate, Z Coordinate, Speed,  Distance to Destination, Time to Arrival, Battery Level\n";
-    file << (localtime(&clock)).asctime() << ',' << droneX << ',' << droneY << ',' << droneZ << ',' << droneSpeed << ',' << distanceToDest << ',' << eta << ',' << batteryLevel << "\n";
+    file << asctime(localtime(&clock)) << ',' << droneX << ',' << droneY << ',' << droneZ << ',' << droneSpeed << ',' << distanceToDest << ',' << eta << ',' << batteryLevel << "\n";
     file.close();
 
 }
