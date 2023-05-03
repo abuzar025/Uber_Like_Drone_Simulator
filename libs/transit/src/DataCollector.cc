@@ -15,6 +15,7 @@ void DataCollector::collectData(const Drone& drone) {
     droneX = drone.GetPosition().x;
     droneY = drone.GetPosition().y;
     droneZ = drone.GetPosition().z;
+    droneSpeed = drone.GetSpeed();
 
     eta = distanceToDest / drone.GetSpeed();
 }
@@ -30,8 +31,8 @@ void DataCollector::writeDataToCSV(string filename) const{
         return;
     }
 
-    file << "Timestamp, X Coordinate, Y Coordinate, Z Coordinate, Distance to Destination, Time to Arrival, Battery Level\n";
-    file << localtime(&clock) << ',' << droneX << ',' << droneY << ',' << droneZ << ',' << distanceToDest << ',' << eta << ',' << batteryLevel << "\n";
+    file << "Timestamp, X Coordinate, Y Coordinate, Z Coordinate, Speed,  Distance to Destination, Time to Arrival, Battery Level\n";
+    file << (localtime(&clock)).asctime() << ',' << droneX << ',' << droneY << ',' << droneZ << ',' << droneSpeed << ',' << distanceToDest << ',' << eta << ',' << batteryLevel << "\n";
     file.close();
 
 }

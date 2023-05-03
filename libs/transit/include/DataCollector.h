@@ -60,6 +60,7 @@ class DataCollector {
         float eta;
         int numTrips;
         float distanceToDest;
+        float droneSpeed;
         float batteryLevel;
         float droneX;
         float droneY;
