@@ -75,5 +75,5 @@ void RepairDrone::GetClosestRechargeStation(std::vector<IEntity*> scheduler) {
 }
 
 float RepairDrone::DistanceFromDrone(IEntity* entity) {
-  return sqrt(pow(abs(position[0] - entity->GetPosition()[0]), 2.0) + pow(abs(position[1] - entity->GetPosition()[1]), 2.0));
+  return sqrt(pow(abs(position[0] - entity->GetPosition()[0]), 2.0) + pow(abs(position[2] - entity->GetPosition()[2]), 2.0));
 }

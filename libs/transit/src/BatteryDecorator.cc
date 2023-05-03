@@ -83,6 +83,7 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
 
 bool BatteryDecorator::recharge(double amount) {
     charge += amount;
+    std::cout << charge << std::endl;
     if (charge >= maxCharge) {
         charge = maxCharge;
         return true;
