@@ -105,6 +105,8 @@ class RechargeStation: public IEntity {
 
     void SetRechargeRate(double rate) { rechargeRate = rate; }
 
+    double GetRadius() {return radius;}
+
     bool BatteryInRange(IEntity* entity);
     /**
      * @brief Removing the copy constructor and assignment operator
@@ -120,6 +122,7 @@ private:
     std::string color = "None";  // None means default color
     bool available;
     double rechargeRate;
+    double radius;
     std::vector<IEntity*>* entityList;
 };
 

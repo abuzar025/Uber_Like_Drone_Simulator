@@ -3,9 +3,6 @@
 #include "BeelineStrategy.h"
 #include "RechargeStation.h"
 
-// PLEASE REMOVE LATER
-#include <iostream>
-
 void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> scheduler) {
     double amount = dt * drainRate;
     bool withinChargingStation = false;
@@ -16,10 +13,8 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
             break;
         }
     }
-    std::cout << charge << std::endl;
     if (!withinChargingStation) {
         if (charge <= 0 || IsOrWillBeMarooned()) {
-            std::cout << "I am ded" << std::endl;
             return; //Stop moving drone, repair drones will be sent out
         } else if (amount > charge) {
             amount = charge;
@@ -30,16 +25,12 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
     }
 
     if (recharging) {
-        std::cout << "I am looking to recharge" << std::endl;
         if (!withinChargingStation) {
-            std::cout << "not within recharge station" << std::endl;
             if (toRechargeStation == nullptr) {
-                std::cout << "Seeking Recharge Station" << std::endl;
                 if (targetRechargeStation != nullptr) {
                     SetDestination(targetRechargeStation->GetPosition());
                     toRechargeStation = new BeelineStrategy(GetPosition(), targetRechargeStation->GetPosition());
                 } else {
-                    std::cout << "Did not find Recharge Station" << std::endl;
                 }
             }
             if (toRechargeStation != nullptr) {
@@ -61,34 +52,35 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
                 if (drone->GetCurrentNearestEntity() != nullptr) {
                     Vector3 finalDestination = drone->GetCurrentNearestEntity()->GetDestination();
                     double closestRechargeStationDistance = INFINITY;
-                    IEntity* closestRechargeStation = nullptr;
+                    RechargeStation* closestRechargeStation = nullptr;
                     for (auto iter = entityList->begin(); iter != entityList->end(); iter++) {
-                        if (dynamic_cast<RechargeStation*>(*iter) != nullptr) {
-                            double distance = (*iter)->GetPosition().Distance(finalDestination);
+                        RechargeStation* station = dynamic_cast<RechargeStation*>(*iter);
+                        if (station != nullptr) {
+                            double distance = station->GetPosition().Distance(finalDestination);
                             if (distance < closestRechargeStationDistance) {
                                 closestRechargeStationDistance = distance;
-                                closestRechargeStation = *iter;
+                                closestRechargeStation = station;
                             }
                         }
                     }
                     double additionalDistance = 0;
-                    if (closestRechargeStation != nullptr && closestRechargeStationDistance >= 5) {
-                        additionalDistance = closestRechargeStationDistance - 5;
+                    if (closestRechargeStation != nullptr && closestRechargeStationDistance >= closestRechargeStation->GetRadius()) {
+                        additionalDistance = closestRechargeStationDistance - closestRechargeStation->GetRadius();
                     }
                     double chargeRequired = drone->GetToRobotStrategy()->GetDistance(GetPosition()) + drone->GetToFinalDestinationStrategy()->GetDistance(GetDestination()) + additionalDistance;
                     chargeRequired *= drainRate / GetSpeed();
-                    std::cout << "additionalDistance: " << additionalDistance << std::endl;
                     if (chargeRequired > charge) {
-                        double testDistance = (charge * GetSpeed() / drainRate) + 5;
+                        double testDistance = (charge * GetSpeed() / drainRate);
                         closestRechargeStationDistance = INFINITY;
                         closestRechargeStation = nullptr;
                         for (auto iter = entityList->begin(); iter != entityList->end(); iter++) {
-                            if (dynamic_cast<RechargeStation*>(*iter) != nullptr) {
-                                double distance = (*iter)->GetPosition().Distance(GetDestination());
-                                double distanceFromBattery = (*iter)->GetPosition().Distance(GetPosition());
-                                if (distance < closestRechargeStationDistance && distanceFromBattery < testDistance) {
+                            RechargeStation* station = dynamic_cast<RechargeStation*>(*iter);
+                            if (station != nullptr) {
+                                double distance = station->GetPosition().Distance(GetDestination());
+                                double distanceFromBattery = station->GetPosition().Distance(GetPosition());
+                                if (distance < closestRechargeStationDistance && distanceFromBattery < testDistance + station->GetRadius()) {
                                     closestRechargeStationDistance = distance;
-                                    closestRechargeStation = *iter;
+                                    closestRechargeStation = station;
                                 }
                             }
                         }
@@ -98,21 +90,21 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
                         }
                         drone->CancelDelivery();
                         drone->GetCurrentNearestEntity()->SetAvailability(true);
-                        std::cout << "I am looking to recharge, " << chargeRequired << ", " << charge << std::endl;
                     }
                 } else {
                     double closestRechargeStationDistance = INFINITY;
-                    IEntity* closestRechargeStation = nullptr;
+                    RechargeStation* closestRechargeStation = nullptr;
                     for (auto iter = entityList->begin(); iter != entityList->end(); iter++) {
-                        if (dynamic_cast<RechargeStation*>(*iter) != nullptr) {
-                            double distance = (*iter)->GetPosition().Distance(GetPosition());
+                        RechargeStation* station = dynamic_cast<RechargeStation*>(*iter);
+                        if (station != nullptr) {
+                            double distance = (station)->GetPosition().Distance(GetPosition());
                             if (distance < closestRechargeStationDistance) {
                                 closestRechargeStationDistance = distance;
-                                closestRechargeStation = *iter;
+                                closestRechargeStation = station;
                             }
                         }
                     }
-                    if ((closestRechargeStationDistance - 5) * drainRate / GetSpeed() > charge - 3) {
+                    if (closestRechargeStation != nullptr && (closestRechargeStationDistance - closestRechargeStation->GetRadius()) * drainRate / GetSpeed() > charge - 3) {
                         targetRechargeStation = closestRechargeStation;
                         recharging = true;
                     }
@@ -127,7 +119,6 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
 
 bool BatteryDecorator::recharge(double amount) {
     charge += amount;
-    std::cout << charge << std::endl;
     if (charge >= maxCharge) {
         charge = maxCharge;
         return true;
@@ -136,10 +127,9 @@ bool BatteryDecorator::recharge(double amount) {
 }
 
 bool BatteryDecorator::IsOrWillBeMarooned() {
-    if (toRechargeStation != nullptr) {
-        std::cout << "Target Position: " << targetRechargeStation->GetPosition().x << ", " << targetRechargeStation->GetPosition().y << ", " << targetRechargeStation->GetPosition().z << std::endl;
-        std::cout << "Charge Required: " << (toRechargeStation->GetDistance(GetPosition()) - 5) * drainRate / GetSpeed();
-        return (toRechargeStation->GetDistance(GetPosition()) - 5) * drainRate / GetSpeed() > charge;
+    RechargeStation* target = dynamic_cast<RechargeStation*>(targetRechargeStation);
+    if (toRechargeStation != nullptr && target != nullptr) {
+        return (toRechargeStation->GetDistance(GetPosition()) - target->GetRadius()) * drainRate / GetSpeed() > charge;
     }
     return charge <= 0;
 }
