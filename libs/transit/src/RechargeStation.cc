@@ -11,21 +11,20 @@ RechargeStation::RechargeStation(JsonObject& obj) : details(obj) {
   JsonArray dir(obj["direction"]);
   direction = {dir[0], dir[1], dir[2]};
 
-  rechargeRate = obj["rechargeRate"]; 
+  rechargeRate = obj["rechargeRate"];
 
-  available = true; 
+  available = true;
 }
 
-RechargeStation::~RechargeStation() {
-
-}
+RechargeStation::~RechargeStation() {}
 
 void RechargeStation::Update(double dt, std::vector<IEntity*> scheduler) {
-    for(int i = 0; i < entityList->size(); i++) {
-        if(dynamic_cast<BatteryDecorator*>(entityList->at(i)) != nullptr) { //Checks that the object is a Battery
+    for (int i = 0; i < entityList->size(); i++) {
+        if (dynamic_cast<BatteryDecorator*>(entityList->at(i)) != nullptr) {
           std::cout << "CAST" << std::endl;
-          BatteryDecorator* batt = dynamic_cast<BatteryDecorator*>(entityList->at(i));
-          if(BatteryInRange(batt)) {
+          BatteryDecorator* batt =
+            dynamic_cast<BatteryDecorator*>(entityList->at(i));
+          if (BatteryInRange(batt)) {
             batt->recharge(rechargeRate * dt);
           }
         }
