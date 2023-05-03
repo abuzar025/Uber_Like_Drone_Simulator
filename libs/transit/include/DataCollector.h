@@ -50,15 +50,17 @@ class DataCollector {
        /**
         * @brief This method uses data stored in this class to write the data into a csv file
        */
-        void writeDataToCSV(string filename);
+        void writeDataToCSV(string filename) const;
 
         
     
     private:
         DataCollector();
+        time_t clock;
         float eta;
         int numTrips;
         float distanceToDest;
+        float droneSpeed;
         float batteryLevel;
         float droneX;
         float droneY;

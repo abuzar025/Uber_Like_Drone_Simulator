@@ -65,6 +65,12 @@ class IEntityDecorator: public IEntity {
     bool GetAvailability() const { return entity->GetAvailability(); }
 
     /**
+     * @brief Sets the availability of the wrapped entity.
+     * @param choice The desired availability of the wrapped entity.
+     */
+    void SetAvailability(bool choice) { entity->SetAvailability(choice); }
+
+    /**
      * @brief Updates the wrapped entity 's position
      * @param dt Delta time
      * @param scheduler Vector containing all the entities in the system

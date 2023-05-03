@@ -142,6 +142,11 @@ class Drone : public IEntity {
   }
 
   /**
+   * @brief Cancels the current robot delivery
+   */
+  void CancelDelivery();
+
+  /**
    * @brief Removing the copy constructor and assignment operator
    * so that drones cannot be copied.
    */
