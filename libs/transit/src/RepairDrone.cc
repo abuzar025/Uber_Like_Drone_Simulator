@@ -37,6 +37,7 @@ void RepairDrone::Update(double dt, std::vector<IEntity*> scheduler) {
         toDrone->Move(this, dt);
         if (toDrone->IsCompleted()) {
             if(batt->recharge(rechargeRate * dt)) {
+                std::cout << "DONE" << std::endl;
                 delete toDrone;
                 toDrone = nullptr;
                 toRechargeStation = new BeelineStrategy(position, home);

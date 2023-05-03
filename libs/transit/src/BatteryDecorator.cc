@@ -23,7 +23,7 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
             charge -= amount;
         }
     }
-
+    std::cout << charge << std::endl;
     if (recharging) {
         if (!withinChargingStation) {
             if (toRechargeStation == nullptr) {
