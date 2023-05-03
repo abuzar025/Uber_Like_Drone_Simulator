@@ -3,7 +3,7 @@
 
 using namespace std;
 
-DataCollector::DataCollector() {};
+DataCollector::DataCollector() {time_t clock = time(NULL);};
 
 DataCollector& DataCollector::getInstance() {
     static DataCollector instance;
@@ -31,8 +31,7 @@ void DataCollector::writeDataToCSV(string filename) const{
     }
 
     file << "Timestamp, X Coordinate, Y Coordinate, Z Coordinate, Distance to Destination, Time to Arrival, Battery Level\n";
-    /* Line not functional -> clock not implemented correctly */
-    // file << clock.now() << ',' << droneX << ',' << droneY << ',' << droneZ << ',' << distanceToDest << ',' << eta << ',' << batteryLevel << "\n";
+    file << localtime(&clock) << ',' << droneX << ',' << droneY << ',' << droneZ << ',' << distanceToDest << ',' << eta << ',' << batteryLevel << "\n";
     file.close();
 
 }
