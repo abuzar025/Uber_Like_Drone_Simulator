@@ -119,3 +119,19 @@ void Drone::Jump(double height) {
     }
   }
 }
+
+void Drone::CancelDelivery() {
+  available = true;
+  if (nearestEntity != nullptr) {
+    nearestEntity->SetAvailability(true);
+  }
+  pickedUp = false;
+  if (toRobot != nullptr) {
+    delete toRobot;
+    toRobot = nullptr;
+  }
+  if (toFinalDestination != nullptr) {
+    delete toFinalDestination;
+    toFinalDestination = nullptr;
+  }
+}

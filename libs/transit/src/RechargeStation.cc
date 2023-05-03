@@ -33,7 +33,7 @@ void RechargeStation::Update(double dt, std::vector<IEntity*> scheduler) {
 
 bool RechargeStation::BatteryInRange(IEntity* entity) {
   double x = position.x - entity->GetPosition().x;
-  double z = position.x - entity->GetPosition().z;
+  double z = position.z - entity->GetPosition().z;
   double radius = 5.0;
   return x * x + z * z <= radius * radius;
 }
