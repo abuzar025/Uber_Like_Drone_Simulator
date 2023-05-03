@@ -57,7 +57,8 @@ class RepairDrone : public IEntity {
    * @brief Gets the RepairDrone's details
    * @return The RepairDrone's details
    */
-  JsonObject GetDetails() const override;
+  JsonObject GetDetails() const { return details; }
+
 
   /**
    * @brief Gets the RepairDrone's speed
@@ -80,12 +81,6 @@ class RepairDrone : public IEntity {
   void SetStrategyName(std::string strategyName_) {
     strategyName = strategyName_;
   }
-
-  /**
-   * @brief Sets the RepairDrone's availability
-   * @param choice The new availability of the RepairDrone
-   */
-  void SetAvailability(bool choice);
 
   /**
    * @brief Sets the RepairDrone's position
@@ -116,7 +111,12 @@ class RepairDrone : public IEntity {
    * @brief Rotates the RepairDrone
    * @param angle The angle by which the RepairDrone should be rotated
    */
-  void Rotate(double angle);
+  void Rotate(double angle) {
+      Vector3 dirTmp = direction;
+      direction.x = dirTmp.x * std::cos(angle) - dirTmp.z * std::sin(angle);
+      direction.z = dirTmp.x * std::sin(angle) + dirTmp.z * std::cos(angle);
+  }
+
   void GetClosestRechargeStation(std::vector<IEntity*> scheduler);
   float DistanceFromDrone(IEntity* entity);
   bool BatteryInRange(IEntity* entity);

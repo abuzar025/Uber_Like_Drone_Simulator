@@ -10,7 +10,7 @@
 /**
  *@brief Repair drone factory to produce Repair drone.
  **/
-class RepairDroneFactory : IEntityFactory {
+class RepairDroneFactory : public IEntityFactory {
     public:
         /**
         * @brief Destructor for RepairDroneFactory class.

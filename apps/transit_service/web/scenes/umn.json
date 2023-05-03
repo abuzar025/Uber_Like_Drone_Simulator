@@ -66,6 +66,22 @@
     	  }
     },
     {
+        "command": "CreateEntity",
+      	"params": {
+            "type": "repairdrone",
+            "name": "Repair Drone",
+            "mesh": "assets/model/drone.glb",
+            "position": [498.292, 550, -228.623],
+            "scale": [0.025, 0.025, 0.025],
+            "rotation": [0, 0, 0, 0],
+            "direction": [1,0,0],
+            "speed": 50.0,
+            "offset": [0, 1.5, 0],
+            "rechargeRate": 2.0,
+            "radius": 5.0
+    	  }
+    },
+    {
         "command": "SetScene",
         "params": {
             "type": "scene",
