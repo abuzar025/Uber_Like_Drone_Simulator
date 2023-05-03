@@ -7,6 +7,7 @@
 #include "math/vector3.h"
 #include "util/json.h"
 #include "Drone.h"
+#include "BatteryDecorator.h"
 
 /**
  * @class RepairDrone
@@ -129,8 +130,9 @@ class RepairDrone : public IEntity {
   Vector3 destination;
   float speed;
   bool available;
+  double rechargeRate;
   std::string strategyName;
-  IEntity* batt = nullptr;
+  BatteryDecorator* batt = nullptr;
   IStrategy* toDrone = nullptr;
   IStrategy* toRechargeStation = nullptr;
   std::vector<IEntity*>* entityList;
