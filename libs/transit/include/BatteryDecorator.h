@@ -41,6 +41,7 @@ class BatteryDecorator: public IEntityDecorator {
     double charge;
     bool recharging;
     IStrategy* toRechargeStation = nullptr;
+    IEntity* targetRechargeStation = nullptr;
 };
 
 #endif
