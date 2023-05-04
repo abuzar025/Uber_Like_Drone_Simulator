@@ -27,6 +27,31 @@ RepairDrone::~RepairDrone() {
 
 void RepairDrone::Update(double dt, std::vector<IEntity*> scheduler) {
     // Look through the scheduler and try to find drones that are dead
+    if (toDrone == nullptr || !toDrone->IsCompleted()) {
+        BatteryDecorator* closestBattery = nullptr;
+        double closestDistance = INFINITY;
+        for (int i = 0; i < entityList->size(); i++) {
+            BatteryDecorator* tempbatt = dynamic_cast<BatteryDecorator*>(entityList->at(i));
+            if (tempbatt != nullptr) {  //Checks that the object is a Battery
+                if (batt->IsOrWillBeMarooned()) {
+                    double distanceComparison = tempbatt->GetPosition().Distance(position);
+                    if (distanceComparison < closestDistance) {
+                        closestBattery = tempbatt;
+                    }
+                }
+            }
+        }
+        if (closestBattery != nullptr && closestBattery != batt) {
+            batt = closestBattery;
+            if (toDrone != nullptr) delete toDrone;
+            if (toRechargeStation != nullptr) {
+                delete toRechargeStation;
+                toRechargeStation = nullptr;
+            }
+            destination = batt->GetPosition();
+            toDrone = new BeelineStrategy(position, destination);
+        }
+    }
     if (toRechargeStation) {
         toRechargeStation->Move(this, dt);
         if (toRechargeStation->IsCompleted()) {
@@ -41,17 +66,6 @@ void RepairDrone::Update(double dt, std::vector<IEntity*> scheduler) {
                 delete toDrone;
                 toDrone = nullptr;
                 toRechargeStation = new BeelineStrategy(position, home);
-            }
-        }
-    } else {
-        for (int i = 0; i < entityList->size(); i++) {
-            if (dynamic_cast<BatteryDecorator*>(entityList->at(i)) != nullptr) {  //Checks that the object is a Battery
-                batt = dynamic_cast<BatteryDecorator*>(entityList->at(i));
-                if (batt->IsOrWillBeMarooned()) {
-                    destination = batt->GetPosition();
-                    toDrone = new BeelineStrategy(position, destination);
-                    toRechargeStation = nullptr;
-                }
             }
         }
     }

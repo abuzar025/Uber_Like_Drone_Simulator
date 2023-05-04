@@ -3,6 +3,10 @@
 #include "BeelineStrategy.h"
 #include "RechargeStation.h"
 
+BatteryDecorator::~BatteryDecorator() {
+    if (toRechargeStation != nullptr) delete toRechargeStation;
+}
+
 void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> scheduler) {
     double amount = dt * drainRate;
     bool withinChargingStation = false;

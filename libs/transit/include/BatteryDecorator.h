@@ -23,6 +23,11 @@ class BatteryDecorator: public IEntityDecorator {
     BatteryDecorator(IEntity* wrapped, JsonObject& obj):
     BatteryDecorator(wrapped, obj["maxCharge"], obj["drainRate"]) {}
 
+    /**
+     * @brief Destructor
+     */
+    ~BatteryDecorator();
+
      /**
      * @brief What to override to modify the behaviour of the surrounding IEntity
      * @param dt The time step of the update.
