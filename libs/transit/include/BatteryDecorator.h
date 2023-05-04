@@ -14,7 +14,7 @@ class BatteryDecorator: public IEntityDecorator {
      * @brief Constructor that assigns a unique ID to the battery.
      */
     BatteryDecorator(IEntity* wrapped, double maxCharge, double drainRate):
-    IEntityDecorator(wrapped), maxCharge(maxCharge), charge(maxCharge), drainRate(drainRate), recharging(false) {}
+    IEntityDecorator(wrapped), maxCharge(maxCharge), charge(maxCharge), drainRate(drainRate), recharging(false), completelyDrained(true) {}
 
     /**
      * @brief Constructor that assigns a unique ID to the battery.
@@ -42,6 +42,7 @@ class BatteryDecorator: public IEntityDecorator {
  private:
     double charge;
     bool recharging;
+    bool completelyDrained;
     IStrategy* toRechargeStation = nullptr;
     IEntity* targetRechargeStation = nullptr;
 };
