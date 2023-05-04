@@ -66,7 +66,13 @@ void RepairDrone::Update(double dt, std::vector<IEntity*> scheduler) {
                 delete toDrone;
                 toDrone = nullptr;
                 toRechargeStation = new BeelineStrategy(position, home);
+                batt = nullptr;
             }
+        } else if (!batt->IsOrWillBeMarooned()) {
+            delete toDrone;
+            toDrone = nullptr;
+            toRechargeStation = new BeelineStrategy(position, home);
+            batt = nullptr;
         }
     }
 }
