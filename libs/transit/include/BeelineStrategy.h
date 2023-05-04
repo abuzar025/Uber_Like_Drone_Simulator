@@ -32,7 +32,7 @@ class BeelineStrategy : public IStrategy {
    * @return True if complete, false if not complete
    */
   bool IsCompleted();
-  
+
   /**
    * @brief Get the distance left to travel
    * 

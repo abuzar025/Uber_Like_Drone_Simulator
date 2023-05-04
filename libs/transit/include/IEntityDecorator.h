@@ -9,7 +9,7 @@
  * and provides the basic functionality of an entity.
 */ 
 class IEntityDecorator: public IEntity {
-  public:
+ public:
     /**
      * @brief Constructor that assigns a unique ID to the entity.
      */
@@ -141,10 +141,10 @@ class IEntityDecorator: public IEntity {
      */
     IEntityDecorator(const IEntityDecorator& entityDecorator) = delete;
     IEntityDecorator& operator=(const IEntityDecorator& entityDecorator) = delete;
-  protected:
+
+ protected:
     IEntity* entity;
     std::vector<IEntity*>* entityList;
-
 };
 
 #endif

@@ -11,7 +11,7 @@
  *@brief Recharge Station Factory to produce Recharge Stations.
  **/
 class RechargeStationFactory : public IEntityFactory {
-    public:
+ public:
         /**
         * @brief Destructor for RechargeStationFactory class.
         **/

@@ -19,9 +19,7 @@ using namespace std;
  */
 
 class DataCollector {
-
-    public:
-
+ public:
         static DataCollector& getInstance();
 
        /**
@@ -52,9 +50,7 @@ class DataCollector {
        */
         void writeDataToCSV(string filename) const;
 
-        
-    
-    private:
+ private:
         DataCollector();
         time_t clock;
         float eta;

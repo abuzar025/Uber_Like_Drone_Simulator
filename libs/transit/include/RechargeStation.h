@@ -10,7 +10,7 @@
  */
 
 class RechargeStation: public IEntity {
-  public:
+ public:
     /**
      * @brief RechargeStations are created with a name
      * @param obj JSON object containing the Recharge Station's information
@@ -115,7 +115,7 @@ class RechargeStation: public IEntity {
     RechargeStation(const RechargeStation& drone) = delete;
     RechargeStation& operator=(const RechargeStation& drone) = delete;
 
-private:
+ private:
     JsonObject details;
     Vector3 position;
     Vector3 direction;

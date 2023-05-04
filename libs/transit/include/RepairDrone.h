@@ -122,7 +122,6 @@ class RepairDrone : public IEntity {
   bool BatteryInRange(IEntity* entity);
 
  private:
-  
   JsonObject details;
   Vector3 position;
   Vector3 home;

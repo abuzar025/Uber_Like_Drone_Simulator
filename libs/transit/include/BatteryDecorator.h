@@ -9,17 +9,19 @@
  * modify the behavior of an IEntity object by adding a battery to it.
  */
 class BatteryDecorator: public IEntityDecorator {
-  public:
+ public:
     /**
      * @brief Constructor that assigns a unique ID to the battery.
      */
-    BatteryDecorator(IEntity* wrapped, double maxCharge, double drainRate): IEntityDecorator(wrapped), maxCharge(maxCharge), charge(maxCharge), drainRate(drainRate), recharging(false) {}
+    BatteryDecorator(IEntity* wrapped, double maxCharge, double drainRate):
+    IEntityDecorator(wrapped), maxCharge(maxCharge), charge(maxCharge), drainRate(drainRate), recharging(false) {}
 
     /**
      * @brief Constructor that assigns a unique ID to the battery.
      * Values are taken from a JsonObject
      */
-    BatteryDecorator(IEntity* wrapped, JsonObject& obj): BatteryDecorator(wrapped, obj["maxCharge"], obj["drainRate"]) {}
+    BatteryDecorator(IEntity* wrapped, JsonObject& obj):
+    BatteryDecorator(wrapped, obj["maxCharge"], obj["drainRate"]) {}
 
      /**
      * @brief What to override to modify the behaviour of the surrounding IEntity
@@ -37,7 +39,7 @@ class BatteryDecorator: public IEntityDecorator {
     const double maxCharge;
     const double drainRate;
 
-  private:
+ private:
     double charge;
     bool recharging;
     IStrategy* toRechargeStation = nullptr;
