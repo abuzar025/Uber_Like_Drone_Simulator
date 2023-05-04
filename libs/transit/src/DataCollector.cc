@@ -3,7 +3,7 @@
 
 using namespace std;
 
-DataCollector::DataCollector() {time_t clock = time(NULL);};
+DataCollector::DataCollector() {time_t clock = time(NULL);}
 
 DataCollector& DataCollector::getInstance() {
     static DataCollector instance;
@@ -24,7 +24,7 @@ void DataCollector::collectBatteryLevel(const BatteryDecorator& battery) {
     batteryLevel = battery.getCharge();
 }
 
-void DataCollector::writeDataToCSV(string filename) const{
+void DataCollector::writeDataToCSV(string filename) const {
     ofstream file(filename);
     if (!file.is_open()) {
         cerr << "Error opening file: " << filename << '\n';
@@ -34,5 +34,4 @@ void DataCollector::writeDataToCSV(string filename) const{
     file << "Timestamp, X Coordinate, Y Coordinate, Z Coordinate, Speed,  Distance to Destination, Time to Arrival, Battery Level\n";
     file << asctime(localtime(&clock)) << ',' << droneX << ',' << droneY << ',' << droneZ << ',' << droneSpeed << ',' << distanceToDest << ',' << eta << ',' << batteryLevel << "\n";
     file.close();
-
 }

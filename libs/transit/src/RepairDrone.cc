@@ -15,7 +15,7 @@ RepairDrone::RepairDrone(JsonObject& obj) : details(obj) {
   direction = {dir[0], dir[1], dir[2]};
 
   speed = obj["speed"];
-  rechargeRate = obj["rechargeRate"]; 
+  rechargeRate = obj["rechargeRate"];
 
   available = true;
 }
@@ -27,16 +27,16 @@ RepairDrone::~RepairDrone() {
 
 void RepairDrone::Update(double dt, std::vector<IEntity*> scheduler) {
     // Look through the scheduler and try to find drones that are dead
-    if(toRechargeStation) {
+    if (toRechargeStation) {
         toRechargeStation->Move(this, dt);
         if (toRechargeStation->IsCompleted()) {
             delete toRechargeStation;
             toRechargeStation = nullptr;
         }
-    } else if(toDrone) {
+    } else if (toDrone) {
         toDrone->Move(this, dt);
         if (toDrone->IsCompleted()) {
-            if(batt->recharge(rechargeRate * dt)) {
+            if (batt->recharge(rechargeRate * dt)) {
                 std::cout << "DONE" << std::endl;
                 delete toDrone;
                 toDrone = nullptr;
@@ -44,10 +44,10 @@ void RepairDrone::Update(double dt, std::vector<IEntity*> scheduler) {
             }
         }
     } else {
-        for(int i = 0; i < entityList->size(); i++) {
-            if(dynamic_cast<BatteryDecorator*>(entityList->at(i)) != nullptr) { //Checks that the object is a Battery
+        for (int i = 0; i < entityList->size(); i++) {
+            if (dynamic_cast<BatteryDecorator*>(entityList->at(i)) != nullptr) {  //Checks that the object is a Battery
                 batt = dynamic_cast<BatteryDecorator*>(entityList->at(i));
-                if(batt->IsOrWillBeMarooned()) {
+                if (batt->IsOrWillBeMarooned()) {
                     destination = batt->GetPosition();
                     toDrone = new BeelineStrategy(position, destination);
                     toRechargeStation = nullptr;
@@ -55,4 +55,4 @@ void RepairDrone::Update(double dt, std::vector<IEntity*> scheduler) {
             }
         }
     }
-} 
+}

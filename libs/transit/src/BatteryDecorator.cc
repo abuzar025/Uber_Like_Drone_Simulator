@@ -15,7 +15,7 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
     }
     if (!withinChargingStation) {
         if (charge <= 0 || IsOrWillBeMarooned()) {
-            return; //Stop moving drone, repair drones will be sent out
+            return;  //Stop moving drone, repair drones will be sent out
         } else if (amount > charge) {
             amount = charge;
             charge = 0;
@@ -114,7 +114,6 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
             }
         }
     }
-    
 }
 
 bool BatteryDecorator::recharge(double amount) {
