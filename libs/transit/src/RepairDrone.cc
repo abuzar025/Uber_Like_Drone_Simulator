@@ -32,7 +32,7 @@ void RepairDrone::Update(double dt, std::vector<IEntity*> scheduler) {
         double closestDistance = INFINITY;
         for (int i = 0; i < entityList->size(); i++) {
             BatteryDecorator* tempbatt = dynamic_cast<BatteryDecorator*>(entityList->at(i));
-            if (tempbatt != nullptr) {  //Checks that the object is a Battery
+            if (tempbatt != nullptr) {
                 if (tempbatt->IsOrWillBeMarooned()) {
                     double distanceComparison = tempbatt->GetPosition().Distance(position);
                     if (distanceComparison < closestDistance) {

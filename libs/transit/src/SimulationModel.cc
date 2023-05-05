@@ -36,8 +36,8 @@ SimulationModel::~SimulationModel() {
 
 void SimulationModel::CreateEntity(JsonObject& entity) {
   std::string type = entity["type"];
-  //Technically, position isn't necessary
-  //Name is necessary unless you are using Decorators
+  // Technically, position isn't necessary
+  // Name is necessary unless you are using Decorators
   std::cout << "Created Entity of type " << type;
   if (entity.Contains("name") && entity.Contains("position")) {
     std::string name = entity["name"];
