@@ -47,6 +47,7 @@ class DecoratorFactory : public IEntityFactory {
    * @return If this factory should make the new entity
    **/
   virtual bool ShouldMakeNewEntity(JsonObject& entity) = 0;
+
  private:
   CompositeFactory* compositeFactory;
 };

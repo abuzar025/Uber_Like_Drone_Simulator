@@ -15,7 +15,6 @@ DataCollector& DataCollector::getInstance() {
 }
 
 void DataCollector::collectData(IEntity* entity) {
-
     DataEntry& entry = entries[entity->GetId()];
 
     time_t clock;
