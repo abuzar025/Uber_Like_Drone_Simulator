@@ -70,7 +70,12 @@ void DataCollector::OpenCSV(IEntity* entity) {
     }
     std::string name = nameDetails["name"];
 
-    std::string filename = "entity_";
+    time_t clock;
+    time(&clock);
+
+    std::string filename = asctime(localtime(&clock));
+    filename = currentTime.substr(0, 24);
+    filename.append("_entity_");
     filename.append(to_string(entity->GetId()));
     filename.append("_");
     filename.append(name);
