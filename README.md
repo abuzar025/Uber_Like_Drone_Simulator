@@ -72,4 +72,5 @@ Everytime a new simulation is run a new CSV file with the current timestamp is c
 
 # Sprint retrospective
 
+
 The project sprint was a success, and we were able to complete our project within the given time frame. We had a team of 4 members, and each one of us contributed equally to the project. We had regular meetings and communicated well with each other throughout the sprint. We ensured to make time for regular meetings and communication to stay on track with our tasks and deliverables. At the end of the sprint, we feel proud of what we have accomplished, including completing all the project requirements, testing thoroughly, and delivering a high-quality product. However, we also identified some areas for improvement, such as better time management, more efficient communication, and more extensive documentation. 
