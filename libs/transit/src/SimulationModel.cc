@@ -34,9 +34,15 @@ SimulationModel::~SimulationModel() {
 
 void SimulationModel::CreateEntity(JsonObject& entity) {
   std::string type = entity["type"];
-  std::string name = entity["name"];
-  JsonArray position = entity["position"];
-  std::cout << name << ": " << position << std::endl;
+  //Technically, position isn't necessary
+  //Name is necessary unless you are using Decorators
+  std::cout << "Created Entity of type " << type;
+  if (entity.Contains("name") && entity.Contains("position")) {
+    std::string name = entity["name"];
+    JsonArray position = entity["position"];
+    std::cout << ", name " << name << ", and position " << position;
+  }
+  std::cout << std::endl;
 
   IEntity* myNewEntity = compFactory->CreateEntity(entity);
   myNewEntity->SetGraph(graph);
