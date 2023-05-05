@@ -6,6 +6,7 @@
 #include "HelicopterFactory.h"
 #include "RechargeStationFactory.h"
 #include "RepairDroneFactory.h"
+#include "BatteryDecoratorFactory.h"
 
 SimulationModel::SimulationModel(IController& controller)
     : controller(controller) {
@@ -14,8 +15,9 @@ SimulationModel::SimulationModel(IController& controller)
   AddFactory(new RobotFactory());
   AddFactory(new HumanFactory());
   AddFactory(new HelicopterFactory());
-  // AddFactory(new RechargeStationFactory());
+  AddFactory(new RechargeStationFactory());
   AddFactory(new RepairDroneFactory());
+  AddFactory(new BatteryDecoratorFactory(compFactory));
 }
 
 SimulationModel::~SimulationModel() {
