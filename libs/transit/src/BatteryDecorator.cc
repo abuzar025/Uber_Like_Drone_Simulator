@@ -29,7 +29,6 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
         completelyDrained = true;
         return; //Stop moving drone, repair drones will be sent out
     }
-    std::cout << charge << std::endl;
     if (recharging) {
         if (!withinChargingStation) {
             if (toRechargeStation == nullptr) {

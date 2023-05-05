@@ -3,13 +3,6 @@
 
 using namespace std;
 
-class DataEntry {
- public:
-  double collectionPeriod;
-  double timeSinceLastCollection = 0;
-  ofstream* output;
-};
-
 DataCollector::~DataCollector() {
     CloseCSV();
 }
@@ -35,8 +28,10 @@ void DataCollector::collectData(IEntity* entity) {
     float speed = entity->GetSpeed();
 
     float eta = distanceToDest / speed;
+    std::string currentTime = asctime(localtime(&clock));
+    currentTime = currentTime.substr(0, 24);
 
-    (*(entry.output)) << asctime(localtime(&clock)) << ',' << x << ',' << y << ',' << z << ',' << speed << ',' << distanceToDest << ',' << eta;
+    (*(entry.output)) << currentTime << ',' << x << ',' << y << ',' << z << ',' << speed << ',' << distanceToDest << ',' << eta;
 
     BatteryDecorator* battery = dynamic_cast<BatteryDecorator*>(entity);
     if (battery != nullptr) {
@@ -64,6 +59,7 @@ void DataCollector::OnTick(std::vector<IEntity*>& entities, double dt) {
 }
 
 void DataCollector::OpenCSV(IEntity* entity) {
+    std::cout << "opening csv" << std::endl;
     JsonObject details = entity->GetDetails();
     JsonObject nameDetails = details;
 
@@ -75,7 +71,11 @@ void DataCollector::OpenCSV(IEntity* entity) {
     }
     std::string name = nameDetails["name"];
 
-    std::string filename = ("entity_" + entity->GetId()) + "_" + name + ".csv";
+    std::string filename = "entity_";
+    filename.append(to_string(entity->GetId()));
+    filename.append("_");
+    filename.append(name);
+    filename.append(".csv");
 
     ofstream* file = new ofstream(filename);
     if (!file->is_open()) {
@@ -97,9 +97,11 @@ void DataCollector::OpenCSV(IEntity* entity) {
 }
 
 void DataCollector::CloseCSV() {
+    std::cout << "closing csvs" << std::endl;
     for (auto iter = entries.begin(); iter != entries.end(); iter++) {
         iter->second.output->close();
         delete iter->second.output;
+        std::cout << "csv closed" << std::endl;
     }
     entries.clear();
 }

@@ -3,6 +3,7 @@
 #include "WebServer.h"
 #include "SimulationModel.h"
 #include "routing_api.h"
+#include "DataCollector.h"
 
 //--------------------  Controller ----------------------------
 
@@ -14,6 +15,10 @@ public:
         routing::RoutingAPI api;
         routing::IGraph* graph = api.LoadFromFile("libs/routing/data/umn.osm");
         model.SetGraph(graph);
+    }
+
+    ~TransitService() {
+        DataCollector::getInstance().CloseCSV();
     }
 
     /// Handles specific commands from the web server

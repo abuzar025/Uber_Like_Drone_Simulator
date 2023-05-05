@@ -17,7 +17,12 @@ using namespace std;
  * @class DataEntry
  * @brief INTERNAL DATA; DO NOT USE OUTSIDE DataCollector
  */
-class DataEntry;
+class DataEntry {
+ public:
+  double collectionPeriod;
+  double timeSinceLastCollection = 0;
+  ofstream* output;
+};
 
 /**
  * @class DataCollector

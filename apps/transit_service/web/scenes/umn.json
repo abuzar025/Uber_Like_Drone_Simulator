@@ -5,8 +5,8 @@
       	    "type": "battery",
             "maxCharge": 100,
             "drainRate": 1,
-            "dataCollectionPeriod": 10,
             "entity": {
+                "dataCollectionPeriod": 10,
                 "type": "drone",
                 "name": "Drone",
       	        "mesh": "assets/model/drone.glb",
