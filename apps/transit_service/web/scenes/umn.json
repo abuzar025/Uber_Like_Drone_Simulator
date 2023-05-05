@@ -2,8 +2,25 @@
     {
         "command": "CreateEntity",
       	"params": {
+      	    "type": "human",
+            "name": "Human-OG",
+      	    "mesh": "assets/model/human.glb",
+      	    "position": [498.292, 270, -228.623],
+      	    "scale": [0.005, 0.005, 0.005],
+      	    "rotation": [0, 0, 0, 0],
+            "direction": [1,0,0],
+            "speed": 10.0,
+            "radius": 1.0,
+      	    "start": 2.0,
+      	    "duration": 2.0,
+            "offset": [0, -0.5, 0]
+    	  }
+    },
+    {
+        "command": "CreateEntity",
+      	"params": {
       	    "type": "battery",
-            "maxCharge": 100,
+            "maxCharge": 250,
             "drainRate": 1,
             "entity": {
                 "dataCollectionPeriod": 10,
@@ -21,23 +38,6 @@
                 "speed": 30.0
             }
     	}
-    },
-    {
-        "command": "CreateEntity",
-      	"params": {
-      	    "type": "human",
-            "name": "Human-OG",
-      	    "mesh": "assets/model/human.glb",
-      	    "position": [498.292, 270, -228.623],
-      	    "scale": [0.005, 0.005, 0.005],
-      	    "rotation": [0, 0, 0, 0],
-            "direction": [1,0,0],
-            "speed": 10.0,
-            "radius": 1.0,
-      	    "start": 2.0,
-      	    "duration": 2.0,
-            "offset": [0, -0.5, 0]
-    	  }
     },
     {
         "command": "CreateEntity",
@@ -121,38 +121,6 @@
         "command": "CreateEntity",
       	"params": {
             "type": "rechargestation",
-            "name": "Recharge Station 3",
-            "mesh": "assets/model/machine.glb",
-            "position": [-600.292, 270, 0.623],
-            "scale": [1.0, 1.0, 1.0],
-            "rotation": [0, 0, 0, 0],
-            "direction": [1,0,0],
-            "speed": 50.0,
-            "offset": [0, 0, 0],
-            "rechargeRate": 10.0,
-            "radius": 5.0
-    	  }
-    },
-    {
-        "command": "CreateEntity",
-      	"params": {
-            "type": "repairdrone",
-            "name": "Repair Drone 3",
-            "mesh": "assets/model/wm260_glb_0909.glb",
-            "position": [-600.292, 270, 0.623],
-            "scale": [0.02, 0.02, 0.02],
-            "rotation": [0, 0, 0, 0],
-            "direction": [1,0,0],
-            "speed": 50.0,
-            "offset": [0, 1.5, 0],
-            "rechargeRate": 10.0,
-            "radius": 5.0
-    	  }
-    },
-    {
-        "command": "CreateEntity",
-      	"params": {
-            "type": "rechargestation",
             "name": "Recharge Station 4",
             "mesh": "assets/model/machine.glb",
             "position": [1300.292, 270, 400.623],
@@ -204,6 +172,38 @@
             "name": "Repair Drone 5",
             "mesh": "assets/model/wm260_glb_0909.glb",
             "position": [-1300.292, 270, 400.623],
+            "scale": [0.02, 0.02, 0.02],
+            "rotation": [0, 0, 0, 0],
+            "direction": [1,0,0],
+            "speed": 50.0,
+            "offset": [0, 1.5, 0],
+            "rechargeRate": 10.0,
+            "radius": 5.0
+    	  }
+    },
+    {
+        "command": "CreateEntity",
+      	"params": {
+            "type": "rechargestation",
+            "name": "Recharge Station 6",
+            "mesh": "assets/model/machine.glb",
+            "position": [-800.292, 270, 500.623],
+            "scale": [1.0, 1.0, 1.0],
+            "rotation": [0, 0, 0, 0],
+            "direction": [1,0,0],
+            "speed": 50.0,
+            "offset": [0, 0, 0],
+            "rechargeRate": 10.0,
+            "radius": 5.0
+    	  }
+    },
+    {
+        "command": "CreateEntity",
+      	"params": {
+            "type": "repairdrone",
+            "name": "Repair Drone 6",
+            "mesh": "assets/model/wm260_glb_0909.glb",
+            "position": [-800.292, 270, 500.623],
             "scale": [0.02, 0.02, 0.02],
             "rotation": [0, 0, 0, 0],
             "direction": [1,0,0],

@@ -30,7 +30,7 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
         return;
     }
     if (recharging) {
-        if (!withinChargingStation) {
+        if (!(targetRechargeStation->BatteryInRange(this))) {
             if (toRechargeStation == nullptr) {
                 if (targetRechargeStation != nullptr) {
                     SetDestination(targetRechargeStation->GetPosition());
@@ -94,7 +94,6 @@ void BatteryDecorator::OverridedUpdate(double dt, std::vector<IEntity*> schedule
                             recharging = true;
                         }
                         drone->CancelDelivery();
-                        drone->GetCurrentNearestEntity()->SetAvailability(true);
                     }
                 } else {
                     double closestRechargeStationDistance = INFINITY;
@@ -132,9 +131,8 @@ bool BatteryDecorator::recharge(double amount) {
 }
 
 bool BatteryDecorator::IsOrWillBeMarooned() {
-    RechargeStation* target = dynamic_cast<RechargeStation*>(targetRechargeStation);
-    if (toRechargeStation != nullptr && target != nullptr) {
-        return (toRechargeStation->GetDistance(GetPosition()) - target->GetRadius()) * drainRate / GetSpeed() > charge;
+    if (toRechargeStation != nullptr && targetRechargeStation != nullptr) {
+        return (toRechargeStation->GetDistance(GetPosition()) - targetRechargeStation->GetRadius()) * drainRate / GetSpeed() > charge;
     }
     return charge <= 0 || completelyDrained;
 }

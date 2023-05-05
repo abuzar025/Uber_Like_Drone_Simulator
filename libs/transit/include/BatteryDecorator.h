@@ -3,6 +3,7 @@
 
 #include "IEntityDecorator.h"
 #include "IStrategy.h"
+#include "RechargeStation.h"
 
 /**
  * @brief this class inhertis from the IEntityDecorator class. The purpose of this class is to 
@@ -49,7 +50,7 @@ class BatteryDecorator: public IEntityDecorator {
     bool recharging;
     bool completelyDrained;
     IStrategy* toRechargeStation = nullptr;
-    IEntity* targetRechargeStation = nullptr;
+    RechargeStation* targetRechargeStation = nullptr;
 };
 
 #endif

@@ -22,7 +22,6 @@ RechargeStation::~RechargeStation() {}
 void RechargeStation::Update(double dt, std::vector<IEntity*> scheduler) {
     for (int i = 0; i < entityList->size(); i++) {
         if (dynamic_cast<BatteryDecorator*>(entityList->at(i)) != nullptr) {
-          std::cout << "CAST" << std::endl;
           BatteryDecorator* batt =
             dynamic_cast<BatteryDecorator*>(entityList->at(i));
           if (BatteryInRange(batt)) {
