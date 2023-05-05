@@ -5,6 +5,7 @@
       	    "type": "battery",
             "maxCharge": 100,
             "drainRate": 1,
+            "dataCollectionPeriod": 10,
             "entity": {
                 "type": "drone",
                 "name": "Drone",

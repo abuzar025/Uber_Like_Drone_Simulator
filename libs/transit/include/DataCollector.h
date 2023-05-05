@@ -5,12 +5,19 @@
 #include <fstream>
 #include <vector>
 #include <ctime>
+#include <unordered_map>
 
 #include "math/vector3.h"
-#include "Drone.h"
+#include "IEntity.h"
 #include "BatteryDecorator.h"
 
 using namespace std;
+
+/**
+ * @class DataEntry
+ * @brief INTERNAL DATA; DO NOT USE OUTSIDE DataCollector
+ */
+class DataEntry;
 
 /**
  * @class DataCollector
@@ -20,47 +27,48 @@ using namespace std;
 
 class DataCollector {
  public:
-        static DataCollector& getInstance();
+       static DataCollector& getInstance();
 
        /**
         * Singletons should not be cloneable.
         */
-        DataCollector(const DataCollector& other) = delete;
-
-        /**
-        * Singletons should not be assignable.
-        */
-        DataCollector& operator=(const DataCollector& other) = delete;
-
-        /**
-         * @brief DataCollector desconstructor
-        */
-        ~DataCollector();
-
-        /**
-         * @brief This method takes a drone object to calculate and store certain data points into to the singleton class
-         * @param drone The input is a refrence to a Drone object which we will read the data of
-        */
-       void collectData(const Drone& drone);
-
-       void collectBatteryLevel(const BatteryDecorator& battery);
+       DataCollector(const DataCollector& other) = delete;
 
        /**
-        * @brief This method uses data stored in this class to write the data into a csv file
+        * Singletons should not be assignable.
+        */
+       DataCollector& operator=(const DataCollector& other) = delete;
+
+       /**
+        * @brief DataCollector desconstructor
+        */
+       ~DataCollector();
+
+       /**
+        * @brief This method takes a entity to calculate and store certain data points into to the singleton class
+        * @param entity The input is a refrence to a IEntity object which we will read the data of
+        */
+       void collectData(IEntity* entity);
+
+       /**
+        * @brief This method takes a entity to calculate and store certain data points into to the singleton class
+        * @param entity The input is a refrence to a IEntity object which we will read the data of
+        */
+       void OnTick(std::vector<IEntity*>& entites, double dt);
+
+       /**
+        * @brief This method opens the csv file to write to
        */
-        void writeDataToCSV(string filename) const;
+       void OpenCSV(IEntity* entity);
+
+       /**
+        * @brief This method closes the csv files
+       */
+       void CloseCSV();
 
  private:
-        DataCollector();
-        time_t clock;
-        float eta;
-        int numTrips;
-        float distanceToDest;
-        float droneSpeed;
-        float batteryLevel;
-        float droneX;
-        float droneY;
-        float droneZ;
+       DataCollector();
+       std::unordered_map<int, DataEntry> entries;
 };
 
 #endif

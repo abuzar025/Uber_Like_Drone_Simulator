@@ -1,5 +1,7 @@
 #include "SimulationModel.h"
 
+#include "DataCollector.h"
+
 #include "DroneFactory.h"
 #include "RobotFactory.h"
 #include "HumanFactory.h"
@@ -82,6 +84,7 @@ void SimulationModel::Update(double dt) {
     entities[i]->Update(dt, scheduler);
     controller.UpdateEntity(*entities[i]);
   }
+  DataCollector::getInstance().OnTick(entities, dt);
 }
 
 void SimulationModel::AddFactory(IEntityFactory* factory) {
