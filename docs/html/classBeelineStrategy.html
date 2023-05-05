@@ -103,6 +103,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a648eae389f7844f210ac267313ef6233"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBeelineStrategy.html#a648eae389f7844f210ac267313ef6233">IsCompleted</a> ()</td></tr>
 <tr class="memdesc:a648eae389f7844f210ac267313ef6233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the trip is completed.  <a href="classBeelineStrategy.html#a648eae389f7844f210ac267313ef6233">More...</a><br /></td></tr>
 <tr class="separator:a648eae389f7844f210ac267313ef6233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb6ea1ff70954ded77cf81e24497aed7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBeelineStrategy.html#abb6ea1ff70954ded77cf81e24497aed7">GetDistance</a> (<a class="el" href="classVector3.html">Vector3</a> from)</td></tr>
+<tr class="memdesc:abb6ea1ff70954ded77cf81e24497aed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the distance left to travel.  <a href="classBeelineStrategy.html#abb6ea1ff70954ded77cf81e24497aed7">More...</a><br /></td></tr>
+<tr class="separator:abb6ea1ff70954ded77cf81e24497aed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>this class inhertis from the <a class="el" href="classIStrategy.html" title="Strategy interface.">IStrategy</a> class and is responsible for generating the beeline that the drone will take. </p>
@@ -145,6 +148,37 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="abb6ea1ff70954ded77cf81e24497aed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb6ea1ff70954ded77cf81e24497aed7">&#9670;&nbsp;</a></span>GetDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double BeelineStrategy::GetDistance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the distance left to travel. </p>
+<dl class="section return"><dt>Returns</dt><dd>the distance left to travel </dd></dl>
+
+<p>Implements <a class="el" href="classIStrategy.html#a27f9512aaeec26eeb532ebd294efe651">IStrategy</a>.</p>
+
+</div>
+</div>
 <a id="a648eae389f7844f210ac267313ef6233"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a648eae389f7844f210ac267313ef6233">&#9670;&nbsp;</a></span>IsCompleted()</h2>
 
@@ -223,8 +257,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/abuza006/Courses Spring 2023/csci3081W/Assignments/HW4/Team-010-46-homework4/libs/transit/include/<a class="el" href="BeelineStrategy_8h_source.html">BeelineStrategy.h</a></li>
-<li>/home/abuza006/Courses Spring 2023/csci3081W/Assignments/HW4/Team-010-46-homework4/libs/transit/src/BeelineStrategy.cc</li>
+<li>/home/abuza006/Courses Spring 2023/Team-010-46-homework4/libs/transit/include/<a class="el" href="BeelineStrategy_8h_source.html">BeelineStrategy.h</a></li>
+<li>/home/abuza006/Courses Spring 2023/Team-010-46-homework4/libs/transit/src/BeelineStrategy.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

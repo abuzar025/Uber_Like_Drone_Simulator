@@ -61,6 +61,10 @@ $(function() {
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="classDataCollector-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DataCollector Class Reference</div>  </div>
 </div><!--header-->
@@ -70,10 +74,161 @@ $(function() {
  <a href="classDataCollector.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="DataCollector_8h_source.html">DataCollector.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a6377cbd8b20100f0d4451fba27184590"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataCollector.html#a6377cbd8b20100f0d4451fba27184590">DataCollector</a> (const <a class="el" href="classDataCollector.html">DataCollector</a> &amp;other)=delete</td></tr>
+<tr class="separator:a6377cbd8b20100f0d4451fba27184590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa68dc44638eee5e097b9d2ec1839a8f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDataCollector.html">DataCollector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataCollector.html#aa68dc44638eee5e097b9d2ec1839a8f8">operator=</a> (const <a class="el" href="classDataCollector.html">DataCollector</a> &amp;other)=delete</td></tr>
+<tr class="separator:aa68dc44638eee5e097b9d2ec1839a8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f9ff1817bd0601ba33925c3378ac50e"><td class="memItemLeft" align="right" valign="top"><a id="a9f9ff1817bd0601ba33925c3378ac50e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataCollector.html#a9f9ff1817bd0601ba33925c3378ac50e">~DataCollector</a> ()</td></tr>
+<tr class="memdesc:a9f9ff1817bd0601ba33925c3378ac50e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classDataCollector.html" title="Represents a singleton class that collect drone pertaining the drone and its surroundings....">DataCollector</a> desconstructor. <br /></td></tr>
+<tr class="separator:a9f9ff1817bd0601ba33925c3378ac50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1f921d699021970ff43b7b738b34fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataCollector.html#aeb1f921d699021970ff43b7b738b34fc">collectData</a> (<a class="el" href="classIEntity.html">IEntity</a> *entity)</td></tr>
+<tr class="memdesc:aeb1f921d699021970ff43b7b738b34fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method takes a entity to calculate and store certain data points into to the singleton class.  <a href="classDataCollector.html#aeb1f921d699021970ff43b7b738b34fc">More...</a><br /></td></tr>
+<tr class="separator:aeb1f921d699021970ff43b7b738b34fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae26618d4a412a7186469b116ff6bc608"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataCollector.html#ae26618d4a412a7186469b116ff6bc608">OnTick</a> (std::vector&lt; <a class="el" href="classIEntity.html">IEntity</a> * &gt; &amp;entites, double dt)</td></tr>
+<tr class="memdesc:ae26618d4a412a7186469b116ff6bc608"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method takes a entity to calculate and store certain data points into to the singleton class.  <a href="classDataCollector.html#ae26618d4a412a7186469b116ff6bc608">More...</a><br /></td></tr>
+<tr class="separator:ae26618d4a412a7186469b116ff6bc608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed87438ba5a0656507be8816a10912ad"><td class="memItemLeft" align="right" valign="top"><a id="aed87438ba5a0656507be8816a10912ad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataCollector.html#aed87438ba5a0656507be8816a10912ad">OpenCSV</a> (<a class="el" href="classIEntity.html">IEntity</a> *entity)</td></tr>
+<tr class="memdesc:aed87438ba5a0656507be8816a10912ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method opens the csv file to write to. <br /></td></tr>
+<tr class="separator:aed87438ba5a0656507be8816a10912ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c1c2f0781ebc9ce0425f30e64d2c1c7"><td class="memItemLeft" align="right" valign="top"><a id="a5c1c2f0781ebc9ce0425f30e64d2c1c7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataCollector.html#a5c1c2f0781ebc9ce0425f30e64d2c1c7">CloseCSV</a> ()</td></tr>
+<tr class="memdesc:a5c1c2f0781ebc9ce0425f30e64d2c1c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method closes the csv files. <br /></td></tr>
+<tr class="separator:a5c1c2f0781ebc9ce0425f30e64d2c1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a975680376366dcf48861ab3fe7fe06fc"><td class="memItemLeft" align="right" valign="top"><a id="a975680376366dcf48861ab3fe7fe06fc"></a>
+static <a class="el" href="classDataCollector.html">DataCollector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="separator:a975680376366dcf48861ab3fe7fe06fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a singleton class that collect drone pertaining the drone and its surroundings. It then stores this data into a csv. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/abuza006/Courses Spring 2023/csci3081W/Assignments/HW4/Team-010-46-homework4/libs/transit/include/<a class="el" href="DataCollector_8h_source.html">DataCollector.h</a></li>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6377cbd8b20100f0d4451fba27184590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6377cbd8b20100f0d4451fba27184590">&#9670;&nbsp;</a></span>DataCollector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DataCollector::DataCollector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDataCollector.html">DataCollector</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Singletons should not be cloneable. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aeb1f921d699021970ff43b7b738b34fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb1f921d699021970ff43b7b738b34fc">&#9670;&nbsp;</a></span>collectData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataCollector::collectData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIEntity.html">IEntity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method takes a entity to calculate and store certain data points into to the singleton class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>The input is a refrence to a <a class="el" href="classIEntity.html" title="Represents an entity in a physical system.">IEntity</a> object which we will read the data of </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae26618d4a412a7186469b116ff6bc608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae26618d4a412a7186469b116ff6bc608">&#9670;&nbsp;</a></span>OnTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataCollector::OnTick </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classIEntity.html">IEntity</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>entites</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method takes a entity to calculate and store certain data points into to the singleton class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>The input is a refrence to a <a class="el" href="classIEntity.html" title="Represents an entity in a physical system.">IEntity</a> object which we will read the data of </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa68dc44638eee5e097b9d2ec1839a8f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa68dc44638eee5e097b9d2ec1839a8f8">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDataCollector.html">DataCollector</a>&amp; DataCollector::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDataCollector.html">DataCollector</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Singletons should not be assignable. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/abuza006/Courses Spring 2023/Team-010-46-homework4/libs/transit/include/<a class="el" href="DataCollector_8h_source.html">DataCollector.h</a></li>
+<li>/home/abuza006/Courses Spring 2023/Team-010-46-homework4/libs/transit/src/DataCollector.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

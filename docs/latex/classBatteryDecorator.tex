@@ -11,8 +11,7 @@ this class inhertis from the \mbox{\hyperlink{classIEntityDecorator}{I\+Entity\+
 
 
 
-Inheritance diagram for Battery\+Decorator\+:
-\nopagebreak
+Inheritance diagram for Battery\+Decorator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Battery\+Decorator\+:
 \end{figure}
 
 
-Collaboration diagram for Battery\+Decorator\+:
-\nopagebreak
+Collaboration diagram for Battery\+Decorator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,22 +30,34 @@ Collaboration diagram for Battery\+Decorator\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classBatteryDecorator_a8f2d260a3ecf9fdf443a0f952464c438}\label{classBatteryDecorator_a8f2d260a3ecf9fdf443a0f952464c438}} 
-\mbox{\hyperlink{classBatteryDecorator_a8f2d260a3ecf9fdf443a0f952464c438}{Battery\+Decorator}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$wrapped, double max\+Charge)
+\mbox{\Hypertarget{classBatteryDecorator_a23bf7b77e27d74aa142da8567865c0b9}\label{classBatteryDecorator_a23bf7b77e27d74aa142da8567865c0b9}} 
+\mbox{\hyperlink{classBatteryDecorator_a23bf7b77e27d74aa142da8567865c0b9}{Battery\+Decorator}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$wrapped, double max\+Charge, double drain\+Rate)
 \begin{DoxyCompactList}\small\item\em Constructor that assigns a unique ID to the battery. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBatteryDecorator_a9c0864309c5014b73f1fa2a4b2e91758}\label{classBatteryDecorator_a9c0864309c5014b73f1fa2a4b2e91758}} 
+\mbox{\hyperlink{classBatteryDecorator_a9c0864309c5014b73f1fa2a4b2e91758}{Battery\+Decorator}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$wrapped, Json\+Object \&obj)
+\begin{DoxyCompactList}\small\item\em Constructor that assigns a unique ID to the battery. Values are taken from a Json\+Object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBatteryDecorator_a0036d03d5fc869eb39e55734d1e5bb87}\label{classBatteryDecorator_a0036d03d5fc869eb39e55734d1e5bb87}} 
+\mbox{\hyperlink{classBatteryDecorator_a0036d03d5fc869eb39e55734d1e5bb87}{$\sim$\+Battery\+Decorator}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classBatteryDecorator_abf07daa937e3c657d43896a3b8c81057}{Overrided\+Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
 \begin{DoxyCompactList}\small\item\em What to override to modify the behaviour of the surrounding \mbox{\hyperlink{classIEntity}{I\+Entity}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classBatteryDecorator_a0aa5f9d47d509b9201f1aa8d738ba87d}\label{classBatteryDecorator_a0aa5f9d47d509b9201f1aa8d738ba87d}} 
-void {\bfseries recharge} (double amount)
+\mbox{\Hypertarget{classBatteryDecorator_afdeedd28f4aef114665b589126296f1e}\label{classBatteryDecorator_afdeedd28f4aef114665b589126296f1e}} 
+bool {\bfseries recharge} (double amount)
 \item 
-\mbox{\Hypertarget{classBatteryDecorator_a927007d883fd412db218e0cb3dd56965}\label{classBatteryDecorator_a927007d883fd412db218e0cb3dd56965}} 
-double {\bfseries get\+Charge} ()
+\mbox{\Hypertarget{classBatteryDecorator_a882623234ed441d8b9527e96d954ebd0}\label{classBatteryDecorator_a882623234ed441d8b9527e96d954ebd0}} 
+double {\bfseries get\+Charge} () const
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_aa9e1018546bea4ccde0d8b0216256e75}\label{classBatteryDecorator_aa9e1018546bea4ccde0d8b0216256e75}} 
+bool {\bfseries Is\+Or\+Will\+Be\+Marooned} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classBatteryDecorator_ae3f0608afaa6d564512dfeb557c221b8}\label{classBatteryDecorator_ae3f0608afaa6d564512dfeb557c221b8}} 
 const double {\bfseries max\+Charge}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a32397d5a88b78436982fac66452c2802}\label{classBatteryDecorator_a32397d5a88b78436982fac66452c2802}} 
+const double {\bfseries drain\+Rate}
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -81,5 +91,5 @@ Implements \mbox{\hyperlink{classIEntityDecorator_a1270f7ee557197e0babaa6f65272b
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/abuza006/\+Courses Spring 2023/csci3081\+W/\+Assignments/\+H\+W4/\+Team-\/010-\/46-\/homework4/libs/transit/include/Battery\+Decorator.\+h\item 
-/home/abuza006/\+Courses Spring 2023/csci3081\+W/\+Assignments/\+H\+W4/\+Team-\/010-\/46-\/homework4/libs/transit/src/Battery\+Decorator.\+cc\end{DoxyCompactItemize}
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/include/Battery\+Decorator.\+h\item 
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/src/Battery\+Decorator.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,117 @@
+\hypertarget{classBatteryDecoratorFactory}{}\doxysection{Battery\+Decorator\+Factory Class Reference}
+\label{classBatteryDecoratorFactory}\index{BatteryDecoratorFactory@{BatteryDecoratorFactory}}
+
+
+Battery Decorator Factory to produce Battery Decorators.  
+
+
+
+
+{\ttfamily \#include $<$Battery\+Decorator\+Factory.\+h$>$}
+
+
+
+Inheritance diagram for Battery\+Decorator\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classBatteryDecoratorFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Battery\+Decorator\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classBatteryDecoratorFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBatteryDecoratorFactory_a8178961aac11f2c77459cfef7be0444d}{Battery\+Decorator\+Factory}} (\mbox{\hyperlink{classCompositeFactory}{Composite\+Factory}} $\ast$composite\+Factory)
+\begin{DoxyCompactList}\small\item\em Constructor that sets a pointer to a \mbox{\hyperlink{classCompositeFactory}{Composite\+Factory}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBatteryDecoratorFactory_a7aa6390b98c86650ad3f4c46eea0618b}\label{classBatteryDecoratorFactory_a7aa6390b98c86650ad3f4c46eea0618b}} 
+virtual \mbox{\hyperlink{classBatteryDecoratorFactory_a7aa6390b98c86650ad3f4c46eea0618b}{$\sim$\+Battery\+Decorator\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classBatteryDecoratorFactory}{Battery\+Decorator\+Factory}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classBatteryDecoratorFactory_a7abb23b4a05fce6fa67768967617ccc4}{Create\+Decorated\+Entity}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$wrapped, Json\+Object \&entity)
+\begin{DoxyCompactList}\small\item\em Creates the decorator around an entity using the given J\+S\+ON object, if possible. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBatteryDecoratorFactory_aa6239ff7c4a3e8b565e66872e0053cff}{Should\+Make\+New\+Entity}} (Json\+Object \&entity)
+\begin{DoxyCompactList}\small\item\em Decides if this factory should produce the new entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Battery Decorator Factory to produce Battery Decorators. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBatteryDecoratorFactory_a8178961aac11f2c77459cfef7be0444d}\label{classBatteryDecoratorFactory_a8178961aac11f2c77459cfef7be0444d}} 
+\index{BatteryDecoratorFactory@{BatteryDecoratorFactory}!BatteryDecoratorFactory@{BatteryDecoratorFactory}}
+\index{BatteryDecoratorFactory@{BatteryDecoratorFactory}!BatteryDecoratorFactory@{BatteryDecoratorFactory}}
+\doxysubsubsection{\texorpdfstring{BatteryDecoratorFactory()}{BatteryDecoratorFactory()}}
+{\footnotesize\ttfamily Battery\+Decorator\+Factory\+::\+Battery\+Decorator\+Factory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCompositeFactory}{Composite\+Factory}} $\ast$}]{composite\+Factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that sets a pointer to a \mbox{\hyperlink{classCompositeFactory}{Composite\+Factory}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em composite\+Factory} & the \mbox{\hyperlink{classCompositeFactory}{Composite\+Factory}} to point to \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBatteryDecoratorFactory_a7abb23b4a05fce6fa67768967617ccc4}\label{classBatteryDecoratorFactory_a7abb23b4a05fce6fa67768967617ccc4}} 
+\index{BatteryDecoratorFactory@{BatteryDecoratorFactory}!CreateDecoratedEntity@{CreateDecoratedEntity}}
+\index{CreateDecoratedEntity@{CreateDecoratedEntity}!BatteryDecoratorFactory@{BatteryDecoratorFactory}}
+\doxysubsubsection{\texorpdfstring{CreateDecoratedEntity()}{CreateDecoratedEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ Battery\+Decorator\+Factory\+::\+Create\+Decorated\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{wrapped,  }\item[{Json\+Object \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates the decorator around an entity using the given J\+S\+ON object, if possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wrapped} & -\/ \mbox{\hyperlink{classIEntity}{I\+Entity}} to wrap around. \\
+\hline
+{\em entity} & -\/ Json\+Object to be used to create the new entity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Decorated entity that was created if it was created successfully, or a nullpointer if creation failed. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDecoratorFactory_ae720e033109c613a3d8845526f5a99d1}{Decorator\+Factory}}.
+
+\mbox{\Hypertarget{classBatteryDecoratorFactory_aa6239ff7c4a3e8b565e66872e0053cff}\label{classBatteryDecoratorFactory_aa6239ff7c4a3e8b565e66872e0053cff}} 
+\index{BatteryDecoratorFactory@{BatteryDecoratorFactory}!ShouldMakeNewEntity@{ShouldMakeNewEntity}}
+\index{ShouldMakeNewEntity@{ShouldMakeNewEntity}!BatteryDecoratorFactory@{BatteryDecoratorFactory}}
+\doxysubsubsection{\texorpdfstring{ShouldMakeNewEntity()}{ShouldMakeNewEntity()}}
+{\footnotesize\ttfamily bool Battery\+Decorator\+Factory\+::\+Should\+Make\+New\+Entity (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Decides if this factory should produce the new entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & -\/ Json\+Object to be used to create the new entity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If this factory should make the new entity 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDecoratorFactory_afd97ffc0672843821469df37f5de4c89}{Decorator\+Factory}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/include/Battery\+Decorator\+Factory.\+h\item 
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/src/Battery\+Decorator\+Factory.\+cc\end{DoxyCompactItemize}

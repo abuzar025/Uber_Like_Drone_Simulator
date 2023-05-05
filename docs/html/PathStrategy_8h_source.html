@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: /home/abuza006/Courses Spring 2023/csci3081W/Assignments/HW4/Team-010-46-homework4/libs/transit/include/PathStrategy.h Source File</title>
+<title>My Project: /home/abuza006/Courses Spring 2023/Team-010-46-homework4/libs/transit/include/PathStrategy.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,12 +85,16 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPathStrategy.html#a6dc77c85825e63ce46ac1041818222c3">Move</a>(<a class="code" href="classIEntity.html">IEntity</a>* entity, <span class="keywordtype">double</span> dt);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classPathStrategy.html#a96edc8077f42ed62a64803b69e770690">IsCompleted</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif  // PATH_STRATEGY_H_</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classPathStrategy.html#a40508f15fdcfdc9980260d3530077dd0">GetDistance</a>(<a class="code" href="classVector3.html">Vector3</a> from);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif  // PATH_STRATEGY_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassPathStrategy_html_a8b73e5f41250a1b53bfeed777103fc70"><div class="ttname"><a href="classPathStrategy.html#a8b73e5f41250a1b53bfeed777103fc70">PathStrategy::PathStrategy</a></div><div class="ttdeci">PathStrategy(std::vector&lt; std::vector&lt; float &gt;&gt; path={})</div><div class="ttdoc">Construct a new PathStrategy Strategy object.</div><div class="ttdef"><b>Definition:</b> PathStrategy.cc:3</div></div>
-<div class="ttc" id="aclassIStrategy_html"><div class="ttname"><a href="classIStrategy.html">IStrategy</a></div><div class="ttdoc">Strategy interface.</div><div class="ttdef"><b>Definition:</b> IStrategy.h:10</div></div>
+<div class="ttc" id="aclassIStrategy_html"><div class="ttname"><a href="classIStrategy.html">IStrategy</a></div><div class="ttdoc">Strategy interface.</div><div class="ttdef"><b>Definition:</b> IStrategy.h:11</div></div>
+<div class="ttc" id="aclassPathStrategy_html_a40508f15fdcfdc9980260d3530077dd0"><div class="ttname"><a href="classPathStrategy.html#a40508f15fdcfdc9980260d3530077dd0">PathStrategy::GetDistance</a></div><div class="ttdeci">double GetDistance(Vector3 from)</div><div class="ttdoc">Get the distance left to travel.</div><div class="ttdef"><b>Definition:</b> PathStrategy.cc:24</div></div>
+<div class="ttc" id="aclassVector3_html"><div class="ttname"><a href="classVector3.html">Vector3</a></div><div class="ttdoc">A class built solely to handle 3D vector mathematics.</div><div class="ttdef"><b>Definition:</b> vector3.h:9</div></div>
 <div class="ttc" id="aclassPathStrategy_html_a96edc8077f42ed62a64803b69e770690"><div class="ttname"><a href="classPathStrategy.html#a96edc8077f42ed62a64803b69e770690">PathStrategy::IsCompleted</a></div><div class="ttdeci">virtual bool IsCompleted()</div><div class="ttdoc">Check if the trip is completed by seeing if index has reached the end of the path.</div><div class="ttdef"><b>Definition:</b> PathStrategy.cc:20</div></div>
 <div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdoc">Represents an entity in a physical system.</div><div class="ttdef"><b>Definition:</b> IEntity.h:21</div></div>
 <div class="ttc" id="aclassPathStrategy_html_a6dc77c85825e63ce46ac1041818222c3"><div class="ttname"><a href="classPathStrategy.html#a6dc77c85825e63ce46ac1041818222c3">PathStrategy::Move</a></div><div class="ttdeci">virtual void Move(IEntity *entity, double dt)</div><div class="ttdoc">Move toward next position in the path.</div><div class="ttdef"><b>Definition:</b> PathStrategy.cc:6</div></div>

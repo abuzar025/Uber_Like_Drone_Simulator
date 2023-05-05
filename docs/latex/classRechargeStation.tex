@@ -11,8 +11,7 @@ this class inhertis from the \mbox{\hyperlink{classIEntity}{I\+Entity}} class an
 
 
 
-Inheritance diagram for Recharge\+Station\+:
-\nopagebreak
+Inheritance diagram for Recharge\+Station\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Recharge\+Station\+:
 \end{figure}
 
 
-Collaboration diagram for Recharge\+Station\+:
-\nopagebreak
+Collaboration diagram for Recharge\+Station\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -33,7 +31,7 @@ Collaboration diagram for Recharge\+Station\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classRechargeStation_a5d73fedd3f3706659a63f3a1e3d5d0be}{Recharge\+Station}} (Json\+Object \&obj)
-\begin{DoxyCompactList}\small\item\em Drones are created with a name. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Recharge\+Stations are created with a name. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRechargeStation_a95a244adc4eb932bbc021f0cfab7f00a}\label{classRechargeStation_a95a244adc4eb932bbc021f0cfab7f00a}} 
 \mbox{\hyperlink{classRechargeStation_a95a244adc4eb932bbc021f0cfab7f00a}{$\sim$\+Recharge\+Station}} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
@@ -51,6 +49,9 @@ Json\+Object \mbox{\hyperlink{classRechargeStation_a98885a18485258d192fd4228227e
 \begin{DoxyCompactList}\small\item\em Gets the details information of the drone. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classRechargeStation_a817e0b4b96c52f0aebef2f9ad9c5e2f1}{Get\+Availability}} () const
 \begin{DoxyCompactList}\small\item\em Gets the availability of the drone. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRechargeStation_ac3c8631b9521875378c6aef345e58c54}\label{classRechargeStation_ac3c8631b9521875378c6aef345e58c54}} 
+double {\bfseries Get\+Recharge\+Rate} () const
+\item 
 void \mbox{\hyperlink{classRechargeStation_abf2319116a20d1f4cafcb4716fb04069}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
 \begin{DoxyCompactList}\small\item\em Updates the drone\textquotesingle{}s position. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRechargeStation_ad1f81bd953d2a4832e15a31a020f9df4}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
@@ -61,6 +62,17 @@ void \mbox{\hyperlink{classRechargeStation_a2b8568944c73f58cf811ec8684de41d2}{Se
 \begin{DoxyCompactList}\small\item\em Sets the destination of the drone. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRechargeStation_a28a4ed22a3481ec97c3e0399ba770ac7}{Set\+Color}} (std\+::string col\+\_\+)
 \begin{DoxyCompactList}\small\item\em Sets the color of the drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRechargeStation_aa965a044ff3b29d97cb5e7a688449a90}{Set\+Entity\+List}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$entity\+List\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the entity list of the entity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRechargeStation_afee612ca22966a932a0ed4bd8ff19106}\label{classRechargeStation_afee612ca22966a932a0ed4bd8ff19106}} 
+void {\bfseries Set\+Recharge\+Rate} (double rate)
+\item 
+\mbox{\Hypertarget{classRechargeStation_a2f23dc314f5b10f0495ea8e9ce3ecccc}\label{classRechargeStation_a2f23dc314f5b10f0495ea8e9ce3ecccc}} 
+double {\bfseries Get\+Radius} ()
+\item 
+\mbox{\Hypertarget{classRechargeStation_a796b42a517f0118222c91303bc36b6fb}\label{classRechargeStation_a796b42a517f0118222c91303bc36b6fb}} 
+bool {\bfseries Battery\+In\+Range} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\item 
 \mbox{\Hypertarget{classRechargeStation_aec4f06fa99626ece31d97a668753277e}\label{classRechargeStation_aec4f06fa99626ece31d97a668753277e}} 
 \mbox{\hyperlink{classRechargeStation_aec4f06fa99626ece31d97a668753277e}{Recharge\+Station}} (const \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} \&drone)=delete
 \begin{DoxyCompactList}\small\item\em Removing the copy constructor and assignment operator so that drones cannot be copied. \end{DoxyCompactList}\item 
@@ -82,11 +94,11 @@ this class inhertis from the \mbox{\hyperlink{classIEntity}{I\+Entity}} class an
 
 
 
-Drones are created with a name. 
+Recharge\+Stations are created with a name. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em obj} & J\+S\+ON object containing the drone\textquotesingle{}s information \\
+{\em obj} & J\+S\+ON object containing the Recharge Station\textquotesingle{}s information \\
 \hline
 \end{DoxyParams}
 
@@ -268,6 +280,25 @@ Sets the direction of the drone.
 
 Reimplemented from \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{I\+Entity}}.
 
+\mbox{\Hypertarget{classRechargeStation_aa965a044ff3b29d97cb5e7a688449a90}\label{classRechargeStation_aa965a044ff3b29d97cb5e7a688449a90}} 
+\index{RechargeStation@{RechargeStation}!SetEntityList@{SetEntityList}}
+\index{SetEntityList@{SetEntityList}!RechargeStation@{RechargeStation}}
+\doxysubsubsection{\texorpdfstring{SetEntityList()}{SetEntityList()}}
+{\footnotesize\ttfamily void Recharge\+Station\+::\+Set\+Entity\+List (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$}]{entity\+List\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the entity list of the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity\+List} & The new entity list of the entity \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af32ea2be2ac4c6630c20b9a5f0f5f529}{I\+Entity}}.
+
 \mbox{\Hypertarget{classRechargeStation_ad1f81bd953d2a4832e15a31a020f9df4}\label{classRechargeStation_ad1f81bd953d2a4832e15a31a020f9df4}} 
 \index{RechargeStation@{RechargeStation}!SetPosition@{SetPosition}}
 \index{SetPosition@{SetPosition}!RechargeStation@{RechargeStation}}
@@ -310,6 +341,7 @@ Reimplemented from \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/abuza006/\+Courses Spring 2023/csci3081\+W/\+Assignments/\+H\+W4/\+Team-\/010-\/46-\/homework4/libs/transit/include/Recharge\+Station.\+h\end{DoxyCompactItemize}
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/include/Recharge\+Station.\+h\item 
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/src/Recharge\+Station.\+cc\end{DoxyCompactItemize}

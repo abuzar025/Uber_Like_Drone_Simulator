@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: /home/abuza006/Courses Spring 2023/csci3081W/Assignments/HW4/Team-010-46-homework4/libs/transit/include/CelebrationDecorator.h Source File</title>
+<title>My Project: /home/abuza006/Courses Spring 2023/Team-010-46-homework4/libs/transit/include/CelebrationDecorator.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,15 +88,22 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classCelebrationDecorator.html#ae0711d10b93521df0bafd05795838860">Move</a>(<a class="code" href="classIEntity.html">IEntity</a>* entity, <span class="keywordtype">double</span> dt) = 0;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classCelebrationDecorator.html#a7ce83ef692d22773bf40e8733e20329a">IsCompleted</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif  // CELEBRATION_DECORATOR_H_</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classCelebrationDecorator.html#ac1c76c963cc0f50d7d11f1ae279d0489">   49</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classCelebrationDecorator.html#ac1c76c963cc0f50d7d11f1ae279d0489">GetDistance</a>(<a class="code" href="classVector3.html">Vector3</a> from) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> strategy-&gt;<a class="code" href="classIStrategy.html#a27f9512aaeec26eeb532ebd294efe651">GetDistance</a>(from);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif  // CELEBRATION_DECORATOR_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassIStrategy_html"><div class="ttname"><a href="classIStrategy.html">IStrategy</a></div><div class="ttdoc">Strategy interface.</div><div class="ttdef"><b>Definition:</b> IStrategy.h:10</div></div>
+<div class="ttc" id="aclassIStrategy_html"><div class="ttname"><a href="classIStrategy.html">IStrategy</a></div><div class="ttdoc">Strategy interface.</div><div class="ttdef"><b>Definition:</b> IStrategy.h:11</div></div>
+<div class="ttc" id="aclassCelebrationDecorator_html_ac1c76c963cc0f50d7d11f1ae279d0489"><div class="ttname"><a href="classCelebrationDecorator.html#ac1c76c963cc0f50d7d11f1ae279d0489">CelebrationDecorator::GetDistance</a></div><div class="ttdeci">virtual double GetDistance(Vector3 from)</div><div class="ttdoc">Get the distance left to travel.</div><div class="ttdef"><b>Definition:</b> CelebrationDecorator.h:49</div></div>
 <div class="ttc" id="aclassCelebrationDecorator_html_ae0711d10b93521df0bafd05795838860"><div class="ttname"><a href="classCelebrationDecorator.html#ae0711d10b93521df0bafd05795838860">CelebrationDecorator::Move</a></div><div class="ttdeci">virtual void Move(IEntity *entity, double dt)=0</div><div class="ttdoc">Move the entity with the behavior as described for 4 seconds.</div></div>
+<div class="ttc" id="aclassIStrategy_html_a27f9512aaeec26eeb532ebd294efe651"><div class="ttname"><a href="classIStrategy.html#a27f9512aaeec26eeb532ebd294efe651">IStrategy::GetDistance</a></div><div class="ttdeci">virtual double GetDistance(Vector3 from)=0</div><div class="ttdoc">Get the distance left to travel.</div></div>
 <div class="ttc" id="aclassCelebrationDecorator_html"><div class="ttname"><a href="classCelebrationDecorator.html">CelebrationDecorator</a></div><div class="ttdoc">this class inhertis from the IStrategy class and represents a celebration decorator where the entity ...</div><div class="ttdef"><b>Definition:</b> CelebrationDecorator.h:10</div></div>
 <div class="ttc" id="aclassCelebrationDecorator_html_a7ce83ef692d22773bf40e8733e20329a"><div class="ttname"><a href="classCelebrationDecorator.html#a7ce83ef692d22773bf40e8733e20329a">CelebrationDecorator::IsCompleted</a></div><div class="ttdeci">virtual bool IsCompleted()</div><div class="ttdoc">Check if the movement is completed by checking the time.</div><div class="ttdef"><b>Definition:</b> CelebrationDecorator.cc:13</div></div>
 <div class="ttc" id="aclassCelebrationDecorator_html_a384761e73eb607f1eae894d6310d2d2e"><div class="ttname"><a href="classCelebrationDecorator.html#a384761e73eb607f1eae894d6310d2d2e">CelebrationDecorator::CelebrationDecorator</a></div><div class="ttdeci">CelebrationDecorator(IStrategy *strategy)</div><div class="ttdoc">Construct a new Celebration Decorator object.</div><div class="ttdef"><b>Definition:</b> CelebrationDecorator.cc:3</div></div>
+<div class="ttc" id="aclassVector3_html"><div class="ttname"><a href="classVector3.html">Vector3</a></div><div class="ttdoc">A class built solely to handle 3D vector mathematics.</div><div class="ttdef"><b>Definition:</b> vector3.h:9</div></div>
 <div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdoc">Represents an entity in a physical system.</div><div class="ttdef"><b>Definition:</b> IEntity.h:21</div></div>
 <div class="ttc" id="aclassCelebrationDecorator_html_a59689f8c890ac6abcdb708829501aa78"><div class="ttname"><a href="classCelebrationDecorator.html#a59689f8c890ac6abcdb708829501aa78">CelebrationDecorator::~CelebrationDecorator</a></div><div class="ttdeci">~CelebrationDecorator()</div><div class="ttdoc">Celebration Destructor.</div><div class="ttdef"><b>Definition:</b> CelebrationDecorator.cc:8</div></div>
 <!-- start footer part -->

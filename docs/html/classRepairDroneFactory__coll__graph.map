@@ -1,0 +1,4 @@
+<map id="RepairDroneFactory" name="RepairDroneFactory">
+<area shape="rect" id="node1" title="Repair drone factory to produce Repair drone." alt="" coords="5,80,156,107"/>
+<area shape="rect" id="node2" href="$classIEntityFactory.html" title="Composite Factory Interface." alt="" coords="25,5,137,32"/>
+</map>

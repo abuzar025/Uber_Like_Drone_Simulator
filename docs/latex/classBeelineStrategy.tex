@@ -35,7 +35,9 @@ Collaboration diagram for Beeline\+Strategy\+:\nopagebreak
 void \mbox{\hyperlink{classBeelineStrategy_ab8d3f5b05d5e9dd06465f5fc4cd4767e}{Move}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity, double dt)
 \begin{DoxyCompactList}\small\item\em Move toward next position. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classBeelineStrategy_a648eae389f7844f210ac267313ef6233}{Is\+Completed}} ()
-\begin{DoxyCompactList}\small\item\em Check if the trip is completed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if the trip is completed. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBeelineStrategy_abb6ea1ff70954ded77cf81e24497aed7}{Get\+Distance}} (\mbox{\hyperlink{classVector3}{Vector3}} from)
+\begin{DoxyCompactList}\small\item\em Get the distance left to travel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -62,6 +64,23 @@ Construct a new Beeline Strategy object.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBeelineStrategy_abb6ea1ff70954ded77cf81e24497aed7}\label{classBeelineStrategy_abb6ea1ff70954ded77cf81e24497aed7}} 
+\index{BeelineStrategy@{BeelineStrategy}!GetDistance@{GetDistance}}
+\index{GetDistance@{GetDistance}!BeelineStrategy@{BeelineStrategy}}
+\doxysubsubsection{\texorpdfstring{GetDistance()}{GetDistance()}}
+{\footnotesize\ttfamily double Beeline\+Strategy\+::\+Get\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{from }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the distance left to travel. 
+
+\begin{DoxyReturn}{Returns}
+the distance left to travel 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIStrategy_a27f9512aaeec26eeb532ebd294efe651}{I\+Strategy}}.
+
 \mbox{\Hypertarget{classBeelineStrategy_a648eae389f7844f210ac267313ef6233}\label{classBeelineStrategy_a648eae389f7844f210ac267313ef6233}} 
 \index{BeelineStrategy@{BeelineStrategy}!IsCompleted@{IsCompleted}}
 \index{IsCompleted@{IsCompleted}!BeelineStrategy@{BeelineStrategy}}
@@ -104,5 +123,5 @@ Implements \mbox{\hyperlink{classIStrategy_a69254389f4ef9a851dc5d40c4cc9aacd}{I\
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/abuza006/\+Courses Spring 2023/csci3081\+W/\+Assignments/\+H\+W4/\+Team-\/010-\/46-\/homework4/libs/transit/include/Beeline\+Strategy.\+h\item 
-/home/abuza006/\+Courses Spring 2023/csci3081\+W/\+Assignments/\+H\+W4/\+Team-\/010-\/46-\/homework4/libs/transit/src/Beeline\+Strategy.\+cc\end{DoxyCompactItemize}
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/include/Beeline\+Strategy.\+h\item 
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/src/Beeline\+Strategy.\+cc\end{DoxyCompactItemize}

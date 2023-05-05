@@ -11,8 +11,7 @@ The \mbox{\hyperlink{classIEntityDecorator}{I\+Entity\+Decorator}} class is an a
 
 
 
-Inheritance diagram for I\+Entity\+Decorator\+:
-\nopagebreak
+Inheritance diagram for I\+Entity\+Decorator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for I\+Entity\+Decorator\+:
 \end{figure}
 
 
-Collaboration diagram for I\+Entity\+Decorator\+:
-\nopagebreak
+Collaboration diagram for I\+Entity\+Decorator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -38,36 +36,42 @@ Collaboration diagram for I\+Entity\+Decorator\+:
 virtual void \mbox{\hyperlink{classIEntityDecorator_a1270f7ee557197e0babaa6f65272b297}{Overrided\+Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)=0
 \begin{DoxyCompactList}\small\item\em What to override to modify the baheavior of the surrounding \mbox{\hyperlink{classIEntity}{I\+Entity}}. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classIEntityDecorator_a2d1c926a85aa906daca44b2bc5f3d0d2}{Get\+Speed}} () const
-\begin{DoxyCompactList}\small\item\em Gets the speed of the drone. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Gets the speed of the wrapped entity. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classIEntityDecorator_a07206e377ee50d430991201e3f11f880}{Get\+Position}} () const
-\begin{DoxyCompactList}\small\item\em Gets the position of the drone. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Gets the position of the wrapped entity. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classIEntityDecorator_ac526afbc933c78ed90ad23e2e6900612}{Get\+Direction}} () const
-\begin{DoxyCompactList}\small\item\em Gets the direction of the drone. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Gets the direction of the wrapped entity. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classIEntityDecorator_a9804b949fd9ce0d09f71f357f0d4d26f}{Get\+Destination}} () const
-\begin{DoxyCompactList}\small\item\em Gets the destination of the drone. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Gets the destination of the wrapped entity. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classIEntityDecorator_ab4ccd696b6147c2bca6714f1470f508e}{Get\+Color}} () const
-\begin{DoxyCompactList}\small\item\em Gets the color of the drone. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Gets the color of the wrapped entity. \end{DoxyCompactList}\item 
 Json\+Object \mbox{\hyperlink{classIEntityDecorator_a7e0c71700ec013d442a52f383de373bd}{Get\+Details}} () const
-\begin{DoxyCompactList}\small\item\em Gets the details information of the drone. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Gets the details information of the wrapped entity. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classIEntityDecorator_a1182081933a5fd6fe996ee9e4a348340}{Get\+Availability}} () const
-\begin{DoxyCompactList}\small\item\em Gets the availability of the drone. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Gets the availability of the wrapped entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIEntityDecorator_afc0270580d70e3d713c9f1daf9f1f591}{Set\+Availability}} (bool choice)
+\begin{DoxyCompactList}\small\item\em Sets the availability of the wrapped entity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classIEntityDecorator_a7bf76b94db8a4a88d6981685f90989ec}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
-\begin{DoxyCompactList}\small\item\em Updates the drone\textquotesingle{}s position. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Updates the wrapped entity \textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIEntityDecorator_ad5ad7bf3dc8edd07996933f936a411d6}{Set\+Graph}} (const I\+Graph $\ast$graph)
+\begin{DoxyCompactList}\small\item\em Sets the graph object used by the entity in the simulation. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classIEntityDecorator_a22f30fd37a90dc1cff02e066345ec058}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
 \begin{DoxyCompactList}\small\item\em Sets the position of the drone. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classIEntityDecorator_a1629752303eba09ab3916c86760e79c5}{Set\+Direction}} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+)
-\begin{DoxyCompactList}\small\item\em Sets the direction of the drone. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Sets the direction of the wrapped entity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classIEntityDecorator_a5c63b05dc3400a7b98c039af47375fcd}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
-\begin{DoxyCompactList}\small\item\em Sets the destination of the drone. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Sets the destination of the wrapped entity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classIEntityDecorator_a419e10d46bc5cfb0da7885cb12816db6}{Set\+Color}} (std\+::string col\+\_\+)
-\begin{DoxyCompactList}\small\item\em Sets the color of the drone. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Sets the color of the wrapped entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIEntityDecorator_a0dd83e93fe5b27981d7c458252e61d4c}{Set\+Entity\+List}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$entity\+List\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the entity list of this and wrapped entity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classIEntityDecorator_afecf0dfa7622acf273def1c0c3f479e1}{Rotate}} (double angle)
-\begin{DoxyCompactList}\small\item\em Rotates the drone. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Rotates the wrapped entity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classIEntityDecorator_a0a6c7805970162447e529d6f5d8ecd44}{Jump}} (double height)
-\begin{DoxyCompactList}\small\item\em Makes the drone jump. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Makes the wrapped entity jump. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classIEntityDecorator_a55347f4e824aa4abeb38d72c99736bc3}\label{classIEntityDecorator_a55347f4e824aa4abeb38d72c99736bc3}} 
 \mbox{\hyperlink{classIEntityDecorator_a55347f4e824aa4abeb38d72c99736bc3}{I\+Entity\+Decorator}} (const \mbox{\hyperlink{classIEntityDecorator}{I\+Entity\+Decorator}} \&entity\+Decorator)=delete
-\begin{DoxyCompactList}\small\item\em Removing the copy constructor and assignment operator so that drones cannot be copied. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Removing the copy constructor and assignment operator so that wrapped entity s cannot be copied. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classIEntityDecorator_a02c1586088e383382411dc8a2fbf7141}\label{classIEntityDecorator_a02c1586088e383382411dc8a2fbf7141}} 
 \mbox{\hyperlink{classIEntityDecorator}{I\+Entity\+Decorator}} \& {\bfseries operator=} (const \mbox{\hyperlink{classIEntityDecorator}{I\+Entity\+Decorator}} \&entity\+Decorator)=delete
 \end{DoxyCompactItemize}
@@ -76,6 +80,9 @@ void \mbox{\hyperlink{classIEntityDecorator_a0a6c7805970162447e529d6f5d8ecd44}{J
 \item 
 \mbox{\Hypertarget{classIEntityDecorator_afe9de153af53f3f51ae4e791fbb55354}\label{classIEntityDecorator_afe9de153af53f3f51ae4e791fbb55354}} 
 \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ {\bfseries entity}
+\item 
+\mbox{\Hypertarget{classIEntityDecorator_a96c06d8630d2ecbad1cfa6eca0cdd954}\label{classIEntityDecorator_a96c06d8630d2ecbad1cfa6eca0cdd954}} 
+std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$ {\bfseries entity\+List}
 \end{DoxyCompactItemize}
 
 
@@ -91,10 +98,10 @@ The \mbox{\hyperlink{classIEntityDecorator}{I\+Entity\+Decorator}} class is an a
 
 
 
-Gets the availability of the drone. 
+Gets the availability of the wrapped entity. 
 
 \begin{DoxyReturn}{Returns}
-The availability of the drone 
+The availability of the wrapped entity 
 \end{DoxyReturn}
 
 
@@ -108,10 +115,10 @@ Reimplemented from \mbox{\hyperlink{classIEntity_a90348881691a37d5c3d63265ed3463
 
 
 
-Gets the color of the drone. 
+Gets the color of the wrapped entity. 
 
 \begin{DoxyReturn}{Returns}
-The color of the drone 
+The color of the wrapped entity 
 \end{DoxyReturn}
 
 
@@ -125,10 +132,10 @@ Reimplemented from \mbox{\hyperlink{classIEntity_a1326f6c0e0377a4fbde8a8c02fb6cc
 
 
 
-Gets the destination of the drone. 
+Gets the destination of the wrapped entity. 
 
 \begin{DoxyReturn}{Returns}
-The destination of the drone 
+The destination of the wrapped entity 
 \end{DoxyReturn}
 
 
@@ -142,10 +149,10 @@ Implements \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{I\+E
 
 
 
-Gets the details information of the drone. 
+Gets the details information of the wrapped entity. 
 
 \begin{DoxyReturn}{Returns}
-The details information of the drone 
+The details information of the wrapped entity 
 \end{DoxyReturn}
 
 
@@ -159,10 +166,10 @@ Implements \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{I\+E
 
 
 
-Gets the direction of the drone. 
+Gets the direction of the wrapped entity. 
 
 \begin{DoxyReturn}{Returns}
-The direction of the drone 
+The direction of the wrapped entity 
 \end{DoxyReturn}
 
 
@@ -176,10 +183,10 @@ Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+E
 
 
 
-Gets the position of the drone. 
+Gets the position of the wrapped entity. 
 
 \begin{DoxyReturn}{Returns}
-The position of the drone 
+The position of the wrapped entity 
 \end{DoxyReturn}
 
 
@@ -193,10 +200,10 @@ Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+E
 
 
 
-Gets the speed of the drone. 
+Gets the speed of the wrapped entity. 
 
 \begin{DoxyReturn}{Returns}
-The speed of the drone 
+The speed of the wrapped entity 
 \end{DoxyReturn}
 
 
@@ -210,11 +217,11 @@ Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+E
 
 
 
-Makes the drone jump. 
+Makes the wrapped entity jump. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em height} & The height at which the drone should jump \\
+{\em height} & The height at which the wrapped entity should jump \\
 \hline
 \end{DoxyParams}
 
@@ -250,16 +257,35 @@ Implemented in \mbox{\hyperlink{classBatteryDecorator_abf07daa937e3c657d43896a3b
 
 
 
-Rotates the drone. 
+Rotates the wrapped entity. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em angle} & The angle by which the drone should be rotated \\
+{\em angle} & The angle by which the wrapped entity should be rotated \\
 \hline
 \end{DoxyParams}
 
 
 Reimplemented from \mbox{\hyperlink{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}{I\+Entity}}.
+
+\mbox{\Hypertarget{classIEntityDecorator_afc0270580d70e3d713c9f1daf9f1f591}\label{classIEntityDecorator_afc0270580d70e3d713c9f1daf9f1f591}} 
+\index{IEntityDecorator@{IEntityDecorator}!SetAvailability@{SetAvailability}}
+\index{SetAvailability@{SetAvailability}!IEntityDecorator@{IEntityDecorator}}
+\doxysubsubsection{\texorpdfstring{SetAvailability()}{SetAvailability()}}
+{\footnotesize\ttfamily void I\+Entity\+Decorator\+::\+Set\+Availability (\begin{DoxyParamCaption}\item[{bool}]{choice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the availability of the wrapped entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice} & The desired availability of the wrapped entity. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_adf3acdf4764f5ff25f89d7814e39551c}{I\+Entity}}.
 
 \mbox{\Hypertarget{classIEntityDecorator_a419e10d46bc5cfb0da7885cb12816db6}\label{classIEntityDecorator_a419e10d46bc5cfb0da7885cb12816db6}} 
 \index{IEntityDecorator@{IEntityDecorator}!SetColor@{SetColor}}
@@ -269,11 +295,11 @@ Reimplemented from \mbox{\hyperlink{classIEntity_a4c109baa4179c28422623a7d3b2e9f
 
 
 
-Sets the color of the drone. 
+Sets the color of the wrapped entity. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em col\+\_\+} & The new color of the drone \\
+{\em col\+\_\+} & The new color of the wrapped entity \\
 \hline
 \end{DoxyParams}
 
@@ -288,11 +314,11 @@ Reimplemented from \mbox{\hyperlink{classIEntity_a61b62fe1126f473d8ebb524c70c57a
 
 
 
-Sets the destination of the drone. 
+Sets the destination of the wrapped entity. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em des\+\_\+} & The new destination of the drone \\
+{\em des\+\_\+} & The new destination of the wrapped entity \\
 \hline
 \end{DoxyParams}
 
@@ -307,16 +333,54 @@ Reimplemented from \mbox{\hyperlink{classIEntity_aa473000823f673e9d7b89aed3cd3fc
 
 
 
-Sets the direction of the drone. 
+Sets the direction of the wrapped entity. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em dir\+\_\+} & The new direction of the drone \\
+{\em dir\+\_\+} & The new direction of the wrapped entity \\
 \hline
 \end{DoxyParams}
 
 
 Reimplemented from \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{I\+Entity}}.
+
+\mbox{\Hypertarget{classIEntityDecorator_a0dd83e93fe5b27981d7c458252e61d4c}\label{classIEntityDecorator_a0dd83e93fe5b27981d7c458252e61d4c}} 
+\index{IEntityDecorator@{IEntityDecorator}!SetEntityList@{SetEntityList}}
+\index{SetEntityList@{SetEntityList}!IEntityDecorator@{IEntityDecorator}}
+\doxysubsubsection{\texorpdfstring{SetEntityList()}{SetEntityList()}}
+{\footnotesize\ttfamily void I\+Entity\+Decorator\+::\+Set\+Entity\+List (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$}]{entity\+List\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the entity list of this and wrapped entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity\+List} & The new entity list of this and wrapped entity \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af32ea2be2ac4c6630c20b9a5f0f5f529}{I\+Entity}}.
+
+\mbox{\Hypertarget{classIEntityDecorator_ad5ad7bf3dc8edd07996933f936a411d6}\label{classIEntityDecorator_ad5ad7bf3dc8edd07996933f936a411d6}} 
+\index{IEntityDecorator@{IEntityDecorator}!SetGraph@{SetGraph}}
+\index{SetGraph@{SetGraph}!IEntityDecorator@{IEntityDecorator}}
+\doxysubsubsection{\texorpdfstring{SetGraph()}{SetGraph()}}
+{\footnotesize\ttfamily void I\+Entity\+Decorator\+::\+Set\+Graph (\begin{DoxyParamCaption}\item[{const I\+Graph $\ast$}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the graph object used by the entity in the simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The I\+Graph object to be used. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a50b01c5c4fab1632c0289e30aa77faf2}{I\+Entity}}.
 
 \mbox{\Hypertarget{classIEntityDecorator_a22f30fd37a90dc1cff02e066345ec058}\label{classIEntityDecorator_a22f30fd37a90dc1cff02e066345ec058}} 
 \index{IEntityDecorator@{IEntityDecorator}!SetPosition@{SetPosition}}
@@ -345,7 +409,7 @@ Reimplemented from \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae
 
 
 
-Updates the drone\textquotesingle{}s position. 
+Updates the wrapped entity \textquotesingle{}s position. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -362,4 +426,4 @@ Reimplemented from \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/abuza006/\+Courses Spring 2023/csci3081\+W/\+Assignments/\+H\+W4/\+Team-\/010-\/46-\/homework4/libs/transit/include/I\+Entity\+Decorator.\+h\end{DoxyCompactItemize}
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/include/I\+Entity\+Decorator.\+h\end{DoxyCompactItemize}

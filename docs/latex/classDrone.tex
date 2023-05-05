@@ -51,6 +51,8 @@ bool \mbox{\hyperlink{classDrone_a479442805072af27a7ee628ed59d621e}{Get\+Availab
 \begin{DoxyCompactList}\small\item\em Gets the availability of the drone. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDrone_a21d9dc799ee8a6c10b579fcab401bd57}{Get\+Nearest\+Entity}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
 \begin{DoxyCompactList}\small\item\em Gets the nearest entity in the scheduler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classDrone_a13fe2157fa394f4bffdfc2940ea0fbee}{Get\+Current\+Nearest\+Entity}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current nearest entity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDrone_a6798b0bd297ca7a930016cd2dda0b7ff}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
 \begin{DoxyCompactList}\small\item\em Updates the drone\textquotesingle{}s position. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDrone_a00150938e8dbfceaf81c9fb59994f6ef}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
@@ -65,6 +67,13 @@ void \mbox{\hyperlink{classDrone_ad698b0fac61fecdd01dffea6762a3710}{Rotate}} (do
 \begin{DoxyCompactList}\small\item\em Rotates the drone. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDrone_a1559fe24a5792ac72ba9d8a4a13a9ec8}{Jump}} (double height)
 \begin{DoxyCompactList}\small\item\em Makes the drone jump. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIStrategy}{I\+Strategy}} $\ast$ \mbox{\hyperlink{classDrone_a9dd43a31d35c9c0981a6dd580125f0e3}{Get\+To\+Robot\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current strategy the drone uses to go to the \mbox{\hyperlink{classRobot}{Robot}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIStrategy}{I\+Strategy}} $\ast$ \mbox{\hyperlink{classDrone_a273f518c444ff03a4ce5760e6469fdb1}{Get\+To\+Final\+Destination\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current strategy the drone uses to go to the final destination. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDrone_a01a83013756b8621fb60b4979f2c17a7}\label{classDrone_a01a83013756b8621fb60b4979f2c17a7}} 
+void \mbox{\hyperlink{classDrone_a01a83013756b8621fb60b4979f2c17a7}{Cancel\+Delivery}} ()
+\begin{DoxyCompactList}\small\item\em Cancels the current robot delivery. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDrone_af60150a86c9fbe79ef1995e9b401b46b}\label{classDrone_af60150a86c9fbe79ef1995e9b401b46b}} 
 \mbox{\hyperlink{classDrone_af60150a86c9fbe79ef1995e9b401b46b}{Drone}} (const \mbox{\hyperlink{classDrone}{Drone}} \&drone)=delete
 \begin{DoxyCompactList}\small\item\em Removing the copy constructor and assignment operator so that drones cannot be copied. \end{DoxyCompactList}\item 
@@ -130,6 +139,19 @@ The color of the drone
 
 Reimplemented from \mbox{\hyperlink{classIEntity_a1326f6c0e0377a4fbde8a8c02fb6ccb3}{I\+Entity}}.
 
+\mbox{\Hypertarget{classDrone_a13fe2157fa394f4bffdfc2940ea0fbee}\label{classDrone_a13fe2157fa394f4bffdfc2940ea0fbee}} 
+\index{Drone@{Drone}!GetCurrentNearestEntity@{GetCurrentNearestEntity}}
+\index{GetCurrentNearestEntity@{GetCurrentNearestEntity}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{GetCurrentNearestEntity()}{GetCurrentNearestEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIEntity}{I\+Entity}}$\ast$ Drone\+::\+Get\+Current\+Nearest\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current nearest entity. 
+
+\begin{DoxyReturn}{Returns}
+The nearest entity to the drone 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classDrone_adaf61822f659e8ab22fb633569288752}\label{classDrone_adaf61822f659e8ab22fb633569288752}} 
 \index{Drone@{Drone}!GetDestination@{GetDestination}}
 \index{GetDestination@{GetDestination}!Drone@{Drone}}
@@ -230,6 +252,32 @@ The speed of the drone
 
 Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+Entity}}.
 
+\mbox{\Hypertarget{classDrone_a273f518c444ff03a4ce5760e6469fdb1}\label{classDrone_a273f518c444ff03a4ce5760e6469fdb1}} 
+\index{Drone@{Drone}!GetToFinalDestinationStrategy@{GetToFinalDestinationStrategy}}
+\index{GetToFinalDestinationStrategy@{GetToFinalDestinationStrategy}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{GetToFinalDestinationStrategy()}{GetToFinalDestinationStrategy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIStrategy}{I\+Strategy}}$\ast$ Drone\+::\+Get\+To\+Final\+Destination\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current strategy the drone uses to go to the final destination. 
+
+\begin{DoxyReturn}{Returns}
+the current \mbox{\hyperlink{classIStrategy}{I\+Strategy}} in use 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDrone_a9dd43a31d35c9c0981a6dd580125f0e3}\label{classDrone_a9dd43a31d35c9c0981a6dd580125f0e3}} 
+\index{Drone@{Drone}!GetToRobotStrategy@{GetToRobotStrategy}}
+\index{GetToRobotStrategy@{GetToRobotStrategy}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{GetToRobotStrategy()}{GetToRobotStrategy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIStrategy}{I\+Strategy}}$\ast$ Drone\+::\+Get\+To\+Robot\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current strategy the drone uses to go to the \mbox{\hyperlink{classRobot}{Robot}}. 
+
+\begin{DoxyReturn}{Returns}
+the current \mbox{\hyperlink{classIStrategy}{I\+Strategy}} in use 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classDrone_a1559fe24a5792ac72ba9d8a4a13a9ec8}\label{classDrone_a1559fe24a5792ac72ba9d8a4a13a9ec8}} 
 \index{Drone@{Drone}!Jump@{Jump}}
 \index{Jump@{Jump}!Drone@{Drone}}
@@ -369,5 +417,5 @@ Reimplemented from \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/abuza006/\+Courses Spring 2023/csci3081\+W/\+Assignments/\+H\+W4/\+Team-\/010-\/46-\/homework4/libs/transit/include/Drone.\+h\item 
-/home/abuza006/\+Courses Spring 2023/csci3081\+W/\+Assignments/\+H\+W4/\+Team-\/010-\/46-\/homework4/libs/transit/src/Drone.\+cc\end{DoxyCompactItemize}
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/include/Drone.\+h\item 
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/src/Drone.\+cc\end{DoxyCompactItemize}

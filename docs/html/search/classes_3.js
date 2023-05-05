@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['datacollector_91',['DataCollector',['../classDataCollector.html',1,'']]],
-  ['dfsstrategy_92',['DfsStrategy',['../classDfsStrategy.html',1,'']]],
-  ['dijkstrastrategy_93',['DijkstraStrategy',['../classDijkstraStrategy.html',1,'']]],
-  ['drone_94',['Drone',['../classDrone.html',1,'']]],
-  ['dronefactory_95',['DroneFactory',['../classDroneFactory.html',1,'']]]
+  ['datacollector_116',['DataCollector',['../classDataCollector.html',1,'']]],
+  ['dataentry_117',['DataEntry',['../classDataEntry.html',1,'']]],
+  ['decoratorfactory_118',['DecoratorFactory',['../classDecoratorFactory.html',1,'']]],
+  ['dfsstrategy_119',['DfsStrategy',['../classDfsStrategy.html',1,'']]],
+  ['dijkstrastrategy_120',['DijkstraStrategy',['../classDijkstraStrategy.html',1,'']]],
+  ['drone_121',['Drone',['../classDrone.html',1,'']]],
+  ['dronefactory_122',['DroneFactory',['../classDroneFactory.html',1,'']]]
 ];

@@ -9,11 +9,86 @@ Represents a singleton class that collect drone pertaining the drone and its sur
 
 {\ttfamily \#include $<$Data\+Collector.\+h$>$}
 
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDataCollector_a6377cbd8b20100f0d4451fba27184590}{Data\+Collector}} (const \mbox{\hyperlink{classDataCollector}{Data\+Collector}} \&other)=delete
+\item 
+\mbox{\hyperlink{classDataCollector}{Data\+Collector}} \& \mbox{\hyperlink{classDataCollector_aa68dc44638eee5e097b9d2ec1839a8f8}{operator=}} (const \mbox{\hyperlink{classDataCollector}{Data\+Collector}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classDataCollector_a9f9ff1817bd0601ba33925c3378ac50e}\label{classDataCollector_a9f9ff1817bd0601ba33925c3378ac50e}} 
+\mbox{\hyperlink{classDataCollector_a9f9ff1817bd0601ba33925c3378ac50e}{$\sim$\+Data\+Collector}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDataCollector}{Data\+Collector}} desconstructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollector_aeb1f921d699021970ff43b7b738b34fc}{collect\+Data}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\begin{DoxyCompactList}\small\item\em This method takes a entity to calculate and store certain data points into to the singleton class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollector_ae26618d4a412a7186469b116ff6bc608}{On\+Tick}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ \&entites, double dt)
+\begin{DoxyCompactList}\small\item\em This method takes a entity to calculate and store certain data points into to the singleton class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataCollector_aed87438ba5a0656507be8816a10912ad}\label{classDataCollector_aed87438ba5a0656507be8816a10912ad}} 
+void \mbox{\hyperlink{classDataCollector_aed87438ba5a0656507be8816a10912ad}{Open\+C\+SV}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\begin{DoxyCompactList}\small\item\em This method opens the csv file to write to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataCollector_a5c1c2f0781ebc9ce0425f30e64d2c1c7}\label{classDataCollector_a5c1c2f0781ebc9ce0425f30e64d2c1c7}} 
+void \mbox{\hyperlink{classDataCollector_a5c1c2f0781ebc9ce0425f30e64d2c1c7}{Close\+C\+SV}} ()
+\begin{DoxyCompactList}\small\item\em This method closes the csv files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDataCollector_a975680376366dcf48861ab3fe7fe06fc}\label{classDataCollector_a975680376366dcf48861ab3fe7fe06fc}} 
+static \mbox{\hyperlink{classDataCollector}{Data\+Collector}} \& {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Represents a singleton class that collect drone pertaining the drone and its surroundings. It then stores this data into a csv. 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDataCollector_a6377cbd8b20100f0d4451fba27184590}\label{classDataCollector_a6377cbd8b20100f0d4451fba27184590}} 
+\index{DataCollector@{DataCollector}!DataCollector@{DataCollector}}
+\index{DataCollector@{DataCollector}!DataCollector@{DataCollector}}
+\doxysubsubsection{\texorpdfstring{DataCollector()}{DataCollector()}}
+{\footnotesize\ttfamily Data\+Collector\+::\+Data\+Collector (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDataCollector}{Data\+Collector}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Singletons should not be cloneable. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDataCollector_aeb1f921d699021970ff43b7b738b34fc}\label{classDataCollector_aeb1f921d699021970ff43b7b738b34fc}} 
+\index{DataCollector@{DataCollector}!collectData@{collectData}}
+\index{collectData@{collectData}!DataCollector@{DataCollector}}
+\doxysubsubsection{\texorpdfstring{collectData()}{collectData()}}
+{\footnotesize\ttfamily void Data\+Collector\+::collect\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+
+
+This method takes a entity to calculate and store certain data points into to the singleton class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & The input is a refrence to a \mbox{\hyperlink{classIEntity}{I\+Entity}} object which we will read the data of \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataCollector_ae26618d4a412a7186469b116ff6bc608}\label{classDataCollector_ae26618d4a412a7186469b116ff6bc608}} 
+\index{DataCollector@{DataCollector}!OnTick@{OnTick}}
+\index{OnTick@{OnTick}!DataCollector@{DataCollector}}
+\doxysubsubsection{\texorpdfstring{OnTick()}{OnTick()}}
+{\footnotesize\ttfamily void Data\+Collector\+::\+On\+Tick (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ \&}]{entites,  }\item[{double}]{dt }\end{DoxyParamCaption})}
+
+
+
+This method takes a entity to calculate and store certain data points into to the singleton class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & The input is a refrence to a \mbox{\hyperlink{classIEntity}{I\+Entity}} object which we will read the data of \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataCollector_aa68dc44638eee5e097b9d2ec1839a8f8}\label{classDataCollector_aa68dc44638eee5e097b9d2ec1839a8f8}} 
+\index{DataCollector@{DataCollector}!operator=@{operator=}}
+\index{operator=@{operator=}!DataCollector@{DataCollector}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDataCollector}{Data\+Collector}}\& Data\+Collector\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDataCollector}{Data\+Collector}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Singletons should not be assignable. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/abuza006/\+Courses Spring 2023/csci3081\+W/\+Assignments/\+H\+W4/\+Team-\/010-\/46-\/homework4/libs/transit/include/Data\+Collector.\+h\end{DoxyCompactItemize}
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/include/Data\+Collector.\+h\item 
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/src/Data\+Collector.\+cc\end{DoxyCompactItemize}

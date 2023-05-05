@@ -11,8 +11,7 @@ this class inhertis from the \mbox{\hyperlink{classIStrategy}{I\+Strategy}} clas
 
 
 
-Inheritance diagram for Celebration\+Decorator\+:
-\nopagebreak
+Inheritance diagram for Celebration\+Decorator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Celebration\+Decorator\+:
 \end{figure}
 
 
-Collaboration diagram for Celebration\+Decorator\+:
-\nopagebreak
+Collaboration diagram for Celebration\+Decorator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -40,7 +38,9 @@ Collaboration diagram for Celebration\+Decorator\+:
 virtual void \mbox{\hyperlink{classCelebrationDecorator_ae0711d10b93521df0bafd05795838860}{Move}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity, double dt)=0
 \begin{DoxyCompactList}\small\item\em Move the entity with the behavior as described for 4 seconds. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classCelebrationDecorator_a7ce83ef692d22773bf40e8733e20329a}{Is\+Completed}} ()
-\begin{DoxyCompactList}\small\item\em Check if the movement is completed by checking the time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if the movement is completed by checking the time. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classCelebrationDecorator_ac1c76c963cc0f50d7d11f1ae279d0489}{Get\+Distance}} (\mbox{\hyperlink{classVector3}{Vector3}} from)
+\begin{DoxyCompactList}\small\item\em Get the distance left to travel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -74,6 +74,23 @@ Construct a new Celebration Decorator object.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCelebrationDecorator_ac1c76c963cc0f50d7d11f1ae279d0489}\label{classCelebrationDecorator_ac1c76c963cc0f50d7d11f1ae279d0489}} 
+\index{CelebrationDecorator@{CelebrationDecorator}!GetDistance@{GetDistance}}
+\index{GetDistance@{GetDistance}!CelebrationDecorator@{CelebrationDecorator}}
+\doxysubsubsection{\texorpdfstring{GetDistance()}{GetDistance()}}
+{\footnotesize\ttfamily virtual double Celebration\+Decorator\+::\+Get\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{from }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the distance left to travel. 
+
+\begin{DoxyReturn}{Returns}
+the distance left to travel 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIStrategy_a27f9512aaeec26eeb532ebd294efe651}{I\+Strategy}}.
+
 \mbox{\Hypertarget{classCelebrationDecorator_a7ce83ef692d22773bf40e8733e20329a}\label{classCelebrationDecorator_a7ce83ef692d22773bf40e8733e20329a}} 
 \index{CelebrationDecorator@{CelebrationDecorator}!IsCompleted@{IsCompleted}}
 \index{IsCompleted@{IsCompleted}!CelebrationDecorator@{CelebrationDecorator}}
@@ -120,5 +137,5 @@ Implemented in \mbox{\hyperlink{classJumpDecorator_a6d46675428916bbe6acd10fb25d5
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/abuza006/\+Courses Spring 2023/csci3081\+W/\+Assignments/\+H\+W4/\+Team-\/010-\/46-\/homework4/libs/transit/include/Celebration\+Decorator.\+h\item 
-/home/abuza006/\+Courses Spring 2023/csci3081\+W/\+Assignments/\+H\+W4/\+Team-\/010-\/46-\/homework4/libs/transit/src/Celebration\+Decorator.\+cc\end{DoxyCompactItemize}
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/include/Celebration\+Decorator.\+h\item 
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/src/Celebration\+Decorator.\+cc\end{DoxyCompactItemize}

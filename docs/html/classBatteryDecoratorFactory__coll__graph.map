@@ -1,0 +1,5 @@
+<map id="BatteryDecoratorFactory" name="BatteryDecoratorFactory">
+<area shape="rect" id="node1" title="Battery Decorator Factory to produce Battery Decorators." alt="" coords="5,155,188,181"/>
+<area shape="rect" id="node2" href="$classDecoratorFactory.html" title="Decorator Factory to produce IEntityDecorator class." alt="" coords="29,80,164,107"/>
+<area shape="rect" id="node3" href="$classIEntityFactory.html" title="Composite Factory Interface." alt="" coords="41,5,153,32"/>
+</map>

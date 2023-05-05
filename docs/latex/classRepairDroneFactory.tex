@@ -1,0 +1,71 @@
+\hypertarget{classRepairDroneFactory}{}\doxysection{Repair\+Drone\+Factory Class Reference}
+\label{classRepairDroneFactory}\index{RepairDroneFactory@{RepairDroneFactory}}
+
+
+Repair drone factory to produce Repair drone.  
+
+
+
+
+{\ttfamily \#include $<$Repair\+Drone\+Factory.\+h$>$}
+
+
+
+Inheritance diagram for Repair\+Drone\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classRepairDroneFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Repair\+Drone\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classRepairDroneFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRepairDroneFactory_a71786d3f4723333195b479b416deb2b9}\label{classRepairDroneFactory_a71786d3f4723333195b479b416deb2b9}} 
+virtual \mbox{\hyperlink{classRepairDroneFactory_a71786d3f4723333195b479b416deb2b9}{$\sim$\+Repair\+Drone\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classRepairDroneFactory}{Repair\+Drone\+Factory}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classRepairDroneFactory_aeaa57164b1b46137189853b20e3be12d}{Create\+Entity}} (Json\+Object \&entity)
+\begin{DoxyCompactList}\small\item\em Creates entity using the given J\+S\+ON object, if possible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Repair drone factory to produce Repair drone. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRepairDroneFactory_aeaa57164b1b46137189853b20e3be12d}\label{classRepairDroneFactory_aeaa57164b1b46137189853b20e3be12d}} 
+\index{RepairDroneFactory@{RepairDroneFactory}!CreateEntity@{CreateEntity}}
+\index{CreateEntity@{CreateEntity}!RepairDroneFactory@{RepairDroneFactory}}
+\doxysubsubsection{\texorpdfstring{CreateEntity()}{CreateEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ Repair\+Drone\+Factory\+::\+Create\+Entity (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates entity using the given J\+S\+ON object, if possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & -\/ Json\+Object to be used to create the new entity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Entity that was created if it was created successfully, or a nullpointer if creation failed. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntityFactory_a9bd53cf7ca21ab252968062ea5d88180}{I\+Entity\+Factory}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/include/Repair\+Drone\+Factory.\+h\item 
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/src/Repair\+Drone\+Factory.\+cc\end{DoxyCompactItemize}

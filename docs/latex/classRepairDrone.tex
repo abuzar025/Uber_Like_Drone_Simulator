@@ -1,0 +1,361 @@
+\hypertarget{classRepairDrone}{}\doxysection{Repair\+Drone Class Reference}
+\label{classRepairDrone}\index{RepairDrone@{RepairDrone}}
+
+
+Represents a \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}} in a physical system.  
+
+
+
+
+{\ttfamily \#include $<$Repair\+Drone.\+h$>$}
+
+
+
+Inheritance diagram for Repair\+Drone\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classRepairDrone__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Repair\+Drone\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classRepairDrone__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRepairDrone_a009cf05ba4d2b8794819d1ee39eeaa02}{Repair\+Drone}} (Json\+Object \&obj)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRepairDrone_a7ebddbb365524756bc5dcff3ce62a82a}\label{classRepairDrone_a7ebddbb365524756bc5dcff3ce62a82a}} 
+\mbox{\hyperlink{classRepairDrone_a7ebddbb365524756bc5dcff3ce62a82a}{$\sim$\+Repair\+Drone}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classRepairDrone_a061dc8f590cd509639a87f49b0ee1d78}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classRepairDrone_a86046097c9f02bfb667ad8cb40fb929d}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classRepairDrone_a69bbebd8380649c139b2482892cc0251}{Get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s destination. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRepairDrone_a51b9ab1147a5c035ca9bc46ab7953ad4}{Get\+Availability}} () const
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s availability. \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classRepairDrone_a7592bf5f2fad0b95527fd6354fefcd0e}{Get\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s details. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRepairDrone_a627f91c230e18fab9019e731ad51b3c5}{Get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s speed. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classRepairDrone_af505f7908308863695c7ddd79cf81706}{Get\+Strategy\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the Strategy Name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRepairDrone_af9d11c8778cdde39f8c8d9b0681cd287}{Set\+Strategy\+Name}} (std\+::string strategy\+Name\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set the Strategy Name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRepairDrone_abf21ba977cfb4e0cf3165dea9c3b137a}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRepairDrone_a4acaf97128d7b954bb69141b0b16f8c6}{Set\+Direction}} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRepairDrone_aece4849161969e42283d3abd25e6d876}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s destination. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRepairDrone_a754b1546cbbce9e80623eedd4f7494fc}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Updates the entity\textquotesingle{}s position in the physical system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRepairDrone_adff9132be443f9bf2e32aa149d929ff1}{Set\+Entity\+List}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$entity\+List\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the entity list of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRepairDrone_a6c40cad437bf51b1b46ae1ac0fd21d1b}{Rotate}} (double angle)
+\begin{DoxyCompactList}\small\item\em Rotates the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRepairDrone_a48600facb5682b5ce1998ffa523b6f7a}\label{classRepairDrone_a48600facb5682b5ce1998ffa523b6f7a}} 
+void {\bfseries Get\+Closest\+Recharge\+Station} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\item 
+\mbox{\Hypertarget{classRepairDrone_acc4ab1150cca7a8efd086cfbb426eaeb}\label{classRepairDrone_acc4ab1150cca7a8efd086cfbb426eaeb}} 
+float {\bfseries Distance\+From\+Drone} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\item 
+\mbox{\Hypertarget{classRepairDrone_a385805ddb57bfeaa5b5f8d9a04a34782}\label{classRepairDrone_a385805ddb57bfeaa5b5f8d9a04a34782}} 
+bool {\bfseries Battery\+In\+Range} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}} in a physical system. 
+
+Repair\+Drones move using euler integration based on a specified velocity and direction. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRepairDrone_a009cf05ba4d2b8794819d1ee39eeaa02}\label{classRepairDrone_a009cf05ba4d2b8794819d1ee39eeaa02}} 
+\index{RepairDrone@{RepairDrone}!RepairDrone@{RepairDrone}}
+\index{RepairDrone@{RepairDrone}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{RepairDrone()}{RepairDrone()}}
+{\footnotesize\ttfamily Repair\+Drone\+::\+Repair\+Drone (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & J\+S\+ON object containing the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s information \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRepairDrone_a51b9ab1147a5c035ca9bc46ab7953ad4}\label{classRepairDrone_a51b9ab1147a5c035ca9bc46ab7953ad4}} 
+\index{RepairDrone@{RepairDrone}!GetAvailability@{GetAvailability}}
+\index{GetAvailability@{GetAvailability}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{GetAvailability()}{GetAvailability()}}
+{\footnotesize\ttfamily bool Repair\+Drone\+::\+Get\+Availability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s availability. 
+
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s availability 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a90348881691a37d5c3d63265ed3463b1}{I\+Entity}}.
+
+\mbox{\Hypertarget{classRepairDrone_a69bbebd8380649c139b2482892cc0251}\label{classRepairDrone_a69bbebd8380649c139b2482892cc0251}} 
+\index{RepairDrone@{RepairDrone}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Repair\+Drone\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s destination. 
+
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s destination 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{I\+Entity}}.
+
+\mbox{\Hypertarget{classRepairDrone_a7592bf5f2fad0b95527fd6354fefcd0e}\label{classRepairDrone_a7592bf5f2fad0b95527fd6354fefcd0e}} 
+\index{RepairDrone@{RepairDrone}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Repair\+Drone\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s details. 
+
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s details 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{I\+Entity}}.
+
+\mbox{\Hypertarget{classRepairDrone_a86046097c9f02bfb667ad8cb40fb929d}\label{classRepairDrone_a86046097c9f02bfb667ad8cb40fb929d}} 
+\index{RepairDrone@{RepairDrone}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Repair\+Drone\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s direction. 
+
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s direction 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
+
+\mbox{\Hypertarget{classRepairDrone_a061dc8f590cd509639a87f49b0ee1d78}\label{classRepairDrone_a061dc8f590cd509639a87f49b0ee1d78}} 
+\index{RepairDrone@{RepairDrone}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Repair\+Drone\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s position. 
+
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s position 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+Entity}}.
+
+\mbox{\Hypertarget{classRepairDrone_a627f91c230e18fab9019e731ad51b3c5}\label{classRepairDrone_a627f91c230e18fab9019e731ad51b3c5}} 
+\index{RepairDrone@{RepairDrone}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Repair\+Drone\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s speed. 
+
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s speed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+Entity}}.
+
+\mbox{\Hypertarget{classRepairDrone_af505f7908308863695c7ddd79cf81706}\label{classRepairDrone_af505f7908308863695c7ddd79cf81706}} 
+\index{RepairDrone@{RepairDrone}!GetStrategyName@{GetStrategyName}}
+\index{GetStrategyName@{GetStrategyName}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{GetStrategyName()}{GetStrategyName()}}
+{\footnotesize\ttfamily std\+::string Repair\+Drone\+::\+Get\+Strategy\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Strategy Name. 
+
+\begin{DoxyReturn}{Returns}
+Streategy name 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a14badced4c9d744bcc210cb3c1260ee1}{I\+Entity}}.
+
+\mbox{\Hypertarget{classRepairDrone_a6c40cad437bf51b1b46ae1ac0fd21d1b}\label{classRepairDrone_a6c40cad437bf51b1b46ae1ac0fd21d1b}} 
+\index{RepairDrone@{RepairDrone}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Repair\+Drone\+::\+Rotate (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Rotates the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The angle by which the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}} should be rotated \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}{I\+Entity}}.
+
+\mbox{\Hypertarget{classRepairDrone_aece4849161969e42283d3abd25e6d876}\label{classRepairDrone_aece4849161969e42283d3abd25e6d876}} 
+\index{RepairDrone@{RepairDrone}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily void Repair\+Drone\+::\+Set\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{des\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s destination. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em des\+\_\+} & The new destination of the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}{I\+Entity}}.
+
+\mbox{\Hypertarget{classRepairDrone_a4acaf97128d7b954bb69141b0b16f8c6}\label{classRepairDrone_a4acaf97128d7b954bb69141b0b16f8c6}} 
+\index{RepairDrone@{RepairDrone}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Repair\+Drone\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{dir\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir\+\_\+} & The new direction of the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{I\+Entity}}.
+
+\mbox{\Hypertarget{classRepairDrone_adff9132be443f9bf2e32aa149d929ff1}\label{classRepairDrone_adff9132be443f9bf2e32aa149d929ff1}} 
+\index{RepairDrone@{RepairDrone}!SetEntityList@{SetEntityList}}
+\index{SetEntityList@{SetEntityList}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{SetEntityList()}{SetEntityList()}}
+{\footnotesize\ttfamily void Repair\+Drone\+::\+Set\+Entity\+List (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$}]{entity\+List\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the entity list of the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity\+List} & The new entity list of the entity \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af32ea2be2ac4c6630c20b9a5f0f5f529}{I\+Entity}}.
+
+\mbox{\Hypertarget{classRepairDrone_abf21ba977cfb4e0cf3165dea9c3b137a}\label{classRepairDrone_abf21ba977cfb4e0cf3165dea9c3b137a}} 
+\index{RepairDrone@{RepairDrone}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Repair\+Drone\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+} & The new position of the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{I\+Entity}}.
+
+\mbox{\Hypertarget{classRepairDrone_af9d11c8778cdde39f8c8d9b0681cd287}\label{classRepairDrone_af9d11c8778cdde39f8c8d9b0681cd287}} 
+\index{RepairDrone@{RepairDrone}!SetStrategyName@{SetStrategyName}}
+\index{SetStrategyName@{SetStrategyName}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{SetStrategyName()}{SetStrategyName()}}
+{\footnotesize\ttfamily void Repair\+Drone\+::\+Set\+Strategy\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{strategy\+Name\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the Strategy Name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strategy\+Name\+\_\+} & Strategy name \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a933def05f85783fddbf05e8257cc8880}{I\+Entity}}.
+
+\mbox{\Hypertarget{classRepairDrone_a754b1546cbbce9e80623eedd4f7494fc}\label{classRepairDrone_a754b1546cbbce9e80623eedd4f7494fc}} 
+\index{RepairDrone@{RepairDrone}!Update@{Update}}
+\index{Update@{Update}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Repair\+Drone\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the entity\textquotesingle{}s position in the physical system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & The time step of the update. \\
+\hline
+{\em scheduler} & The list of all entities in the system. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}{I\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/include/Repair\+Drone.\+h\item 
+/home/abuza006/\+Courses Spring 2023/\+Team-\/010-\/46-\/homework4/libs/transit/src/Repair\+Drone.\+cc\end{DoxyCompactItemize}
