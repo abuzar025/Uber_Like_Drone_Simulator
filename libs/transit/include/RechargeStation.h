@@ -5,7 +5,7 @@
 
 
 /**
- * @brief this class inhertis from the IEntity class and represents 
+ * @brief this class inherits from the IEntity class and represents 
  * the recharge stations for drone entity. 
  */
 
@@ -23,44 +23,44 @@ class RechargeStation: public IEntity {
     ~RechargeStation();
 
     /**
-     * @brief Gets the speed of the drone
-     * @return The speed of the drone
+     * @brief Gets the speed of the Recharge Station
+     * @return The speed of the Recharge Station
      */
     float GetSpeed() const { return 0; }
 
     /**
-     * @brief Gets the position of the drone
-     * @return The position of the drone
+     * @brief Gets the position of the Recharge Station
+     * @return The position of the Recharge Station
      */
     Vector3 GetPosition() const { return position; }
 
     /**
-     * @brief Gets the direction of the drone
-     * @return The direction of the drone
+     * @brief Gets the direction of the Recharge Station
+     * @return The direction of the Recharge Station
      */
     Vector3 GetDirection() const { return direction; }
 
     /**
-     * @brief Gets the destination of the drone
-     * @return The destination of the drone
+     * @brief Gets the destination of the Recharge Station
+     * @return The destination of the Recharge Station
      */
     Vector3 GetDestination() const { return position; }
 
     /**
-     * @brief Gets the color of the drone
-     * @return The color of the drone
+     * @brief Gets the color of the Recharge Station
+     * @return The color of the Recharge Station
      */
     std::string GetColor() const { return color; }
 
     /**
-     * @brief Gets the details information of the drone
-     * @return The details information of the drone
+     * @brief Gets the details information of the Recharge Station
+     * @return The details information of the Recharge Station
      */
     JsonObject GetDetails() const { return details; }
 
     /**
-     * @brief Gets the availability of the drone
-     * @return The availability of the drone
+     * @brief Gets the availability of the Recharge Station
+     * @return The availability of the Recharge Station
      */
     bool GetAvailability() const { return available; }
 
@@ -71,33 +71,33 @@ class RechargeStation: public IEntity {
     double GetRechargeRate() const { return rechargeRate; }
 
     /**
-     * @brief Updates the drone's position
+     * @brief Updates the Recharge Station's position
      * @param dt Delta time
      * @param scheduler Vector containing all the entities in the system
      */
     void Update(double dt, std::vector<IEntity*> scheduler);
 
     /**
-     * @brief Sets the position of the drone
-     * @param pos_ The new position of the drone
+     * @brief Sets the position of the Recharge Station
+     * @param pos_ The new position of the Recharge Station
      */
     void SetPosition(Vector3 pos_) { position = pos_; }
 
     /**
-     * @brief Sets the direction of the drone
-     * @param dir_ The new direction of the drone
+     * @brief Sets the direction of the Recharge Station
+     * @param dir_ The new direction of the Recharge Station
      */
     void SetDirection(Vector3 dir_) { direction = dir_; }
 
     /**
-     * @brief Sets the destination of the drone
-     * @param des_ The new destination of the drone
+     * @brief Sets the destination of the Recharge Station
+     * @param des_ The new destination of the Recharge Station
      */
     void SetDestination(Vector3 des_) {}
 
     /**
-     * @brief Sets the color of the drone
-     * @param col_ The new color of the drone
+     * @brief Sets the color of the Recharge Station
+     * @param col_ The new color of the Recharge Station
      */
     void SetColor(std::string col_) { color = col_; }
 
@@ -126,10 +126,10 @@ class RechargeStation: public IEntity {
 
     /**
      * @brief Removing the copy constructor and assignment operator
-     * so that drones cannot be copied.
+     * so that Recharge Stations cannot be copied.
      */
-    RechargeStation(const RechargeStation& drone) = delete;
-    RechargeStation& operator=(const RechargeStation& drone) = delete;
+    RechargeStation(const RechargeStation& station) = delete;
+    RechargeStation& operator=(const RechargeStation& station) = delete;
 
  private:
     JsonObject details;
