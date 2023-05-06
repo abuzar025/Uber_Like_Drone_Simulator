@@ -74,7 +74,7 @@ void DataCollector::OpenCSV(IEntity* entity) {
     time(&clock);
 
     std::string filename = asctime(localtime(&clock));
-    filename = currentTime.substr(0, 24);
+    filename = filename.substr(0, 24);
     filename.append("_entity_");
     filename.append(to_string(entity->GetId()));
     filename.append("_");
