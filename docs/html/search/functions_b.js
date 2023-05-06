@@ -2,7 +2,7 @@ var searchData=
 [
   ['random_223',['Random',['../classIEntity.html#a40b0caaefcd247250efd2f12a3335a73',1,'IEntity']]],
   ['recharge_224',['recharge',['../classBatteryDecorator.html#afdeedd28f4aef114665b589126296f1e',1,'BatteryDecorator']]],
-  ['rechargestation_225',['RechargeStation',['../classRechargeStation.html#a5d73fedd3f3706659a63f3a1e3d5d0be',1,'RechargeStation::RechargeStation(JsonObject &amp;obj)'],['../classRechargeStation.html#aec4f06fa99626ece31d97a668753277e',1,'RechargeStation::RechargeStation(const RechargeStation &amp;drone)=delete']]],
+  ['rechargestation_225',['RechargeStation',['../classRechargeStation.html#a5d73fedd3f3706659a63f3a1e3d5d0be',1,'RechargeStation::RechargeStation(JsonObject &amp;obj)'],['../classRechargeStation.html#ab3aabd28f0f46356202349816843fdcf',1,'RechargeStation::RechargeStation(const RechargeStation &amp;station)=delete']]],
   ['removeentity_226',['RemoveEntity',['../classIController.html#a35b431eb8e01216df8b33fa3f4c2b25c',1,'IController']]],
   ['removepath_227',['RemovePath',['../classIController.html#a23bf74a0e1672c6daba1674137759f55',1,'IController']]],
   ['repairdrone_228',['RepairDrone',['../classRepairDrone.html#a009cf05ba4d2b8794819d1ee39eeaa02',1,'RepairDrone']]],
