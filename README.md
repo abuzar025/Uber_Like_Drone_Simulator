@@ -51,7 +51,7 @@ The decorator pattern was chosen to implement this feature as it allows for the 
 
 This feature is not user interactable, but rather works automatically. The drone will automatically seek out recharge stations, and repair drones will charge the drone if necessary. No user input is required on the front end, but if more charging stations are desired the umn.json file must be edited to add new entities. 
 
-<p align="center"> <img src="UML/Singleton_UML.png" alt="strategyPatternUML" class="shadow" style="height:300px;width:auto;border-radius:5px;1"></p>
+<p align="center"> <img src="UML/Singleton_UML.pdf" alt="singletonPatternUML" class="shadow" style="height:300px;width:auto;border-radius:5px;1"></p>
 
 # New Feature 2: Singleton pattern - Data collection
 
