@@ -24,8 +24,8 @@ To run the simulation, you can follow these steps:
 Note that if port 8081 is not available, you can use a different port (e.g. 8082, 8083, etc.) by replacing "8081" in the commands above with the desired port number. Also, if you are running the simulation on a CSE Lab machine, you will need to use SSH and port forwarding to access the visualization and scheduling pages.
 
 
-<p align="center"> <img src="UML/Decorator_UML.png" alt="strategyPatternUML" class="shadow" style="height:300px;width:auto;border-radius:5px;1"></p>
-<p align="center"> <img src="UML/Factory_UML.png" alt="strategyPatternUML" class="shadow" style="height:300px;width:auto;border-radius:5px;1"></p>
+<p align="center"> <img src="UML/Decorator_UML.pdf" alt="decoratorPatternUML" class="shadow" style="height:300px;width:auto;border-radius:5px;1"></p>
+<p align="center"> <img src="UML/Factory_UML.pdf" alt="factoryPatternUML" class="shadow" style="height:300px;width:auto;border-radius:5px;1"></p>
 
 # What does the simulation do specifically (individual features ie movement of entities etc)?
 
