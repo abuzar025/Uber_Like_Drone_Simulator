@@ -1,10 +1,9 @@
-# Team number, member names, and x500.
+# Team-010-46
 
-Team-010-46
-Muhammad Abuzar abuza006 
-Anirudh Ganesh  ganes099
-Ronit Motwani   motwa011
-Tony Skeps      skeps002
+* Muhammad Abuzar abuza006 
+* Anirudh Ganesh  ganes099
+* Ronit Motwani   motwa011
+* Tony Skeps      skeps002
 
 # What is the project about? 
 
@@ -26,47 +25,47 @@ Note that if port 8081 is not available, you can use a different port (e.g. 8082
 
 # What does the simulation do specifically (individual features ie movement of entities etc)?
 
-# New Feature 1: Decorator and Factory pattern - Battery and Recharge Station Decorator
+## New Feature 1: Decorator and Factory pattern - Battery and Recharge Station Decorator
 
-# What does it do?
+## What does it do?
 
 The battery and recharge station decorator adds the ability to track the battery level of drones in the 3D simulation. As time passes, the battery level decreases by 2% starting from 100%. If the battery level goes below a certain threshold or reaches 0%, the drone cannot move/deliver the robot anymore. The recharge station is a new entity that the drone can go to in order to recharge its battery. There is also a repair drone that can go to a drone with a low battery level and charge it up.
 
-# Why is it significantly interesting?
+## Why is it significantly interesting?
 
 This feature adds a new level of realism and complexity to the simulation by introducing the concept of battery life and recharging. It also opens up the possibility for new strategies and tactics to be employed in order to manage the battery levels of drones.
 
-# How does it add to the existing work? 
+## How does it add to the existing work? 
 
 This feature builds upon the existing work by adding a new layer of functionality to the drones. It also adds two new entities to the simulation, the recharge station and the repair drone.
 
-# Which design pattern did you choose to implement it and why? 
+## Which design pattern did you choose to implement it and why? 
 
 The decorator pattern was chosen to implement this feature as it allows for the addition of new behavior to an object dynamically at runtime without affecting the behavior of other objects in the same class.
 
-# Instruction to use this new feature (if the new feature is not user interactable, please mention this as well)
+## Instruction to use this new feature (if the new feature is not user interactable, please mention this as well)
 
 This feature is not user interactable, but rather works automatically. The drone will automatically seek out recharge stations, and repair drones will charge the drone if necessary. No user input is required on the front end, but if more charging stations are desired the umn.json file must be edited to add new entities. 
 
 # New Feature 2: Singleton pattern - Data collection
 
-# What does it do?
+## What does it do?
 
 The singleton data collection feature allows for the tracking of various data points from the simulation, such as the speed of drone, the position of drone, number of trips, estimated time to arrival, estimated distance to arrival and a clock time stamp in a CSV file. This data can then be analyzed to gain insights into the performance of the simulation.
 
-# Why is it significantly interesting?
+## Why is it significantly interesting?
 
 This feature allows for the collection and analysis of data from the simulation, which can be used to optimize and improve the simulation. It also adds a layer of analytics to the simulation, allowing for more in-depth analysis of its performance.
 
-# How does it add to the existing work? 
+## How does it add to the existing work? 
 
 This feature builds upon the existing work by adding the ability to track and analyze data from the simulation. It also adds a layer of insight into the performance of the simulation that was not present before.
 
-# Which design pattern did you choose to implement it and why? 
+## Which design pattern did you choose to implement it and why? 
 
 The singleton pattern was chosen to implement this feature as it allows for the creation of a single instance of a class that can be accessed globally. This is useful for data collection as it ensures that there is only one instance of the data collection class that is collecting data throughout the simulation.
 
-# Instruction to use this new feature (if the new feature is not user interactable, please mention this as well)
+## Instruction to use this new feature (if the new feature is not user interactable, please mention this as well)
 
 Everytime a new simulation is run a new CSV file with the current timestamp is created automatically which can be found inside the project folder or repository online. 
 
