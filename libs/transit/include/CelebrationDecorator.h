@@ -9,7 +9,18 @@
  */
 class CelebrationDecorator : public IStrategy {
  protected:
+   /**
+   * @brief The strategy used by the object.
+   *
+   * This pointer represents the current strategy used by the object.
+   */
   IStrategy* strategy;
+
+  /**
+   * @brief The current time of the object.
+   *
+   * This variable represents the current time of the object, measured in seconds.
+   */
   float time;
 
  public:

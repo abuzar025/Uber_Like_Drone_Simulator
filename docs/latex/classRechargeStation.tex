@@ -49,9 +49,8 @@ Json\+Object \mbox{\hyperlink{classRechargeStation_a98885a18485258d192fd4228227e
 \begin{DoxyCompactList}\small\item\em Gets the details information of the drone. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classRechargeStation_a817e0b4b96c52f0aebef2f9ad9c5e2f1}{Get\+Availability}} () const
 \begin{DoxyCompactList}\small\item\em Gets the availability of the drone. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classRechargeStation_ac3c8631b9521875378c6aef345e58c54}\label{classRechargeStation_ac3c8631b9521875378c6aef345e58c54}} 
-double {\bfseries Get\+Recharge\+Rate} () const
-\item 
+double \mbox{\hyperlink{classRechargeStation_ac3c8631b9521875378c6aef345e58c54}{Get\+Recharge\+Rate}} () const
+\begin{DoxyCompactList}\small\item\em A public member function that returns the recharge rate of a \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRechargeStation_abf2319116a20d1f4cafcb4716fb04069}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
 \begin{DoxyCompactList}\small\item\em Updates the drone\textquotesingle{}s position. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRechargeStation_ad1f81bd953d2a4832e15a31a020f9df4}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
@@ -64,15 +63,12 @@ void \mbox{\hyperlink{classRechargeStation_a28a4ed22a3481ec97c3e0399ba770ac7}{Se
 \begin{DoxyCompactList}\small\item\em Sets the color of the drone. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRechargeStation_aa965a044ff3b29d97cb5e7a688449a90}{Set\+Entity\+List}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$entity\+List\+\_\+)
 \begin{DoxyCompactList}\small\item\em Sets the entity list of the entity. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classRechargeStation_afee612ca22966a932a0ed4bd8ff19106}\label{classRechargeStation_afee612ca22966a932a0ed4bd8ff19106}} 
-void {\bfseries Set\+Recharge\+Rate} (double rate)
-\item 
-\mbox{\Hypertarget{classRechargeStation_a2f23dc314f5b10f0495ea8e9ce3ecccc}\label{classRechargeStation_a2f23dc314f5b10f0495ea8e9ce3ecccc}} 
-double {\bfseries Get\+Radius} ()
-\item 
-\mbox{\Hypertarget{classRechargeStation_a796b42a517f0118222c91303bc36b6fb}\label{classRechargeStation_a796b42a517f0118222c91303bc36b6fb}} 
-bool {\bfseries Battery\+In\+Range} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
-\item 
+void \mbox{\hyperlink{classRechargeStation_afee612ca22966a932a0ed4bd8ff19106}{Set\+Recharge\+Rate}} (double rate)
+\begin{DoxyCompactList}\small\item\em A public member function that sets the recharge rate of a \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classRechargeStation_a2f23dc314f5b10f0495ea8e9ce3ecccc}{Get\+Radius}} ()
+\begin{DoxyCompactList}\small\item\em A public member function that returns the radius of a \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRechargeStation_a796b42a517f0118222c91303bc36b6fb}{Battery\+In\+Range}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\begin{DoxyCompactList}\small\item\em A public member function that checks whether an \mbox{\hyperlink{classIEntity}{I\+Entity}} object is within the range of a \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRechargeStation_aec4f06fa99626ece31d97a668753277e}\label{classRechargeStation_aec4f06fa99626ece31d97a668753277e}} 
 \mbox{\hyperlink{classRechargeStation_aec4f06fa99626ece31d97a668753277e}{Recharge\+Station}} (const \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} \&drone)=delete
 \begin{DoxyCompactList}\small\item\em Removing the copy constructor and assignment operator so that drones cannot be copied. \end{DoxyCompactList}\item 
@@ -104,6 +100,24 @@ Recharge\+Stations are created with a name.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRechargeStation_a796b42a517f0118222c91303bc36b6fb}\label{classRechargeStation_a796b42a517f0118222c91303bc36b6fb}} 
+\index{RechargeStation@{RechargeStation}!BatteryInRange@{BatteryInRange}}
+\index{BatteryInRange@{BatteryInRange}!RechargeStation@{RechargeStation}}
+\doxysubsubsection{\texorpdfstring{BatteryInRange()}{BatteryInRange()}}
+{\footnotesize\ttfamily bool Recharge\+Station\+::\+Battery\+In\+Range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+
+
+A public member function that checks whether an \mbox{\hyperlink{classIEntity}{I\+Entity}} object is within the range of a \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & A pointer to the \mbox{\hyperlink{classIEntity}{I\+Entity}} object to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether the \mbox{\hyperlink{classIEntity}{I\+Entity}} object is within range of the \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} object. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classRechargeStation_a817e0b4b96c52f0aebef2f9ad9c5e2f1}\label{classRechargeStation_a817e0b4b96c52f0aebef2f9ad9c5e2f1}} 
 \index{RechargeStation@{RechargeStation}!GetAvailability@{GetAvailability}}
 \index{GetAvailability@{GetAvailability}!RechargeStation@{RechargeStation}}
@@ -206,6 +220,32 @@ The position of the drone
 
 Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+Entity}}.
 
+\mbox{\Hypertarget{classRechargeStation_a2f23dc314f5b10f0495ea8e9ce3ecccc}\label{classRechargeStation_a2f23dc314f5b10f0495ea8e9ce3ecccc}} 
+\index{RechargeStation@{RechargeStation}!GetRadius@{GetRadius}}
+\index{GetRadius@{GetRadius}!RechargeStation@{RechargeStation}}
+\doxysubsubsection{\texorpdfstring{GetRadius()}{GetRadius()}}
+{\footnotesize\ttfamily double Recharge\+Station\+::\+Get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A public member function that returns the radius of a \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} object. 
+
+\begin{DoxyReturn}{Returns}
+A double representing the radius of a \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRechargeStation_ac3c8631b9521875378c6aef345e58c54}\label{classRechargeStation_ac3c8631b9521875378c6aef345e58c54}} 
+\index{RechargeStation@{RechargeStation}!GetRechargeRate@{GetRechargeRate}}
+\index{GetRechargeRate@{GetRechargeRate}!RechargeStation@{RechargeStation}}
+\doxysubsubsection{\texorpdfstring{GetRechargeRate()}{GetRechargeRate()}}
+{\footnotesize\ttfamily double Recharge\+Station\+::\+Get\+Recharge\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A public member function that returns the recharge rate of a \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} object. 
+
+\begin{DoxyReturn}{Returns}
+A double representing the recharge rate of a \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} object. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classRechargeStation_a09d33832aca70b16e75162ce6d646470}\label{classRechargeStation_a09d33832aca70b16e75162ce6d646470}} 
 \index{RechargeStation@{RechargeStation}!GetSpeed@{GetSpeed}}
 \index{GetSpeed@{GetSpeed}!RechargeStation@{RechargeStation}}
@@ -292,7 +332,7 @@ Sets the entity list of the entity.
 
 
 \begin{DoxyParams}{Parameters}
-{\em entity\+List} & The new entity list of the entity \\
+{\em entity\+List\+\_\+} & The new entity list of the entity \\
 \hline
 \end{DoxyParams}
 
@@ -318,6 +358,21 @@ Sets the position of the drone.
 
 Reimplemented from \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{I\+Entity}}.
 
+\mbox{\Hypertarget{classRechargeStation_afee612ca22966a932a0ed4bd8ff19106}\label{classRechargeStation_afee612ca22966a932a0ed4bd8ff19106}} 
+\index{RechargeStation@{RechargeStation}!SetRechargeRate@{SetRechargeRate}}
+\index{SetRechargeRate@{SetRechargeRate}!RechargeStation@{RechargeStation}}
+\doxysubsubsection{\texorpdfstring{SetRechargeRate()}{SetRechargeRate()}}
+{\footnotesize\ttfamily void Recharge\+Station\+::\+Set\+Recharge\+Rate (\begin{DoxyParamCaption}\item[{double}]{rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A public member function that sets the recharge rate of a \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rate} & A double representing the recharge rate of a \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} object. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classRechargeStation_abf2319116a20d1f4cafcb4716fb04069}\label{classRechargeStation_abf2319116a20d1f4cafcb4716fb04069}} 
 \index{RechargeStation@{RechargeStation}!Update@{Update}}
 \index{Update@{Update}!RechargeStation@{RechargeStation}}

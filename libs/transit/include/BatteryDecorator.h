@@ -36,13 +36,36 @@ class BatteryDecorator: public IEntityDecorator {
      */
     virtual void OverridedUpdate(double dt, std::vector<IEntity*> scheduler);
 
+    /**
+     * @brief Recharges the battery by the specified amount.
+     *
+     * @param amount The amount to recharge the battery by.
+     * @return True if the recharge was successful, false otherwise.
+     */
     bool recharge(double amount);
 
+    /**
+     * @brief Gets the current charge of the battery.
+     *
+     * @return The current charge of the battery.
+     */
     double getCharge() const {return charge;}
-
+    
+    /**
+     * @brief Determines if the battery is or will be marooned.
+     *
+     * @return True if the battery is or will be marooned, false otherwise.
+     */
     bool IsOrWillBeMarooned();
 
+    /**
+     * @brief The maximum charge of the battery.
+     */
     const double maxCharge;
+
+    /**
+     * @brief The rate at which the battery drains.
+     */
     const double drainRate;
 
  private:

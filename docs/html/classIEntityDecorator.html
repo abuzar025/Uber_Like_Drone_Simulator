@@ -130,7 +130,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7bf76b94db8a4a88d6981685f90989ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntityDecorator.html#a7bf76b94db8a4a88d6981685f90989ec">Update</a> (double dt, std::vector&lt; <a class="el" href="classIEntity.html">IEntity</a> * &gt; scheduler)</td></tr>
 <tr class="memdesc:a7bf76b94db8a4a88d6981685f90989ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the wrapped entity 's position.  <a href="classIEntityDecorator.html#a7bf76b94db8a4a88d6981685f90989ec">More...</a><br /></td></tr>
 <tr class="separator:a7bf76b94db8a4a88d6981685f90989ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5ad7bf3dc8edd07996933f936a411d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntityDecorator.html#ad5ad7bf3dc8edd07996933f936a411d6">SetGraph</a> (const IGraph *graph)</td></tr>
+<tr class="memitem:ad5ad7bf3dc8edd07996933f936a411d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntityDecorator.html#ad5ad7bf3dc8edd07996933f936a411d6">SetGraph</a> (const IGraph *<a class="el" href="classIEntity.html#a5d4d1c3d5da8a816fe03522cd0b4fcb3">graph</a>)</td></tr>
 <tr class="memdesc:ad5ad7bf3dc8edd07996933f936a411d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the graph object used by the entity in the simulation.  <a href="classIEntityDecorator.html#ad5ad7bf3dc8edd07996933f936a411d6">More...</a><br /></td></tr>
 <tr class="separator:ad5ad7bf3dc8edd07996933f936a411d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22f30fd37a90dc1cff02e066345ec058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntityDecorator.html#a22f30fd37a90dc1cff02e066345ec058">SetPosition</a> (<a class="el" href="classVector3.html">Vector3</a> pos_)</td></tr>
@@ -179,24 +179,28 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a933def05f85783fddbf05e8257cc8880 inherit pub_methods_classIEntity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntity.html#a933def05f85783fddbf05e8257cc8880">SetStrategyName</a> (std::string strategyName_)</td></tr>
 <tr class="memdesc:a933def05f85783fddbf05e8257cc8880 inherit pub_methods_classIEntity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Strategy Name.  <a href="classIEntity.html#a933def05f85783fddbf05e8257cc8880">More...</a><br /></td></tr>
 <tr class="separator:a933def05f85783fddbf05e8257cc8880 inherit pub_methods_classIEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40b0caaefcd247250efd2f12a3335a73 inherit pub_methods_classIEntity"><td class="memItemLeft" align="right" valign="top"><a id="a40b0caaefcd247250efd2f12a3335a73"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>Random</b> (float Min, float Max)</td></tr>
+<tr class="memitem:a40b0caaefcd247250efd2f12a3335a73 inherit pub_methods_classIEntity"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntity.html#a40b0caaefcd247250efd2f12a3335a73">Random</a> (float Min, float Max)</td></tr>
+<tr class="memdesc:a40b0caaefcd247250efd2f12a3335a73 inherit pub_methods_classIEntity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a random float value within a specified range.  <a href="classIEntity.html#a40b0caaefcd247250efd2f12a3335a73">More...</a><br /></td></tr>
 <tr class="separator:a40b0caaefcd247250efd2f12a3335a73 inherit pub_methods_classIEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:afe9de153af53f3f51ae4e791fbb55354"><td class="memItemLeft" align="right" valign="top"><a id="afe9de153af53f3f51ae4e791fbb55354"></a>
-<a class="el" href="classIEntity.html">IEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>entity</b></td></tr>
+<a class="el" href="classIEntity.html">IEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntityDecorator.html#afe9de153af53f3f51ae4e791fbb55354">entity</a></td></tr>
+<tr class="memdesc:afe9de153af53f3f51ae4e791fbb55354"><td class="mdescLeft">&#160;</td><td class="mdescRight">A protected class member variable that holds a pointer to the wrapped <a class="el" href="classIEntity.html" title="Represents an entity in a physical system.">IEntity</a> object. <br /></td></tr>
 <tr class="separator:afe9de153af53f3f51ae4e791fbb55354"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96c06d8630d2ecbad1cfa6eca0cdd954"><td class="memItemLeft" align="right" valign="top"><a id="a96c06d8630d2ecbad1cfa6eca0cdd954"></a>
-std::vector&lt; <a class="el" href="classIEntity.html">IEntity</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>entityList</b></td></tr>
+std::vector&lt; <a class="el" href="classIEntity.html">IEntity</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntityDecorator.html#a96c06d8630d2ecbad1cfa6eca0cdd954">entityList</a></td></tr>
+<tr class="memdesc:a96c06d8630d2ecbad1cfa6eca0cdd954"><td class="mdescLeft">&#160;</td><td class="mdescRight">A protected class member variable that holds a pointer to a vector of <a class="el" href="classIEntity.html" title="Represents an entity in a physical system.">IEntity</a> objects. <br /></td></tr>
 <tr class="separator:a96c06d8630d2ecbad1cfa6eca0cdd954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classIEntity"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classIEntity')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classIEntity.html">IEntity</a></td></tr>
 <tr class="memitem:adb3b46323a3c0269c5f108305a36737c inherit pro_attribs_classIEntity"><td class="memItemLeft" align="right" valign="top"><a id="adb3b46323a3c0269c5f108305a36737c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntity.html#adb3b46323a3c0269c5f108305a36737c">id</a></td></tr>
+<tr class="memdesc:adb3b46323a3c0269c5f108305a36737c inherit pro_attribs_classIEntity"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unique identifier of the object. <br /></td></tr>
 <tr class="separator:adb3b46323a3c0269c5f108305a36737c inherit pro_attribs_classIEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d4d1c3d5da8a816fe03522cd0b4fcb3 inherit pro_attribs_classIEntity"><td class="memItemLeft" align="right" valign="top"><a id="a5d4d1c3d5da8a816fe03522cd0b4fcb3"></a>
-const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></td></tr>
+const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntity.html#a5d4d1c3d5da8a816fe03522cd0b4fcb3">graph</a></td></tr>
+<tr class="memdesc:a5d4d1c3d5da8a816fe03522cd0b4fcb3 inherit pro_attribs_classIEntity"><td class="mdescLeft">&#160;</td><td class="mdescRight">The graph used by the object. <br /></td></tr>
 <tr class="separator:a5d4d1c3d5da8a816fe03522cd0b4fcb3 inherit pro_attribs_classIEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -702,7 +706,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 <p>Sets the entity list of this and wrapped entity. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">entityList</td><td>The new entity list of this and wrapped entity </td></tr>
+    <tr><td class="paramname">entityList_</td><td>The new entity list of this and wrapped entity </td></tr>
   </table>
   </dd>
 </dl>

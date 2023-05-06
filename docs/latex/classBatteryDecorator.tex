@@ -31,7 +31,7 @@ Collaboration diagram for Battery\+Decorator\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classBatteryDecorator_a23bf7b77e27d74aa142da8567865c0b9}\label{classBatteryDecorator_a23bf7b77e27d74aa142da8567865c0b9}} 
-\mbox{\hyperlink{classBatteryDecorator_a23bf7b77e27d74aa142da8567865c0b9}{Battery\+Decorator}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$wrapped, double max\+Charge, double drain\+Rate)
+\mbox{\hyperlink{classBatteryDecorator_a23bf7b77e27d74aa142da8567865c0b9}{Battery\+Decorator}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$wrapped, double \mbox{\hyperlink{classBatteryDecorator_ae3f0608afaa6d564512dfeb557c221b8}{max\+Charge}}, double \mbox{\hyperlink{classBatteryDecorator_a32397d5a88b78436982fac66452c2802}{drain\+Rate}})
 \begin{DoxyCompactList}\small\item\em Constructor that assigns a unique ID to the battery. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classBatteryDecorator_a9c0864309c5014b73f1fa2a4b2e91758}\label{classBatteryDecorator_a9c0864309c5014b73f1fa2a4b2e91758}} 
 \mbox{\hyperlink{classBatteryDecorator_a9c0864309c5014b73f1fa2a4b2e91758}{Battery\+Decorator}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$wrapped, Json\+Object \&obj)
@@ -41,24 +41,21 @@ Collaboration diagram for Battery\+Decorator\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classBatteryDecorator_abf07daa937e3c657d43896a3b8c81057}{Overrided\+Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
 \begin{DoxyCompactList}\small\item\em What to override to modify the behaviour of the surrounding \mbox{\hyperlink{classIEntity}{I\+Entity}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classBatteryDecorator_afdeedd28f4aef114665b589126296f1e}\label{classBatteryDecorator_afdeedd28f4aef114665b589126296f1e}} 
-bool {\bfseries recharge} (double amount)
-\item 
-\mbox{\Hypertarget{classBatteryDecorator_a882623234ed441d8b9527e96d954ebd0}\label{classBatteryDecorator_a882623234ed441d8b9527e96d954ebd0}} 
-double {\bfseries get\+Charge} () const
-\item 
-\mbox{\Hypertarget{classBatteryDecorator_aa9e1018546bea4ccde0d8b0216256e75}\label{classBatteryDecorator_aa9e1018546bea4ccde0d8b0216256e75}} 
-bool {\bfseries Is\+Or\+Will\+Be\+Marooned} ()
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{classBatteryDecorator_afdeedd28f4aef114665b589126296f1e}{recharge}} (double amount)
+\begin{DoxyCompactList}\small\item\em Recharges the battery by the specified amount. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBatteryDecorator_a882623234ed441d8b9527e96d954ebd0}{get\+Charge}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current charge of the battery. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBatteryDecorator_aa9e1018546bea4ccde0d8b0216256e75}{Is\+Or\+Will\+Be\+Marooned}} ()
+\begin{DoxyCompactList}\small\item\em Determines if the battery is or will be marooned. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classBatteryDecorator_ae3f0608afaa6d564512dfeb557c221b8}\label{classBatteryDecorator_ae3f0608afaa6d564512dfeb557c221b8}} 
-const double {\bfseries max\+Charge}
-\item 
+const double \mbox{\hyperlink{classBatteryDecorator_ae3f0608afaa6d564512dfeb557c221b8}{max\+Charge}}
+\begin{DoxyCompactList}\small\item\em The maximum charge of the battery. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classBatteryDecorator_a32397d5a88b78436982fac66452c2802}\label{classBatteryDecorator_a32397d5a88b78436982fac66452c2802}} 
-const double {\bfseries drain\+Rate}
-\end{DoxyCompactItemize}
+const double \mbox{\hyperlink{classBatteryDecorator_a32397d5a88b78436982fac66452c2802}{drain\+Rate}}
+\begin{DoxyCompactList}\small\item\em The rate at which the battery drains. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -66,6 +63,32 @@ const double {\bfseries drain\+Rate}
 this class inhertis from the \mbox{\hyperlink{classIEntityDecorator}{I\+Entity\+Decorator}} class. The purpose of this class is to modify the behavior of an \mbox{\hyperlink{classIEntity}{I\+Entity}} object by adding a battery to it. 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBatteryDecorator_a882623234ed441d8b9527e96d954ebd0}\label{classBatteryDecorator_a882623234ed441d8b9527e96d954ebd0}} 
+\index{BatteryDecorator@{BatteryDecorator}!getCharge@{getCharge}}
+\index{getCharge@{getCharge}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{getCharge()}{getCharge()}}
+{\footnotesize\ttfamily double Battery\+Decorator\+::get\+Charge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current charge of the battery. 
+
+\begin{DoxyReturn}{Returns}
+The current charge of the battery. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBatteryDecorator_aa9e1018546bea4ccde0d8b0216256e75}\label{classBatteryDecorator_aa9e1018546bea4ccde0d8b0216256e75}} 
+\index{BatteryDecorator@{BatteryDecorator}!IsOrWillBeMarooned@{IsOrWillBeMarooned}}
+\index{IsOrWillBeMarooned@{IsOrWillBeMarooned}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{IsOrWillBeMarooned()}{IsOrWillBeMarooned()}}
+{\footnotesize\ttfamily bool Battery\+Decorator\+::\+Is\+Or\+Will\+Be\+Marooned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Determines if the battery is or will be marooned. 
+
+\begin{DoxyReturn}{Returns}
+True if the battery is or will be marooned, false otherwise. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classBatteryDecorator_abf07daa937e3c657d43896a3b8c81057}\label{classBatteryDecorator_abf07daa937e3c657d43896a3b8c81057}} 
 \index{BatteryDecorator@{BatteryDecorator}!OverridedUpdate@{OverridedUpdate}}
 \index{OverridedUpdate@{OverridedUpdate}!BatteryDecorator@{BatteryDecorator}}
@@ -87,6 +110,24 @@ What to override to modify the behaviour of the surrounding \mbox{\hyperlink{cla
 
 Implements \mbox{\hyperlink{classIEntityDecorator_a1270f7ee557197e0babaa6f65272b297}{I\+Entity\+Decorator}}.
 
+\mbox{\Hypertarget{classBatteryDecorator_afdeedd28f4aef114665b589126296f1e}\label{classBatteryDecorator_afdeedd28f4aef114665b589126296f1e}} 
+\index{BatteryDecorator@{BatteryDecorator}!recharge@{recharge}}
+\index{recharge@{recharge}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{recharge()}{recharge()}}
+{\footnotesize\ttfamily bool Battery\+Decorator\+::recharge (\begin{DoxyParamCaption}\item[{double}]{amount }\end{DoxyParamCaption})}
+
+
+
+Recharges the battery by the specified amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount to recharge the battery by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the recharge was successful, false otherwise. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

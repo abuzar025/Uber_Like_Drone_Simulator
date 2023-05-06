@@ -86,39 +86,41 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classDataEntry.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDataEntry.html">DataEntry</a> {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">double</span> collectionPeriod;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">double</span> timeSinceLastCollection = 0;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  ofstream* output;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classDataCollector.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDataCollector.html">DataCollector</a> {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;       <span class="keyword">static</span> <a class="code" href="classDataCollector.html">DataCollector</a>&amp; getInstance();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;       <a class="code" href="classDataCollector.html">DataCollector</a>(<span class="keyword">const</span> <a class="code" href="classDataCollector.html">DataCollector</a>&amp; other) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;       <a class="code" href="classDataCollector.html">DataCollector</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classDataCollector.html">DataCollector</a>&amp; other) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;       ~<a class="code" href="classDataCollector.html">DataCollector</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;       <span class="keywordtype">void</span> collectData(<a class="code" href="classIEntity.html">IEntity</a>* entity);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;       <span class="keywordtype">void</span> OnTick(std::vector&lt;IEntity*&gt;&amp; entites, <span class="keywordtype">double</span> dt);</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classDataEntry.html#a6ba2931cc8e145d4369a995aae8781d4">   25</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classDataEntry.html#a6ba2931cc8e145d4369a995aae8781d4">collectionPeriod</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classDataEntry.html#a0995489a28d5175cda46300fd2c6e05c">   29</a></span>&#160;  <span class="keywordtype">double</span> timeSinceLastCollection = 0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classDataEntry.html#a4876c6f68e30f2954434a065999c4c06">   33</a></span>&#160;  ofstream* <a class="code" href="classDataEntry.html#a4876c6f68e30f2954434a065999c4c06">output</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classDataCollector.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDataCollector.html">DataCollector</a> {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;       <span class="keyword">static</span> <a class="code" href="classDataCollector.html">DataCollector</a>&amp; getInstance();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;       <a class="code" href="classDataCollector.html">DataCollector</a>(<span class="keyword">const</span> <a class="code" href="classDataCollector.html">DataCollector</a>&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;       <a class="code" href="classDataCollector.html">DataCollector</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classDataCollector.html">DataCollector</a>&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;       ~<a class="code" href="classDataCollector.html">DataCollector</a>();</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;       <span class="keywordtype">void</span> OpenCSV(<a class="code" href="classIEntity.html">IEntity</a>* entity);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;       <span class="keywordtype">void</span> CloseCSV();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;       <a class="code" href="classDataCollector.html">DataCollector</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;       std::unordered_map&lt;int, DataEntry&gt; entries;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;       <span class="keywordtype">void</span> collectData(<a class="code" href="classIEntity.html">IEntity</a>* entity);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;       <span class="keywordtype">void</span> OnTick(std::vector&lt;IEntity*&gt;&amp; entites, <span class="keywordtype">double</span> dt);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;       <span class="keywordtype">void</span> OpenCSV(<a class="code" href="classIEntity.html">IEntity</a>* entity);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;       <span class="keywordtype">void</span> CloseCSV();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;       <a class="code" href="classDataCollector.html">DataCollector</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;       std::unordered_map&lt;int, DataEntry&gt; entries;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassDataCollector_html"><div class="ttname"><a href="classDataCollector.html">DataCollector</a></div><div class="ttdoc">Represents a singleton class that collect drone pertaining the drone and its surroundings....</div><div class="ttdef"><b>Definition:</b> DataCollector.h:33</div></div>
+<div class="ttc" id="aclassDataCollector_html"><div class="ttname"><a href="classDataCollector.html">DataCollector</a></div><div class="ttdoc">Represents a singleton class that collect drone pertaining the drone and its surroundings....</div><div class="ttdef"><b>Definition:</b> DataCollector.h:42</div></div>
+<div class="ttc" id="aclassDataEntry_html_a4876c6f68e30f2954434a065999c4c06"><div class="ttname"><a href="classDataEntry.html#a4876c6f68e30f2954434a065999c4c06">DataEntry::output</a></div><div class="ttdeci">ofstream * output</div><div class="ttdoc">A public class member variable that represents the output stream of a DataEntry object.</div><div class="ttdef"><b>Definition:</b> DataCollector.h:33</div></div>
 <div class="ttc" id="aclassDataEntry_html"><div class="ttname"><a href="classDataEntry.html">DataEntry</a></div><div class="ttdoc">INTERNAL DATA; DO NOT USE OUTSIDE DataCollector.</div><div class="ttdef"><b>Definition:</b> DataCollector.h:20</div></div>
 <div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdoc">Represents an entity in a physical system.</div><div class="ttdef"><b>Definition:</b> IEntity.h:21</div></div>
+<div class="ttc" id="aclassDataEntry_html_a6ba2931cc8e145d4369a995aae8781d4"><div class="ttname"><a href="classDataEntry.html#a6ba2931cc8e145d4369a995aae8781d4">DataEntry::collectionPeriod</a></div><div class="ttdeci">double collectionPeriod</div><div class="ttdoc">A public class member variable that represents the data collection period of a DataEntry object.</div><div class="ttdef"><b>Definition:</b> DataCollector.h:25</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -53,7 +53,7 @@ void \mbox{\hyperlink{classIEntityDecorator_afc0270580d70e3d713c9f1daf9f1f591}{S
 \begin{DoxyCompactList}\small\item\em Sets the availability of the wrapped entity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classIEntityDecorator_a7bf76b94db8a4a88d6981685f90989ec}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
 \begin{DoxyCompactList}\small\item\em Updates the wrapped entity \textquotesingle{}s position. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classIEntityDecorator_ad5ad7bf3dc8edd07996933f936a411d6}{Set\+Graph}} (const I\+Graph $\ast$graph)
+void \mbox{\hyperlink{classIEntityDecorator_ad5ad7bf3dc8edd07996933f936a411d6}{Set\+Graph}} (const I\+Graph $\ast$\mbox{\hyperlink{classIEntity_a5d4d1c3d5da8a816fe03522cd0b4fcb3}{graph}})
 \begin{DoxyCompactList}\small\item\em Sets the graph object used by the entity in the simulation. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classIEntityDecorator_a22f30fd37a90dc1cff02e066345ec058}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
 \begin{DoxyCompactList}\small\item\em Sets the position of the drone. \end{DoxyCompactList}\item 
@@ -79,11 +79,11 @@ void \mbox{\hyperlink{classIEntityDecorator_a0a6c7805970162447e529d6f5d8ecd44}{J
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classIEntityDecorator_afe9de153af53f3f51ae4e791fbb55354}\label{classIEntityDecorator_afe9de153af53f3f51ae4e791fbb55354}} 
-\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ {\bfseries entity}
-\item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classIEntityDecorator_afe9de153af53f3f51ae4e791fbb55354}{entity}}
+\begin{DoxyCompactList}\small\item\em A protected class member variable that holds a pointer to the wrapped \mbox{\hyperlink{classIEntity}{I\+Entity}} object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classIEntityDecorator_a96c06d8630d2ecbad1cfa6eca0cdd954}\label{classIEntityDecorator_a96c06d8630d2ecbad1cfa6eca0cdd954}} 
-std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$ {\bfseries entity\+List}
-\end{DoxyCompactItemize}
+std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classIEntityDecorator_a96c06d8630d2ecbad1cfa6eca0cdd954}{entity\+List}}
+\begin{DoxyCompactList}\small\item\em A protected class member variable that holds a pointer to a vector of \mbox{\hyperlink{classIEntity}{I\+Entity}} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -356,7 +356,7 @@ Sets the entity list of this and wrapped entity.
 
 
 \begin{DoxyParams}{Parameters}
-{\em entity\+List} & The new entity list of this and wrapped entity \\
+{\em entity\+List\+\_\+} & The new entity list of this and wrapped entity \\
 \hline
 \end{DoxyParams}
 

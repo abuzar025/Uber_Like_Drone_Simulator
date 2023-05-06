@@ -58,20 +58,17 @@ void \mbox{\hyperlink{classRepairDrone_a4acaf97128d7b954bb69141b0b16f8c6}{Set\+D
 void \mbox{\hyperlink{classRepairDrone_aece4849161969e42283d3abd25e6d876}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
 \begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s destination. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRepairDrone_a754b1546cbbce9e80623eedd4f7494fc}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
-\begin{DoxyCompactList}\small\item\em Updates the entity\textquotesingle{}s position in the physical system. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Updates the state of the object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRepairDrone_adff9132be443f9bf2e32aa149d929ff1}{Set\+Entity\+List}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$entity\+List\+\_\+)
 \begin{DoxyCompactList}\small\item\em Sets the entity list of the entity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRepairDrone_a6c40cad437bf51b1b46ae1ac0fd21d1b}{Rotate}} (double angle)
 \begin{DoxyCompactList}\small\item\em Rotates the \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classRepairDrone_a48600facb5682b5ce1998ffa523b6f7a}\label{classRepairDrone_a48600facb5682b5ce1998ffa523b6f7a}} 
-void {\bfseries Get\+Closest\+Recharge\+Station} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
-\item 
-\mbox{\Hypertarget{classRepairDrone_acc4ab1150cca7a8efd086cfbb426eaeb}\label{classRepairDrone_acc4ab1150cca7a8efd086cfbb426eaeb}} 
-float {\bfseries Distance\+From\+Drone} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
-\item 
-\mbox{\Hypertarget{classRepairDrone_a385805ddb57bfeaa5b5f8d9a04a34782}\label{classRepairDrone_a385805ddb57bfeaa5b5f8d9a04a34782}} 
-bool {\bfseries Battery\+In\+Range} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classRepairDrone_a48600facb5682b5ce1998ffa523b6f7a}{Get\+Closest\+Recharge\+Station}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Gets the closest recharge station to the drone. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRepairDrone_acc4ab1150cca7a8efd086cfbb426eaeb}{Distance\+From\+Drone}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\begin{DoxyCompactList}\small\item\em Gets the distance between the drone and the specified entity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRepairDrone_a385805ddb57bfeaa5b5f8d9a04a34782}{Battery\+In\+Range}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\begin{DoxyCompactList}\small\item\em Determines if the specified entity has enough battery to be interacted with. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -99,6 +96,42 @@ Constructor.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRepairDrone_a385805ddb57bfeaa5b5f8d9a04a34782}\label{classRepairDrone_a385805ddb57bfeaa5b5f8d9a04a34782}} 
+\index{RepairDrone@{RepairDrone}!BatteryInRange@{BatteryInRange}}
+\index{BatteryInRange@{BatteryInRange}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{BatteryInRange()}{BatteryInRange()}}
+{\footnotesize\ttfamily bool Repair\+Drone\+::\+Battery\+In\+Range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+
+
+Determines if the specified entity has enough battery to be interacted with. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & A pointer to the entity to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the specified entity has enough battery, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRepairDrone_acc4ab1150cca7a8efd086cfbb426eaeb}\label{classRepairDrone_acc4ab1150cca7a8efd086cfbb426eaeb}} 
+\index{RepairDrone@{RepairDrone}!DistanceFromDrone@{DistanceFromDrone}}
+\index{DistanceFromDrone@{DistanceFromDrone}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{DistanceFromDrone()}{DistanceFromDrone()}}
+{\footnotesize\ttfamily float Repair\+Drone\+::\+Distance\+From\+Drone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+
+
+Gets the distance between the drone and the specified entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & A pointer to the entity to calculate the distance from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance between the drone and the specified entity. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classRepairDrone_a51b9ab1147a5c035ca9bc46ab7953ad4}\label{classRepairDrone_a51b9ab1147a5c035ca9bc46ab7953ad4}} 
 \index{RepairDrone@{RepairDrone}!GetAvailability@{GetAvailability}}
 \index{GetAvailability@{GetAvailability}!RepairDrone@{RepairDrone}}
@@ -116,6 +149,21 @@ The \mbox{\hyperlink{classRepairDrone}{Repair\+Drone}}\textquotesingle{}s availa
 
 Reimplemented from \mbox{\hyperlink{classIEntity_a90348881691a37d5c3d63265ed3463b1}{I\+Entity}}.
 
+\mbox{\Hypertarget{classRepairDrone_a48600facb5682b5ce1998ffa523b6f7a}\label{classRepairDrone_a48600facb5682b5ce1998ffa523b6f7a}} 
+\index{RepairDrone@{RepairDrone}!GetClosestRechargeStation@{GetClosestRechargeStation}}
+\index{GetClosestRechargeStation@{GetClosestRechargeStation}!RepairDrone@{RepairDrone}}
+\doxysubsubsection{\texorpdfstring{GetClosestRechargeStation()}{GetClosestRechargeStation()}}
+{\footnotesize\ttfamily void Repair\+Drone\+::\+Get\+Closest\+Recharge\+Station (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})}
+
+
+
+Gets the closest recharge station to the drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scheduler} & A vector of \mbox{\hyperlink{classIEntity}{I\+Entity}} pointers representing the scheduler to use for the search. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classRepairDrone_a69bbebd8380649c139b2482892cc0251}\label{classRepairDrone_a69bbebd8380649c139b2482892cc0251}} 
 \index{RepairDrone@{RepairDrone}!GetDestination@{GetDestination}}
 \index{GetDestination@{GetDestination}!RepairDrone@{RepairDrone}}
@@ -287,7 +335,7 @@ Sets the entity list of the entity.
 
 
 \begin{DoxyParams}{Parameters}
-{\em entity\+List} & The new entity list of the entity \\
+{\em entity\+List\+\_\+} & The new entity list of the entity \\
 \hline
 \end{DoxyParams}
 
@@ -340,13 +388,13 @@ Reimplemented from \mbox{\hyperlink{classIEntity_a933def05f85783fddbf05e8257cc88
 
 
 
-Updates the entity\textquotesingle{}s position in the physical system. 
+Updates the state of the object. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em dt} & The time step of the update. \\
+{\em dt} & The delta time to use for the update. \\
 \hline
-{\em scheduler} & The list of all entities in the system. \\
+{\em scheduler} & A vector of \mbox{\hyperlink{classIEntity}{I\+Entity}} pointers representing the scheduler to use for the update. \\
 \hline
 \end{DoxyParams}
 

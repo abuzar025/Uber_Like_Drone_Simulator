@@ -157,12 +157,24 @@ class IEntity {
    */
   virtual void Jump(double height) {}
 
+  /**
+  * @brief Generates a random float value within a specified range.
+  * @param Min The minimum value of the range.
+  * @param Max The maximum value of the range.
+  * @return A random float value within the specified range.
+  */
   virtual float Random(float Min, float Max) {
     return ((float(rand()) / float(RAND_MAX)) * (Max - Min)) + Min;
   }
 
  protected:
+  /**
+  * @brief The unique identifier of the object.
+  */
   int id;
+  /**
+  * @brief The graph used by the object.
+  */
   const IGraph* graph;
 };
 

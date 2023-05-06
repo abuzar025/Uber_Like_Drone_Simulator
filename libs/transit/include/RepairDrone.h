@@ -100,13 +100,19 @@ class RepairDrone : public IEntity {
    */
   void SetDestination(Vector3 des_) { destination = des_; }
 
+  /**
+  * @brief Updates the state of the object.
+  * @param dt The delta time to use for the update.
+  * @param scheduler A vector of IEntity pointers representing the scheduler to use for the update.
+  */
   void Update(double dt, std::vector<IEntity*> scheduler);
 
   /**
     * @brief Sets the entity list of the entity
-    * @param entityList The new entity list of the entity
+    * @param entityList_ The new entity list of the entity
     */
   void SetEntityList(std::vector<IEntity*>* entityList_) { entityList = entityList_; }
+
   /**
    * @brief Rotates the RepairDrone
    * @param angle The angle by which the RepairDrone should be rotated
@@ -116,10 +122,26 @@ class RepairDrone : public IEntity {
       direction.x = dirTmp.x * std::cos(angle) - dirTmp.z * std::sin(angle);
       direction.z = dirTmp.x * std::sin(angle) + dirTmp.z * std::cos(angle);
   }
-
+  /**
+  * @brief Gets the closest recharge station to the drone.
+  * @param scheduler A vector of IEntity pointers representing the scheduler to use for the search.
+  */
   void GetClosestRechargeStation(std::vector<IEntity*> scheduler);
+
+  /**
+  * @brief Gets the distance between the drone and the specified entity.
+  * @param entity A pointer to the entity to calculate the distance from.
+  * @return The distance between the drone and the specified entity.
+  */
   float DistanceFromDrone(IEntity* entity);
+
+  /**
+  * @brief Determines if the specified entity has enough battery to be interacted with.
+  * @param entity A pointer to the entity to check.
+  * @return True if the specified entity has enough battery, false otherwise.
+  */
   bool BatteryInRange(IEntity* entity);
+
 
  private:
   JsonObject details;

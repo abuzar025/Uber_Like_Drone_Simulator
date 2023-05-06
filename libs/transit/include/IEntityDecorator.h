@@ -116,7 +116,7 @@ class IEntityDecorator: public IEntity {
 
     /**
      * @brief Sets the entity list of this and wrapped entity
-     * @param entityList The new entity list of this and wrapped entity
+     * @param entityList_ The new entity list of this and wrapped entity
      */
     void SetEntityList(std::vector<IEntity*>* entityList_) {
       entityList = entityList_;
@@ -143,7 +143,14 @@ class IEntityDecorator: public IEntity {
     IEntityDecorator& operator=(const IEntityDecorator& entityDecorator) = delete;
 
  protected:
+    /**
+    * @brief A protected class member variable that holds a pointer to the wrapped IEntity object.
+    */ 
     IEntity* entity;
+
+    /**
+    * @brief A protected class member variable that holds a pointer to a vector of IEntity objects.
+    */
     std::vector<IEntity*>* entityList;
 };
 

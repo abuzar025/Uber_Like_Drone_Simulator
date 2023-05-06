@@ -51,7 +51,7 @@ virtual void \mbox{\hyperlink{classIEntity_adf3acdf4764f5ff25f89d7814e39551c}{Se
 \begin{DoxyCompactList}\small\item\em Sets the availability of the entity. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
 \begin{DoxyCompactList}\small\item\em Updates the entity\textquotesingle{}s position in the physical system. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classIEntity_a50b01c5c4fab1632c0289e30aa77faf2}{Set\+Graph}} (const I\+Graph $\ast$graph)
+virtual void \mbox{\hyperlink{classIEntity_a50b01c5c4fab1632c0289e30aa77faf2}{Set\+Graph}} (const I\+Graph $\ast$\mbox{\hyperlink{classIEntity_a5d4d1c3d5da8a816fe03522cd0b4fcb3}{graph}})
 \begin{DoxyCompactList}\small\item\em Sets the graph object used by the entity in the simulation. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
 \begin{DoxyCompactList}\small\item\em Sets the position of the entity. \end{DoxyCompactList}\item 
@@ -67,18 +67,17 @@ virtual void \mbox{\hyperlink{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}{Ro
 \begin{DoxyCompactList}\small\item\em Rotate the entity. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classIEntity_a4e8eb64a324e1196be039c5e2a293b7a}{Jump}} (double height)
 \begin{DoxyCompactList}\small\item\em Make the entity jump. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classIEntity_a40b0caaefcd247250efd2f12a3335a73}\label{classIEntity_a40b0caaefcd247250efd2f12a3335a73}} 
-virtual float {\bfseries Random} (float Min, float Max)
-\end{DoxyCompactItemize}
+virtual float \mbox{\hyperlink{classIEntity_a40b0caaefcd247250efd2f12a3335a73}{Random}} (float Min, float Max)
+\begin{DoxyCompactList}\small\item\em Generates a random float value within a specified range. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classIEntity_adb3b46323a3c0269c5f108305a36737c}\label{classIEntity_adb3b46323a3c0269c5f108305a36737c}} 
-int {\bfseries id}
-\item 
+int \mbox{\hyperlink{classIEntity_adb3b46323a3c0269c5f108305a36737c}{id}}
+\begin{DoxyCompactList}\small\item\em The unique identifier of the object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classIEntity_a5d4d1c3d5da8a816fe03522cd0b4fcb3}\label{classIEntity_a5d4d1c3d5da8a816fe03522cd0b4fcb3}} 
-const I\+Graph $\ast$ {\bfseries graph}
-\end{DoxyCompactItemize}
+const I\+Graph $\ast$ \mbox{\hyperlink{classIEntity_a5d4d1c3d5da8a816fe03522cd0b4fcb3}{graph}}
+\begin{DoxyCompactList}\small\item\em The graph used by the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -255,6 +254,26 @@ Make the entity jump.
 
 Reimplemented in \mbox{\hyperlink{classIEntityDecorator_a0a6c7805970162447e529d6f5d8ecd44}{I\+Entity\+Decorator}}, and \mbox{\hyperlink{classDrone_a1559fe24a5792ac72ba9d8a4a13a9ec8}{Drone}}.
 
+\mbox{\Hypertarget{classIEntity_a40b0caaefcd247250efd2f12a3335a73}\label{classIEntity_a40b0caaefcd247250efd2f12a3335a73}} 
+\index{IEntity@{IEntity}!Random@{Random}}
+\index{Random@{Random}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{Random()}{Random()}}
+{\footnotesize\ttfamily virtual float I\+Entity\+::\+Random (\begin{DoxyParamCaption}\item[{float}]{Min,  }\item[{float}]{Max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Generates a random float value within a specified range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Min} & The minimum value of the range. \\
+\hline
+{\em Max} & The maximum value of the range. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A random float value within the specified range. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}\label{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}} 
 \index{IEntity@{IEntity}!Rotate@{Rotate}}
 \index{Rotate@{Rotate}!IEntity@{IEntity}}

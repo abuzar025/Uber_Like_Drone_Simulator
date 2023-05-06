@@ -12,10 +12,12 @@ Represents a singleton class that collect drone pertaining the drone and its sur
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classDataCollector_a6377cbd8b20100f0d4451fba27184590}\label{classDataCollector_a6377cbd8b20100f0d4451fba27184590}} 
 \mbox{\hyperlink{classDataCollector_a6377cbd8b20100f0d4451fba27184590}{Data\+Collector}} (const \mbox{\hyperlink{classDataCollector}{Data\+Collector}} \&other)=delete
-\item 
+\begin{DoxyCompactList}\small\item\em Singletons should not be cloneable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataCollector_aa68dc44638eee5e097b9d2ec1839a8f8}\label{classDataCollector_aa68dc44638eee5e097b9d2ec1839a8f8}} 
 \mbox{\hyperlink{classDataCollector}{Data\+Collector}} \& \mbox{\hyperlink{classDataCollector_aa68dc44638eee5e097b9d2ec1839a8f8}{operator=}} (const \mbox{\hyperlink{classDataCollector}{Data\+Collector}} \&other)=delete
-\item 
+\begin{DoxyCompactList}\small\item\em Singletons should not be assignable. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDataCollector_a9f9ff1817bd0601ba33925c3378ac50e}\label{classDataCollector_a9f9ff1817bd0601ba33925c3378ac50e}} 
 \mbox{\hyperlink{classDataCollector_a9f9ff1817bd0601ba33925c3378ac50e}{$\sim$\+Data\+Collector}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDataCollector}{Data\+Collector}} desconstructor. \end{DoxyCompactList}\item 
@@ -33,21 +35,12 @@ void \mbox{\hyperlink{classDataCollector_a5c1c2f0781ebc9ce0425f30e64d2c1c7}{Clos
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classDataCollector_a975680376366dcf48861ab3fe7fe06fc}\label{classDataCollector_a975680376366dcf48861ab3fe7fe06fc}} 
-static \mbox{\hyperlink{classDataCollector}{Data\+Collector}} \& {\bfseries get\+Instance} ()
-\end{DoxyCompactItemize}
+static \mbox{\hyperlink{classDataCollector}{Data\+Collector}} \& \mbox{\hyperlink{classDataCollector_a975680376366dcf48861ab3fe7fe06fc}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Returns the instance of the {\ttfamily \mbox{\hyperlink{classDataCollector}{Data\+Collector}}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Represents a singleton class that collect drone pertaining the drone and its surroundings. It then stores this data into a csv. 
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classDataCollector_a6377cbd8b20100f0d4451fba27184590}\label{classDataCollector_a6377cbd8b20100f0d4451fba27184590}} 
-\index{DataCollector@{DataCollector}!DataCollector@{DataCollector}}
-\index{DataCollector@{DataCollector}!DataCollector@{DataCollector}}
-\doxysubsubsection{\texorpdfstring{DataCollector()}{DataCollector()}}
-{\footnotesize\ttfamily Data\+Collector\+::\+Data\+Collector (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDataCollector}{Data\+Collector}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
-
-Singletons should not be cloneable. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classDataCollector_aeb1f921d699021970ff43b7b738b34fc}\label{classDataCollector_aeb1f921d699021970ff43b7b738b34fc}} 
@@ -77,16 +70,12 @@ This method takes a entity to calculate and store certain data points into to th
 
 
 \begin{DoxyParams}{Parameters}
-{\em entity} & The input is a refrence to a \mbox{\hyperlink{classIEntity}{I\+Entity}} object which we will read the data of \\
+{\em entites} & The input is a refrence to a \mbox{\hyperlink{classIEntity}{I\+Entity}} object which we will read the data of \\
+\hline
+{\em dt} & Delta time \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classDataCollector_aa68dc44638eee5e097b9d2ec1839a8f8}\label{classDataCollector_aa68dc44638eee5e097b9d2ec1839a8f8}} 
-\index{DataCollector@{DataCollector}!operator=@{operator=}}
-\index{operator=@{operator=}!DataCollector@{DataCollector}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classDataCollector}{Data\+Collector}}\& Data\+Collector\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDataCollector}{Data\+Collector}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
-Singletons should not be assignable. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

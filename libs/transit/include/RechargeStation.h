@@ -64,6 +64,10 @@ class RechargeStation: public IEntity {
      */
     bool GetAvailability() const { return available; }
 
+    /**
+    * @brief A public member function that returns the recharge rate of a RechargeStation object.
+    * @return A double representing the recharge rate of a RechargeStation object.
+    */ 
     double GetRechargeRate() const { return rechargeRate; }
 
     /**
@@ -99,15 +103,27 @@ class RechargeStation: public IEntity {
 
     /**
      * @brief Sets the entity list of the entity
-     * @param entityList The new entity list of the entity
+     * @param entityList_ The new entity list of the entity
      */
     void SetEntityList(std::vector<IEntity*>* entityList_) { entityList = entityList_; }
-
+    /**
+    * @brief A public member function that sets the recharge rate of a RechargeStation object.
+    * @param rate A double representing the recharge rate of a RechargeStation object.
+    */
     void SetRechargeRate(double rate) { rechargeRate = rate; }
-
+    /**
+    * @brief A public member function that returns the radius of a RechargeStation object.
+    * @return A double representing the radius of a RechargeStation object.
+    */
     double GetRadius() {return radius;}
 
+    /**
+    * @brief A public member function that checks whether an IEntity object is within the range of a RechargeStation object.
+    * @param entity A pointer to the IEntity object to be checked.
+    * @return A boolean indicating whether the IEntity object is within range of the RechargeStation object.
+    */
     bool BatteryInRange(IEntity* entity);
+
     /**
      * @brief Removing the copy constructor and assignment operator
      * so that drones cannot be copied.

@@ -19,8 +19,17 @@ using namespace std;
  */
 class DataEntry {
  public:
+  /**
+  * @brief A public class member variable that represents the data collection period of a DataEntry object.
+  */
   double collectionPeriod;
+  /**
+  * @brief A public class member variable that represents the time elapsed since the last data collection of a DataEntry object.
+  */
   double timeSinceLastCollection = 0;
+  /**
+  * @brief A public class member variable that represents the output stream of a DataEntry object.
+  */
   ofstream* output;
 };
 
@@ -32,15 +41,18 @@ class DataEntry {
 
 class DataCollector {
  public:
+       /**
+       * @brief Returns the instance of the `DataCollector`.
+       */
        static DataCollector& getInstance();
 
        /**
-        * Singletons should not be cloneable.
+        * @brief Singletons should not be cloneable.
         */
        DataCollector(const DataCollector& other) = delete;
 
        /**
-        * Singletons should not be assignable.
+        * @brief Singletons should not be assignable.
         */
        DataCollector& operator=(const DataCollector& other) = delete;
 
@@ -57,7 +69,8 @@ class DataCollector {
 
        /**
         * @brief This method takes a entity to calculate and store certain data points into to the singleton class
-        * @param entity The input is a refrence to a IEntity object which we will read the data of
+        * @param entites The input is a refrence to a IEntity object which we will read the data of
+        * @param dt Delta time
         */
        void OnTick(std::vector<IEntity*>& entites, double dt);
 
@@ -68,7 +81,7 @@ class DataCollector {
 
        /**
         * @brief This method closes the csv files
-       */
+        */
        void CloseCSV();
 
  private:
